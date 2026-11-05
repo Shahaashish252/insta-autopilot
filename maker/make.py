@@ -145,6 +145,7 @@ def render(slug, spec):
     if os.path.exists(dest): shutil.rmtree(dest)
     shutil.copytree(TEMPLATE, dest, ignore=shutil.ignore_patterns('spec.example.json', 'new-reel.sh', 'out'))
     os.makedirs(os.path.join(dest, 'out'))
+    if not os.path.isfile(os.path.join(dest, 'js', 'scenes', f"{spec.get('scene', 'default')}.js")): spec['scene'] = 'default'
     json.dump(spec, open(os.path.join(dest, 'spec.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     r = subprocess.run(['sh', os.path.join(dest, 'build.sh')], env={**os.environ, 'LIB': STUDIO}, text=True, encoding='utf-8',
                        stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
