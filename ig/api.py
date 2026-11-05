@@ -5,8 +5,9 @@ the environment; with DRY_RUN=1, or no token, every call that would change somet
 IG_GRAPH=https://graph.instagram.com/v21.0 switches to the older Instagram-login method."""
 import json, os, sys, time, urllib.error, urllib.parse, urllib.request
 
-GRAPH = os.environ.get('IG_GRAPH', 'https://graph.facebook.com/v21.0')
-TOKEN = os.environ.get('IG_ACCESS_TOKEN', '')
+TOKEN = os.environ.get('IG_ACCESS_TOKEN', '').strip()
+# the token says which API it belongs to: Instagram-login tokens start with "IG", Facebook/Unified-login ones with "EA"
+GRAPH = os.environ.get('IG_GRAPH') or ('https://graph.instagram.com/v21.0' if TOKEN.startswith('IG') else 'https://graph.facebook.com/v21.0')
 DRY = os.environ.get('DRY_RUN', '0') == '1' or not TOKEN
 
 
