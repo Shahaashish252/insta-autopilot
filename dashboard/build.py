@@ -129,7 +129,7 @@ def main():
     wf_rows = ''.join(f'<tr><td>{E(w[0])}</td><td><span class="badge {"posted" if w[1] == "active" else "draft"}">{E(w[1].replace("_", " "))}</span></td></tr>' for w in wfs)
     act_rows = ''.join(f'<li class="a {k}"><time>{E(when(t))}</time><b>{E(a)}</b><span>{E(b)}</span></li>' for t, k, a, b in act[:40]) or '<li>No activity yet.</li>'
     inbox_rows = ''.join(f'<li><b>@{E(c.get("from"))}</b> {E(c.get("text"))}<small>{E(c.get("post"))}</small></li>' for c in inbox[:8]) or '<li class="muted">No comments waiting.</li>'
-    setup = [('GitHub repo (private)', bool(wfs)), ('Instagram token saved', connected), ('Token renewal key (GH_PAT)', 'GH_PAT' in secrets),
+    setup = [('GitHub repo (private)', bool(wfs)), ('Instagram token saved', connected), ('Instagram account id (optional)', 'IG_USER_ID' in secrets),
              ('Analytics pulled', bool(ins)), ('Comments synced', os.path.isfile(os.path.join(ROOT, 'comments', 'inbox.json')))]
     setup_rows = ''.join(f'<li class="{"ok" if ok else "todo"}">{"✓" if ok else "○"} {E(n)}</li>' for n, ok in setup)
 

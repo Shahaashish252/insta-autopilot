@@ -26,25 +26,20 @@ folder moves to `posted/` with its `media_id`. To post one right away: Actions �
 
 ## One-time setup (about 15 minutes)
 
-1. **Instagram**: the account is a Professional account (Creator or Business). *Settings → Account type and tools.*
-2. **Meta app**: go to <https://developers.facebook.com/apps> → *Create app* → use case **"Manage messaging & content on
-   Instagram"** (Instagram API with Instagram login).
-3. In the app: *Instagram → API setup with Instagram login* → **Add account** → log in to your Instagram there and allow
-   the permissions: `instagram_business_basic`, `instagram_business_content_publish`, `instagram_business_manage_comments`,
-   `instagram_business_manage_insights` (and `instagram_business_manage_messages` only if you want DMs later).
-4. **Generate token** next to your account. Copy it (it is long-lived: 60 days, renewed by the workflow).
-5. Store it in this repo as secrets. In a terminal (you paste the token when it asks, so it never goes in a chat or a file):
-   ```
-   gh secret set IG_ACCESS_TOKEN -R Shahaashish252/insta-autopilot
-   ```
-6. Check it: Actions → insights → Run workflow. `reports/latest.md` appears with your posts.
-7. For the weekly renewal: create a fine-grained GitHub token (<https://github.com/settings/personal-access-tokens>) for
-   this repo only, permission **Secrets: Read and write**, and store it:
-   ```
-   gh secret set GH_PAT -R Shahaashish252/insta-autopilot
-   ```
+1. **Instagram**: a Professional account (Creator or Business). *Settings → Account type and tools.*
+2. **Meta app**: <https://developers.facebook.com/apps> → *Create app* → use case **"Manage messaging & content on Instagram"**.
+   Meta asks for a **Business portfolio** (free: a name and an email; a brand-new Facebook account may have to wait an hour).
+3. *Use cases → Customize → API setup with Unified login* → **Create new configuration**: pick your Instagram account,
+   keep `instagram_basic`, `instagram_content_publish`, `instagram_manage_comments`, add `instagram_manage_insights` if offered.
+   Redirect and login URLs are not needed.
+4. **Generate token** (a system-user token: it does not expire) and save it in this repo as the secret **`IG_ACCESS_TOKEN`**:
+   <https://github.com/Shahaashish252/insta-autopilot/settings/secrets/actions/new>.
+   If the page shows the Instagram account's id, save it too as **`IG_USER_ID`** (otherwise it is found from the token).
+5. Check it: Actions → insights → Run workflow. `reports/latest.md` appears with your posts.
 
-You can revoke access at any time: Instagram app → Settings → Website permissions → Apps and websites, or delete the secret.
+You can revoke access at any time: remove the app in the Business portfolio settings, or delete the secret.
+The older Instagram-login method (`IG_GRAPH=https://graph.instagram.com/v21.0`, 60-day tokens renewed by the
+refresh-token workflow with a `GH_PAT` secret) is closed to new Meta apps; the code still supports it.
 
 ## Limits to know
 

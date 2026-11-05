@@ -24,7 +24,7 @@ def metrics(mid, names):
 
 def main(posts=50):
     uid = api.user_id()
-    acct = api.get('me', fields='username,followers_count,follows_count,media_count')
+    acct = api.account()
     rows = []
     for m in api.get(f'{uid}/media', fields='id,caption,media_type,media_product_type,permalink,timestamp,like_count,comments_count', limit=posts).get('data', []):
         reel = m.get('media_product_type') == 'REELS'

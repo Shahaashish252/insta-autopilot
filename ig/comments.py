@@ -12,7 +12,7 @@ save = lambda f, v: json.dump(v, open(os.path.join(DIR, f), 'w', encoding='utf-8
 
 
 def fetch(posts=12):
-    me = api.get('me', fields='username')['username']
+    me = api.account('username')['username']
     media = api.get(f'{api.user_id()}/media', fields='id,caption,permalink,timestamp,comments_count', limit=posts).get('data', [])
     answered = {r['comment_id'] for r in load('sent.json', [])}
     inbox = []

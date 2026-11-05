@@ -1,9 +1,11 @@
-"""A small client for the official Instagram API (Instagram Login, graph.instagram.com). Standard library only.
-Reads IG_ACCESS_TOKEN (a long-lived token) and IG_USER_ID from the environment; with DRY_RUN=1, or no token, every
-call that would change something is printed instead of sent."""
+"""A small client for the official Instagram API, Unified login (Facebook Login for Business, graph.facebook.com), with
+a system-user token that does not expire. Standard library only.
+Reads IG_ACCESS_TOKEN and IG_USER_ID (the Instagram professional account's id; found automatically when not set) from
+the environment; with DRY_RUN=1, or no token, every call that would change something is printed instead of sent.
+IG_GRAPH=https://graph.instagram.com/v21.0 switches to the older Instagram-login method."""
 import json, os, sys, time, urllib.error, urllib.parse, urllib.request
 
-GRAPH = os.environ.get('IG_GRAPH', 'https://graph.instagram.com/v21.0')
+GRAPH = os.environ.get('IG_GRAPH', 'https://graph.facebook.com/v21.0')
 TOKEN = os.environ.get('IG_ACCESS_TOKEN', '')
 DRY = os.environ.get('DRY_RUN', '0') == '1' or not TOKEN
 
@@ -42,8 +44,29 @@ def post(path, **params):
     return _call('POST', f'{GRAPH}/{path}', params)
 
 
+_UID = None
 def user_id():
-    return os.environ.get('IG_USER_ID') or get('me', fields='user_id')['user_id']
+    """The Instagram account's id: IG_USER_ID, else found through the token's Pages or business assets."""
+    global _UID
+    if _UID: return _UID
+    _UID = os.environ.get('IG_USER_ID')
+    if _UID: return _UID
+    if 'graph.instagram.com' in GRAPH: _UID = get('me', fields='user_id')['user_id']; return _UID
+    tries = [('me/accounts', {'fields': 'instagram_business_account{id,username}'}),
+             ('me/businesses', {'fields': 'owned_instagram_accounts{id,username},instagram_accounts{id,username}'})]
+    for path, params in tries:
+        try: data = get(path, **params).get('data', [])
+        except IGError: continue
+        for d in data:
+            for k in ('instagram_business_account',):
+                if d.get(k): _UID = d[k]['id']; return _UID
+            for k in ('owned_instagram_accounts', 'instagram_accounts'):
+                for a in d.get(k, {}).get('data', []): _UID = a['id']; return _UID
+    raise IGError('could not find the Instagram account id: add it as the IG_USER_ID secret')
+
+
+def account(fields='username,followers_count,follows_count,media_count'):
+    return get(user_id(), fields=fields)
 
 
 def wait_ready(container, tries=60, every=10):
@@ -98,4 +121,4 @@ def paged(path, **params):
 
 if __name__ == '__main__':
     if not TOKEN: sys.exit('set IG_ACCESS_TOKEN first')
-    print(json.dumps(get('me', fields='user_id,username,account_type,media_count,followers_count'), indent=1))
+    print('instagram account id:', user_id()); print(json.dumps(account(), indent=1, ensure_ascii=False))
