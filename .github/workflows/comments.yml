@@ -1,27 +1,39 @@
-# Every 6 hours: collect unanswered comments (comments/inbox.json). On a push of comments/replies.json: send the
-# replies marked approved. Claude drafts replies.json from the inbox with /ig-reply; you approve them.
+# Every 15 minutes: new comments → Claude replies to the genuine ones (in the commenter's language), hides spam and
+# abuse, and holds sensitive ones for you (comments/held.json, shown on the dashboard). Claude Code is installed only
+# when there is something new. Your own replies: comments/replies.json with "approved": true (sent on push).
 name: comments
 on:
-  schedule: [{ cron: '15 */6 * * *' }]
-  push: { paths: ['comments/replies.json'] }
+  schedule: [{ cron: '*/15 * * * *' }]
+  push: { branches: [main], paths: ['comments/replies.json'] }
   workflow_dispatch:
 permissions: { contents: write }
-concurrency: { group: instagram, cancel-in-progress: false }
+concurrency: { group: comments, cancel-in-progress: false }
 jobs:
   comments:
     runs-on: ubuntu-latest
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      PYTHONIOENCODING: utf-8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - name: Send approved replies
-        if: github.event_name != 'schedule'
-        env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}' }
+      - name: Your own approved replies
+        if: github.event_name == 'push'
         run: python -m ig.comments reply
-      - name: Fetch new comments
-        env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}' }
-        run: python -m ig.comments fetch
+      - name: Anything new?
+        id: new
+        run: python -m ig.comments fetch | tee /tmp/n.txt; echo "n=$(grep -o '^[0-9]*' /tmp/n.txt)" >> "$GITHUB_OUTPUT"
+      - name: Claude Code
+        if: steps.new.outputs.n != '0'
+        run: npm install -g -s @anthropic-ai/claude-code
+      - name: Reply, hide or hold
+        if: steps.new.outputs.n != '0'
+        run: python -u -m ig.comments auto
       - name: Save
+        if: always()
         run: |
           git config user.name insta-autopilot; git config user.email actions@users.noreply.github.com
-          git add comments; git diff --cached --quiet || { git commit -m "comments: inbox updated"; git push; }
+          git add comments; git diff --cached --quiet || { git commit -m "comments: $(python -c "import json;print(len(json.load(open('comments/sent.json'))))" 2>/dev/null || echo 0) replies so far"; git pull --rebase -q; git push; }

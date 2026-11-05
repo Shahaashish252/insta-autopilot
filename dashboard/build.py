@@ -197,7 +197,7 @@ def main():
     rows, ins = reels()
     runs = json.loads(gh('run', 'list', '-R', REPO, '--limit', '30', '--json', 'workflowName,status,conclusion,createdAt,event,url') or '[]')
     wfs = [l.split('\t') for l in gh('workflow', 'list', '-R', REPO, '--all').splitlines() if l.strip()]
-    inbox = jload(os.path.join(ROOT, 'comments', 'inbox.json'), []) or []
+    inbox = jload(os.path.join(ROOT, 'comments', 'held.json'), []) or []
     sent = jload(os.path.join(ROOT, 'comments', 'sent.json'), []) or []
     made = jload(os.path.join(ROOT, 'maker', 'made.json'), []) or []
     acct = ins.get('account', {}); best = jload(os.path.join(ROOT, 'reports', 'best_time.json'), {}) or {}
@@ -241,7 +241,7 @@ def main():
     cards = ''.join(card(r) for r in sorted(rows, key=lambda r: (order[status_of(r)[0]], (r.get('post') or {}).get('publish_at') or (r.get('post') or {}).get('posted_at') or '')))
     wf_rows = ''.join(f'<tr><td>{E(w[0])}</td><td><span class="badge {"done" if w[1] == "active" else "made"}">{E(w[1].replace("_", " "))}</span></td></tr>' for w in wfs)
     act_rows = ''.join(f'<li class="a {k}"><time>{E(when(t))}</time><b>{E(a)}</b><span>{E(b)}</span></li>' for t, k, a, b in act[:40]) or '<li>No activity yet.</li>'
-    inbox_rows = ''.join(f'<li><b>@{E(c.get("from"))}</b> {E(c.get("text"))}<br><small>{E(c.get("post"))}</small></li>' for c in inbox[:8]) or '<li class="muted">No comments waiting.</li>'
+    inbox_rows = ''.join(f'<li><b>@{E(c.get("from"))}</b> {E(c.get("text"))}<br><small>held: {E(c.get("why"))}</small></li>' for c in inbox[:8]) or '<li class="muted">Loading…</li>'
     making_href = 'making.html'
     header = lambda sub: f'''<header><div><h1>Reel Dashboard</h1><p class="sub">{sub} · updated {E(when(now))}</p></div>
 <nav><a class="pill" href="index.html">Reels</a><a class="pill" href="{making_href}">Making ◐</a>
@@ -254,14 +254,14 @@ def main():
 <div class="kpi"><b>{counts["posted"]}</b><span>posted</span></div>
 <div class="kpi"><b>{counts["draft"]}</b><span>waiting for approval</span></div>
 <div class="kpi"><b>{acct.get("followers_count", "–")}</b><span>followers</span></div>
-<div class="kpi"><b>{len(inbox)}</b><span>comments to answer</span></div>
+<div class="kpi"><b id="kheld">{len(inbox)}</b><span>comments held for you</span></div>
 </section>
 <div class="grid"><div><h2>Making</h2><div class="panel now" id="now"><p class="muted">Loading the live progress…</p></div>
 <h2>Every reel, stage by stage</h2>{cards}</div>
 <aside><h2>Best time to post</h2><div class="panel">{('<p style="margin:0"><b>' + E(' and '.join(best.get('slots_ist', []))) + ' IST</b></p><p class="muted" style="margin:4px 0 0;font-size:13px">' + E(best.get('why', '')) + '</p>') if best else '<p class="muted">Worked out by each make.</p>'}</div>
 <h2>Automation on GitHub</h2><div class="panel"><table>{wf_rows or '<tr><td class="muted">not available</td></tr>'}</table>
 <p style="margin:8px 0 0"><a href="https://github.com/{E(REPO)}/actions" target="_blank" rel="noopener">All runs ↗</a></p></div>
-<h2>Comments to answer</h2><div class="panel"><ul>{inbox_rows}</ul></div>
+<h2>Comments</h2><div class="panel" id="comments"><ul>{inbox_rows}</ul></div>
 <h2>Activity</h2><div class="panel"><ol class="tl">{act_rows}</ol></div></aside></div>
 <dialog id="player"><video controls playsinline preload="none"></video><div class="bar2"><b id="ptitle"></b><button class="btn" id="pclose">Close</button></div></dialog>'''
     script = '''
@@ -271,6 +271,15 @@ document.addEventListener('click', e => { const b = e.target.closest('[data-vide
 const stop = () => { vid.pause(); vid.removeAttribute('src'); vid.load(); };
 document.getElementById('pclose').onclick = () => dlg.close(); dlg.addEventListener('close', stop);
 dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+(async () => {                       // comments: live from the repo (replies every 15 min)
+  const get = f => fetch(`https://api.github.com/repos/${REPO}/contents/comments/${f}?t=${Date.now()}`, {headers:{Accept:'application/vnd.github.raw'}, cache:'no-store'}).then(r => r.ok ? r.json() : []).catch(() => []);
+  const [sent, held, hidden] = await Promise.all([get('sent.json'), get('held.json'), get('hidden.json')]);
+  const el = document.getElementById('comments'), ago = x => ist(x);
+  document.getElementById('kheld').textContent = held.length;
+  el.innerHTML = `<p style="margin:0 0 8px;font-size:13px" class="muted">Claude answers new comments every 15 minutes · ${sent.length} replied · ${hidden.length} hidden as spam/abuse · ${held.length} held for you</p>`
+    + (held.length ? `<b style="font-size:13px">Held for you (answer these yourself)</b><ul>${held.slice(-6).reverse().map(c => `<li><b>@${esc(c.from)}</b> ${esc(c.text)}<br><small>${esc(c.why)} · ${esc(c.reel || '')} ${c.permalink ? `· <a href="${esc(c.permalink)}" target="_blank" rel="noopener">open ↗</a>` : ''}</small></li>`).join('')}</ul>` : '')
+    + (sent.length ? `<b style="font-size:13px">Latest replies</b><ul>${sent.slice(-8).reverse().map(c => `<li><small>@${esc(c.from)} · ${ago(c.sent_at)}${c.reel ? ' · ' + esc(c.reel) : ''}</small><br>${esc(c.text)}<br><span style="color:var(--green)">↳ ${esc(c.reply)}</span></li>`).join('')}</ul>` : '<p class="muted" style="margin:0">No comments answered yet.</p>');
+})();
 poll((p, err) => {
   const el = document.getElementById('now');
   if (err) { el.innerHTML = `<p class="muted" style="margin:0">${esc(err)}</p><p style="margin:6px 0 0"><a href="making.html">Making page →</a></p>`; return; }

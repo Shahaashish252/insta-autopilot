@@ -5,11 +5,12 @@ Runs an Instagram Professional account from GitHub, through Instagram's **offici
 | What | How | When |
 |---|---|---|
 | Post reels and stories | `queue/<name>/post.json` with `"approved": true` and a `publish_at` time | checked every 30 min |
-| Comments | new unanswered comments → `comments/inbox.json`; approved replies in `comments/replies.json` are sent | every 6 h, and on every push of `replies.json` |
+| Comments | Claude replies to genuine comments in the commenter's language, hides spam/abuse, holds sensitive ones for you (`comments/held.json`) | every 15 min |
 | Analytics | every post's views, reach, likes, shares, saves, watch time → `reports/` | daily |
 | Token | the 60-day access token renews itself | weekly |
 
-**Nothing is posted or replied unless it is marked `"approved": true`.** Claude prepares; you approve.
+Fully automatic (the owner's choice): reels are made, scheduled and posted, and comments answered, without a manual step.
+Dashboard: <https://shahaashish252.github.io/insta-autopilot/>
 
 ## Queue a reel
 

@@ -1,9 +1,9 @@
 # The dashboard as a website (GitHub Pages): rebuilt after every make, post, analytics or comments run, and on changes.
-# The "Making" parts are live on their own (the page reads progress.json from the status branch).
+# The "Making" and comments parts are live on their own (the page reads them from the repo).
 name: pages
 on:
   push: { branches: [main], paths: ['queue/**', 'posted/**', 'reports/**', 'maker/made.json', 'dashboard/**', 'comments/**'] }
-  workflow_run: { workflows: [make, publish, insights, comments], types: [completed] }
+  workflow_run: { workflows: [make, publish, insights], types: [completed] }
   schedule: [{ cron: '0 */3 * * *' }]
   workflow_dispatch:
 permissions: { contents: read, pages: write, id-token: write, actions: read }
