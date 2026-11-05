@@ -1,0 +1,83 @@
+{
+ "run_id": "42066670864",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42066670864",
+ "started": "2026-11-05T16:39:38+00:00",
+ "status": "running",
+ "stages": [
+  {
+   "key": "setup",
+   "label": "Set up the studio",
+   "about": "ffmpeg, the renderer, Claude Code",
+   "state": "running",
+   "started": "2026-11-05T16:39:38+00:00"
+  },
+  {
+   "key": "numbers",
+   "label": "Channel numbers and best time",
+   "about": "fresh views, the posting slot",
+   "state": "waiting"
+  },
+  {
+   "key": "write",
+   "label": "Claude writes the reel",
+   "about": "picks a new word, the hook, the script and the caption; checked against the rules",
+   "state": "waiting"
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "about": "every line spoken by hi-IN-SwaraNeural",
+   "state": "waiting"
+  },
+  {
+   "key": "speech",
+   "label": "Speech check",
+   "about": "Whisper listens back to every line",
+   "state": "waiting"
+  },
+  {
+   "key": "timing",
+   "label": "Timing",
+   "about": "when each word, matra and pencil stroke happens",
+   "state": "waiting"
+  },
+  {
+   "key": "music",
+   "label": "Music and sound",
+   "about": "guitar, bass, pencil, whooshes; mixed under the voice",
+   "state": "waiting"
+  },
+  {
+   "key": "reading",
+   "label": "Reading check",
+   "about": "every written line long enough on screen to read",
+   "state": "waiting"
+  },
+  {
+   "key": "picture",
+   "label": "Picture",
+   "about": "1080×1920, 30 fps, frame by frame",
+   "state": "waiting"
+  },
+  {
+   "key": "master",
+   "label": "Master, subtitles, cover",
+   "about": "loudness −14 LUFS, Hindi .srt, cover frame",
+   "state": "waiting"
+  },
+  {
+   "key": "upload",
+   "label": "Upload",
+   "about": "the video to the media release",
+   "state": "waiting"
+  },
+  {
+   "key": "queued",
+   "label": "Scheduled",
+   "about": "queued at the next best time",
+   "state": "waiting"
+  }
+ ],
+ "history": [],
+ "updated": "2026-11-05T16:39:38+00:00"
+}
