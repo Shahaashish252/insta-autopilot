@@ -31,6 +31,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12', cache: pip, cache-dependency-path: studio/requirements.txt }
+      - name: Live progress for the dashboard
+        run: python -m maker.progress start
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
       - name: Tools (ffmpeg, renderer, Claude Code)
@@ -39,22 +41,28 @@ jobs:
           pip install -q -r studio/requirements.txt
           cd studio && npm install --silent && node node_modules/playwright-core/cli.js install --with-deps chromium-headless-shell > /dev/null
           npm install -g -s @anthropic-ai/claude-code
+          python -m maker.progress setup done "ffmpeg, renderer, Claude Code"
       - name: Speech-check model cache
         uses: actions/cache@v4
         with: { path: ~/.cache/huggingface, key: whisper-small-v1 }
       - name: Fresh numbers and the best time
         run: |
+          python -m maker.progress numbers running
           python -m ig.insights || echo "(insights failed; using the last report)"
-          python -m ig.best_time
+          python -m ig.best_time | tee /tmp/best.txt
+          python -m maker.progress numbers done "$(head -1 /tmp/best.txt)"
       - name: Make the reel
         env: { WORD: '${{ inputs.word }}', FORCE: '${{ inputs.force }}', TEST: '${{ inputs.test }}' }
         run: |
-          if [ "$TEST" = true ]; then python -u -m maker.make --spec studio/films/_template/spec.example.json --no-queue; exit; fi
+          if [ "$TEST" = true ]; then python -u -m maker.make --spec studio/films/_template/spec.example.json --no-queue; python -m maker.progress finish done "test render (not queued)"; exit; fi
           python -u -m maker.make ${WORD:+--word "$WORD"} $( [ "$FORCE" = true ] && echo --force )
       - name: Test video
         if: inputs.test
         uses: actions/upload-artifact@v4
         with: { name: test-reel, path: 'studio/films/*/*.mp4', retention-days: 3 }
+      - name: Mark a failure on the dashboard
+        if: failure() || cancelled()
+        run: python -m maker.progress fail "the run stopped; see its log"
       - name: Save
         if: always()
         run: |

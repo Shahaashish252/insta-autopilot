@@ -13,6 +13,7 @@ import argparse, datetime as dt, json, os, re, shutil, statistics, subprocess, s
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from ig import best_time  # noqa: E402
+from maker import progress as P  # noqa: E402
 
 STUDIO = os.path.join(ROOT, 'studio'); TEMPLATE = os.path.join(STUDIO, 'films', '_template')
 MADE = os.path.join(ROOT, 'maker', 'made.json')
@@ -147,12 +148,35 @@ def render(slug, spec):
     os.makedirs(os.path.join(dest, 'out'))
     if not os.path.isfile(os.path.join(dest, 'js', 'scenes', f"{spec.get('scene', 'default')}.js")): spec['scene'] = 'default'
     json.dump(spec, open(os.path.join(dest, 'spec.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    r = subprocess.run(['sh', os.path.join(dest, 'build.sh')], env={**os.environ, 'LIB': STUDIO}, text=True, encoding='utf-8',
-                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    print(r.stdout[-6000:])
-    if r.returncode:
-        tail = r.stdout[-1500:]
-        raise RenderError(tail)
+    # build.sh runs voice → speech check → timing → music → reading check → picture → master → subtitles → cover;
+    # its output says where it is, which becomes the live progress on the dashboard
+    proc = subprocess.Popen(['sh', os.path.join(dest, 'build.sh')], env={**os.environ, 'LIB': STUDIO}, text=True, encoding='utf-8',
+                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, bufsize=1)
+    log, cur, frames = [], None, {}
+
+    def go(key, detail=None):
+        nonlocal cur
+        if cur and cur != key: P.stage(cur, 'done')
+        cur = key; P.stage(key, 'running', detail)
+    go('voice')
+    for line in proc.stdout:
+        print(line, end=''); log.append(line); l = line.strip()
+        if l.startswith('mismatches:'): P.stage('speech', 'running', l); go('timing')
+        elif re.match(r'^(OK|BAD|\?\?)\s+N\d+ \|', l) and cur == 'voice': go('speech')
+        elif l.startswith('events '): m = re.match(r'events (\d+) dur ([\d.]+)', l); go('music', f'{m[1]} sound cues, {float(m[2]):.1f} s' if m else None)
+        elif l.startswith('mix.wav'): P.stage('music', 'running', l); go('reading')
+        elif l == 'readcheck ok': go('picture', '0 %'); P.stage('reading', 'done', 'every line readable')
+        elif re.match(r'^w\d+ \d+/\d+', l):
+            w, x, y = re.match(r'^w(\d+) (\d+)/(\d+)', l).groups(); frames[w] = (int(x), int(y))
+            done, tot = sum(v[0] for v in frames.values()), sum(v[1] for v in frames.values())
+            P.stage('picture', 'running', f'{100 * done // max(tot, 1)} % ({done}/{tot} frames, {len(frames)} workers)', force=False)
+        elif l.startswith('done ') and cur == 'picture': go('master')
+    proc.wait()
+    out = ''.join(log)
+    if proc.returncode:
+        if cur: P.stage(cur, 'failed', out.strip().splitlines()[-1][:200] if out.strip() else 'failed')
+        raise RenderError(out[-1500:])
+    if cur: P.stage(cur, 'done')
     ev = jload(os.path.join(dest, 'events.json'), {})
     return dest, ev.get('dur', 0)
 
@@ -165,9 +189,11 @@ def queue(slug, o, dest, dur):
     spec, cap = o['spec'], o['caption']
     q = os.path.join(ROOT, 'queue', slug); os.makedirs(q, exist_ok=True)
     video = os.path.join(dest, f'{slug}.mp4')
+    P.stage('upload', 'running', f'{os.path.getsize(video) / 1e6:.0f} MB')
     subprocess.run(['gh', 'release', 'view', 'media'], capture_output=True).returncode and subprocess.run(
-        ['gh', 'release', 'create', 'media', '--title', 'media', '--notes', 'Reel videos waiting to be posted (deleted once posted).'], check=True)
+        ['gh', 'release', 'create', 'media', '--title', 'media', '--notes', 'The reels made on GitHub (played on the dashboard; posted from here).'], check=True)
     subprocess.run(['gh', 'release', 'upload', 'media', video, '--clobber'], check=True)
+    P.stage('upload', 'done')
     for f, to in (('poster.jpg', 'cover.jpg'), (f'{slug}.srt', f'{slug}.srt'), ('spec.json', 'spec.json')):
         if os.path.isfile(os.path.join(dest, f)): shutil.copy(os.path.join(dest, f), os.path.join(q, to))
     title = f"{''.join(spec['from'])} → {''.join(spec['to'])}"
@@ -178,6 +204,8 @@ def queue(slug, o, dest, dur):
     made = jload(MADE, []); made.append({'slug': slug, 'word': title, 'hook': spec['hook']['text'], 'at': meta['made_at']})
     json.dump(made, open(MADE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'queued {slug} ({title}, {dur:.1f} s) for {when:%a %d %b %H:%M} IST, {"approved" if AUTO else "waiting for approval"}')
+    P.stage('queued', 'done', f'{when:%a %d %b, %I:%M %p} IST'); P.info(publish_at=when.isoformat(), slug=slug, duration=dur)
+    P.finish('done', f'{title} · posts {when:%a %d %b, %I:%M %p} IST')
 
 
 def main():
@@ -185,30 +213,43 @@ def main():
     ap.add_argument('--word'); ap.add_argument('--spec'); ap.add_argument('--no-queue', action='store_true'); ap.add_argument('--force', action='store_true')
     a = ap.parse_args()
     if not (a.force or a.word or a.spec or a.no_queue) and len(waiting()) >= MAX_AHEAD:
-        print(f'{len(waiting())} approved reels are already waiting (max {MAX_AHEAD}); nothing to make'); return
-    feedback = ''
+        msg = f'{len(waiting())} approved reels are already waiting (max {MAX_AHEAD}); nothing to make'
+        print(msg); P.finish('skipped', msg); return
+    feedback, attempts = '', []
     for attempt in range(4):
         if a.spec:
             o = jload(a.spec, {}); o = o if 'spec' in o else {'slug': os.path.splitext(os.path.basename(a.spec))[0], 'spec': o, 'caption': o.get('caption', '')}
         else:
+            P.stage('write', 'running', f'attempt {attempt + 1}: Claude is choosing a word' + (f' ({a.word})' if a.word else ''))
             try: o = write_spec(a.word, feedback)
-            except (RuntimeError, ValueError) as e: feedback = f'(the answer was not valid JSON: {e})'; print(feedback); continue
+            except (RuntimeError, ValueError) as e:
+                feedback = f'(the answer was not valid JSON: {e})'; print(feedback); attempts.append(feedback[:300]); P.info(attempts=attempts); continue
         errs = [] if a.spec else check(o)
         if errs:
-            feedback = '; '.join(errs); print(f'attempt {attempt + 1}: {feedback}'); continue
+            feedback = '; '.join(errs); print(f'attempt {attempt + 1}: {feedback}')
+            attempts.append(f"{(o.get('spec') or {}).get('from')}: rejected ({feedback})"[:300]); P.info(attempts=attempts); continue
         o = normalise(o) if not a.spec else o
         print(f"making {o['slug']}: {o['spec']['title']} · hook: {o['spec'].get('hook', {}).get('text')}")
+        sp = o['spec']; word = sp.get('title', o['slug']).split(' · ')[0]
+        P.info(word=word, slug=o['slug'], hook=(sp.get('hook') or {}).get('text'), caption=o.get('caption'),
+               lines=[{'id': L['id'], 'text': L['text'], 'write': L.get('write'), 'cue': L.get('cue')} for L in sp['lines']])
+        P.stage('write', 'done', word)
+        for st in P._load().get('stages', []):                          # a retry runs these again
+            if st['key'] in ('voice', 'speech', 'timing', 'music', 'reading', 'picture', 'master'): st.update(state='waiting', detail=None)
         try:
             dest, dur = render(o['slug'], o['spec'])
         except RenderError as e:
             if a.spec: raise
             feedback = f'the render failed (often a written line too long to read in time, or a line the voice cannot say): {str(e)[-600:]}'
-            print(f'attempt {attempt + 1}: render failed'); continue
+            print(f'attempt {attempt + 1}: render failed')
+            attempts.append(f"{o['spec'].get('title', o['slug']).split(' · ')[0]}: render failed ({str(e).strip().splitlines()[-1][:200] if str(e).strip() else ''})")
+            P.info(attempts=attempts); continue
         if not 18 <= dur <= 70:
             feedback = f'the reel came out {dur:.0f} s long; aim for 25 to 45 s'; print(feedback)
             if not a.spec: continue
         if a.no_queue: print(f'rendered {dest}'); return
         queue(o['slug'], o, dest, dur); return
+    P.finish('failed', f'gave up after 4 attempts: {feedback[:300]}')
     sys.exit(f'gave up after 4 attempts: {feedback}')
 
 

@@ -3,7 +3,7 @@
    "approved": true, "share_to_feed": true}
 Nothing without "approved": true is ever posted. A posted item moves to posted/ with the media id and the time.
 Reels made on GitHub keep their video out of git: "asset": "<file>" names a file on the repo's "media" release, which is
-downloaded when it is due and deleted from the release once it has posted.
+downloaded when it is due (the release keeps it, for the dashboard's player).
 usage: python -m ig.publish [--now <item>]   (--now posts one approved item immediately)"""
 import datetime as dt, json, os, shutil, subprocess, sys
 from . import api
@@ -43,9 +43,7 @@ def post_one(name, folder, meta):
     print(f'posted {name} as {kind}: media {mid}')
     if api.DRY: return
     meta.update(media_id=mid, posted_at=dt.datetime.now(dt.timezone.utc).isoformat())
-    if meta.get('asset'):                                          # posted: free the release space, keep git small
-        os.remove(path)
-        subprocess.run(['gh', 'release', 'delete-asset', 'media', meta['asset'], '-y'], check=False)
+    if meta.get('asset'): os.remove(path)                          # (the release keeps it: the dashboard plays it from there)
     json.dump(meta, open(os.path.join(folder, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     shutil.move(folder, os.path.join(POSTED, name))
 
