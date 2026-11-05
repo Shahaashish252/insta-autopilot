@@ -1,0 +1,27 @@
+# Every 6 hours: collect unanswered comments (comments/inbox.json). On a push of comments/replies.json: send the
+# replies marked approved. Claude drafts replies.json from the inbox with /ig-reply; you approve them.
+name: comments
+on:
+  schedule: [{ cron: '15 */6 * * *' }]
+  push: { paths: ['comments/replies.json'] }
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: instagram, cancel-in-progress: false }
+jobs:
+  comments:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Send approved replies
+        if: github.event_name != 'schedule'
+        env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}' }
+        run: python -m ig.comments reply
+      - name: Fetch new comments
+        env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}' }
+        run: python -m ig.comments fetch
+      - name: Save
+        run: |
+          git config user.name insta-autopilot; git config user.email actions@users.noreply.github.com
+          git add comments; git diff --cached --quiet || { git commit -m "comments: inbox updated"; git push; }

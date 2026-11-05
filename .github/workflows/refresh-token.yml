@@ -1,0 +1,19 @@
+# Weekly: renew the 60-day Instagram token and store the new one in the IG_ACCESS_TOKEN secret.
+# Needs a GH_PAT secret (a fine-grained token for this repo with "Secrets: read and write").
+name: refresh-token
+on:
+  schedule: [{ cron: '0 3 * * 1' }]
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Renew and store
+        env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', GH_TOKEN: '${{ secrets.GH_PAT }}' }
+        run: |
+          NEW=$(python -m ig.refresh_token)
+          echo "::add-mask::$NEW"
+          gh secret set IG_ACCESS_TOKEN --body "$NEW" --repo "$GITHUB_REPOSITORY"

@@ -1,0 +1,19 @@
+# Daily analytics: reports/insights.json (for /ig-audit) and reports/latest.md (posts ranked by views × the median).
+name: insights
+on:
+  schedule: [{ cron: '30 1 * * *' }]
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: instagram, cancel-in-progress: false }
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}' }
+        run: python -m ig.insights
+      - run: |
+          git config user.name insta-autopilot; git config user.email actions@users.noreply.github.com
+          git add reports; git diff --cached --quiet || { git commit -m "insights: $(date -u +%F)"; git push; }
