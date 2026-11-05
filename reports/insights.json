@@ -1,5 +1,5 @@
 {
- "at": "2026-11-05T06:38:09.104216+00:00",
+ "at": "2026-11-05T07:06:05.002845+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 5,
@@ -7,6 +7,7 @@
   "media_count": 1,
   "username": "anek.arthi"
  },
+ "online_followers": {},
  "posts": [
   {
    "id": "17920789407456992",
@@ -18,7 +19,7 @@
    "permalink": "https://www.instagram.com/reel/DfWPtDniipY/",
    "timestamp": "2026-11-05T05:08:58+0000",
    "insights": {
-    "views": 134,
+    "views": 135,
     "reach": 0,
     "likes": 3,
     "comments": 5,
