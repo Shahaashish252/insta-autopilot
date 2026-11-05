@@ -77,7 +77,7 @@ def reels():
                 r.setdefault('video_src', os.path.join(OUT, 'v', meta['asset']))
             if meta.get('made_at') and not r.get('made'):              # made on GitHub (maker/make.py)
                 r.update(made=dt.datetime.fromisoformat(meta['made_at']).astimezone(IST), dur=meta.get('duration'), checked=True,
-                         style='Shabd Sketch · made on GitHub')
+                         style='Shabd Sketch · made on GitHub' if meta.get('asset') and not meta.get('file') and name != 'sabr-sab' else 'Shabd Sketch')
             elif not r.get('made'): r.update(made=r['qtime'], checked=True)
     ins = jload(os.path.join(ROOT, 'reports', 'insights.json'), {}) or {}
     by_id = {p['id']: p for p in ins.get('posts', [])}
