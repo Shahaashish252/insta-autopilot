@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .env
 dashboard/index.html
+studio/node_modules/
+studio/.venv/
+studio/films/*
+!studio/films/_template/
+queue/*/*.mp4.part

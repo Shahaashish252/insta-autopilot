@@ -54,6 +54,9 @@ def reels():
             r = out.setdefault(name, {'name': name, 'title': meta.get('title', name), 'style': ''})
             r.update(post=meta, where=where, qtime=mtime(os.path.join(base, name, 'post.json')))
             if meta.get('title'): r['title'] = meta['title']
+            if meta.get('made_at') and not r.get('made'):              # made on GitHub (maker/make.py): no local film folder
+                r.update(made=dt.datetime.fromisoformat(meta['made_at']).astimezone(IST), dur=meta.get('duration'), checked=True, srt=True,
+                         style='Shabd Sketch · made on GitHub')
             if not r.get('poster') and os.path.isfile(os.path.join(base, name, 'cover.jpg')):
                 r['poster'] = os.path.relpath(os.path.join(base, name, 'cover.jpg'), HERE).replace('\\', '/')
     ins = jload(os.path.join(ROOT, 'reports', 'insights.json'), {}) or {}
@@ -94,6 +97,7 @@ def main():
     inbox = jload(os.path.join(ROOT, 'comments', 'inbox.json'), []) or []
     sent = jload(os.path.join(ROOT, 'comments', 'sent.json'), []) or []
     acct = ins.get('account', {})
+    best = jload(os.path.join(ROOT, 'reports', 'best_time.json'), {}) or {}
     now = dt.datetime.now(IST)
 
     # activity timeline: everything with a time
@@ -130,7 +134,7 @@ def main():
     act_rows = ''.join(f'<li class="a {k}"><time>{E(when(t))}</time><b>{E(a)}</b><span>{E(b)}</span></li>' for t, k, a, b in act[:40]) or '<li>No activity yet.</li>'
     inbox_rows = ''.join(f'<li><b>@{E(c.get("from"))}</b> {E(c.get("text"))}<small>{E(c.get("post"))}</small></li>' for c in inbox[:8]) or '<li class="muted">No comments waiting.</li>'
     setup = [('GitHub repo (private)', bool(wfs)), ('Instagram token saved', connected), ('Instagram account id (optional)', 'IG_USER_ID' in secrets),
-             ('Analytics pulled', bool(ins)), ('Comments synced', os.path.isfile(os.path.join(ROOT, 'comments', 'inbox.json')))]
+             ('Claude can write reels (CLAUDE_CODE_OAUTH_TOKEN)', 'CLAUDE_CODE_OAUTH_TOKEN' in secrets), ('Analytics pulled', bool(ins)), ('Comments synced', os.path.isfile(os.path.join(ROOT, 'comments', 'inbox.json')))]
     setup_rows = ''.join(f'<li class="{"ok" if ok else "todo"}">{"✓" if ok else "○"} {E(n)}</li>' for n, ok in setup)
 
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -180,6 +184,7 @@ table{{width:100%;border-collapse:collapse}}td{{padding:5px 0;border-bottom:1px 
 <aside><h2>Setup</h2><div class="panel"><ul>{setup_rows}</ul></div>
 <h2>Automation on GitHub</h2><div class="panel"><table>{wf_rows or "<tr><td class=muted>gh CLI not logged in</td></tr>"}</table>
 <p><a href="https://github.com/{E(REPO)}/actions" target="_blank">All runs ↗</a></p></div>
+<h2>Best time to post</h2><div class="panel">{('<p><b>' + E(' and '.join(best.get('slots_ist', []))) + ' IST</b></p><p class=muted>' + E(best.get('why', '')) + '</p>') if best else '<p class=muted>Not worked out yet (the make workflow does it).</p>'}</div>
 <h2>Comments to answer</h2><div class="panel"><ul>{inbox_rows}</ul></div>
 <h2>Activity</h2><div class="panel"><ol class="tl">{act_rows}</ol></div></aside></div>
 </main></body></html>'''

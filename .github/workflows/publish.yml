@@ -1,7 +1,8 @@
-# Posts approved queue items when they are due. Runs every 30 minutes; posting itself is decided by each post.json.
+# Posts approved queue items when they are due. Wakes at the candidate slots of ig/best_time.py (IST 08:00, 12:30, 17:00,
+# 19:00, 21:00); which slot each reel gets is decided by make.yml from the channel's numbers.
 name: publish
 on:
-  schedule: [{ cron: '*/30 * * * *' }]
+  schedule: [{ cron: '30 2 * * *' }, { cron: '0 7 * * *' }, { cron: '30 11 * * *' }, { cron: '30 13 * * *' }, { cron: '30 15 * * *' }]
   workflow_dispatch:
     inputs:
       now: { description: 'post this approved queue item immediately (folder name)', required: false }
@@ -15,10 +16,10 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - name: Post what is due
-        env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}', NOW: '${{ inputs.now }}' }
+        env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}', NOW: '${{ inputs.now }}', GH_TOKEN: '${{ github.token }}' }
         run: python -m ig.publish ${NOW:+--now "$NOW"}
       - name: Record it
         run: |
           git config user.name insta-autopilot; git config user.email actions@users.noreply.github.com
           git add -A queue posted
-          git diff --cached --quiet || { git commit -m "posted: $(ls posted | tail -1)"; git push; }
+          git diff --cached --quiet || { git commit -m "posted: $(ls -t posted | head -1)"; git pull --rebase -q; git push; }

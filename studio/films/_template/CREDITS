@@ -1,0 +1,17 @@
+Shabd Sketch · शब्द-चित्र — template
+
+CODE
+- js/engine.js, js/poses.js: from the Lemo-Opuscar Urban Sketch style (MIT): pen strokes, washes, sketched figures.
+  The rest (reel.js, scene.js, scenes/, tools/, build.sh, new-reel.sh) was written for this style; audio.py's mix and
+  loudness code is adapted from the Lemo-Opuscar Chalkboard demo (MIT).
+
+FONTS (SIL Open Font License 1.1; licence texts in fonts/)
+- Yatra One (© 2014 The Yatra Project Authors): the headline.
+- Kalam Bold (© 2014 Indian Type Foundry): the pencil-written lines.
+
+VOICE (per reel)
+- Edge TTS (Microsoft), default hi-IN-SwaraNeural +6 %, through the library's core/tts/tts_zh.py (online; check
+  Microsoft's terms before commercial use). Checked with faster-whisper (MIT; Whisper small, MIT).
+
+SOUND
+- All synthesised in audio.py; music from the library's physical models (core/audio/pluck.py).

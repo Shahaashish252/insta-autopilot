@@ -30,7 +30,12 @@ def main(posts=50):
         reel = m.get('media_product_type') == 'REELS'
         rows.append({**m, 'caption': (m.get('caption') or '')[:80], 'insights': metrics(m['id'], REEL if reel else POST)})
     os.makedirs(OUT, exist_ok=True)
-    snap = {'at': dt.datetime.now(dt.timezone.utc).isoformat(), 'account': acct, 'posts': rows}
+    try:                                                            # when followers are online, by hour (Pacific time);
+        of = api.get(f'{uid}/insights', metric='online_followers', period='lifetime').get('data', [])  # needs ~100 followers
+        online = (of[0].get('values') or [{}])[-1].get('value') or {} if of else {}
+    except api.IGError:
+        online = {}
+    snap = {'at': dt.datetime.now(dt.timezone.utc).isoformat(), 'account': acct, 'online_followers': online, 'posts': rows}
     json.dump(snap, open(os.path.join(OUT, 'insights.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     # ranked by views against the account's own median (an outlier multiple, as /ig-audit reads it)
     views = [r['insights'].get('views') or 0 for r in rows]

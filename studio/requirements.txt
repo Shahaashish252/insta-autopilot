@@ -1,0 +1,6 @@
+edge-tts==7.3.1
+numpy
+scipy
+soundfile
+soxr
+faster-whisper==1.2.1

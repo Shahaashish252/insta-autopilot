@@ -1,0 +1,8 @@
+{
+  "name": "insta-autopilot-studio",
+  "private": true,
+  "type": "module",
+  "description": "The reel renderer: a trimmed copy of Lemo-Opuscar (MIT, LemoLab) with the Shabd Sketch template.",
+  "engines": { "node": ">=20" },
+  "dependencies": { "playwright-core": "1.63.0" }
+}
