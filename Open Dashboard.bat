@@ -1,4 +1,4 @@
 @echo off
-rem Refresh the reel dashboard and open it in the browser
+rem Reel dashboard: opens in the browser and stays live (refreshes every minute). Close this window to stop.
 cd /d "%~dp0"
-python dashboard\build.py --open
+python dashboard\build.py --open --watch

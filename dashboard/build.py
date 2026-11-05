@@ -1,5 +1,5 @@
 """Reel dashboard: every reel from the moment it is made to its numbers after posting, in one local page.
-  python dashboard/build.py [--open]      → dashboard/index.html (open it in a browser; run again to refresh)
+  python dashboard/build.py [--open] [--watch]   → dashboard/index.html (--watch: rebuild every minute; the page reloads itself)
 Reads: the film folders (FILMS, default ../lemo-opuscar/films), queue/ and posted/ here, comments/, reports/, and GitHub
 (workflow runs and which secrets exist, through the gh CLI, if it is logged in). Writes nothing anywhere else."""
 import datetime as dt, html, json, os, subprocess, sys, webbrowser
@@ -89,8 +89,50 @@ def status_of(r):
     return 'made', 'Not queued'
 
 
+# ───────── making: the make workflow's runs, step by step (live while one is running)
+STAGES = [('Tools', 'Set up the studio', 'ffmpeg, renderer, Claude Code'),
+          ('Fresh numbers', 'Channel numbers and best time', 'views by slot → when to post'),
+          ('Make the reel', 'Write → voice → music → picture → checks', 'Claude writes the word and script; voice, speech check, mix, 1080×1920 render, reading check'),
+          ('Save', 'Queued for posting', 'video to the media release, post.json with its slot')]
+
+
+def secs(a, b):
+    try: return (dt.datetime.fromisoformat(b.replace('Z', '+00:00')) - dt.datetime.fromisoformat(a.replace('Z', '+00:00'))).total_seconds()
+    except (AttributeError, ValueError): return None
+
+
+def dur(x):
+    if x is None: return ''
+    x = int(x); return f'{x // 60} min {x % 60:02d} s' if x >= 60 else f'{x} s'
+
+
+def making():
+    runs = json.loads(gh('run', 'list', '-R', REPO, '-w', 'make.yml', '--limit', '8', '--json', 'databaseId,status,conclusion,createdAt,updatedAt,event,url') or '[]')
+    made = jload(os.path.join(ROOT, 'maker', 'made.json'), []) or []
+    out = []
+    for i, r in enumerate(runs):
+        live = r['status'] != 'completed'
+        steps = []
+        if live or i == 0:                                              # step detail for the newest run and any running one
+            jobs = json.loads(gh('run', 'view', str(r['databaseId']), '-R', REPO, '--json', 'jobs') or '{}').get('jobs', [])
+            raw = jobs[0].get('steps', []) if jobs else []
+            now = dt.datetime.now(dt.timezone.utc).isoformat()
+            for key, label, sub in STAGES:
+                st = next((x for x in raw if x['name'].startswith(key)), None)
+                if not st: continue
+                state = 'running' if st['status'] == 'in_progress' else ('done' if st.get('conclusion') == 'success' else
+                        'failed' if st.get('conclusion') == 'failure' else 'skipped' if st.get('conclusion') == 'skipped' else 'waiting')
+                el = secs(st.get('startedAt'), st.get('completedAt') if st['status'] == 'completed' else now) if st.get('startedAt') and not st['startedAt'].startswith('0001') else None
+                steps.append((label, sub, state, el))
+        word = next((m['word'] for m in made if r['createdAt'] <= m.get('at', '') <= (r.get('updatedAt') or '9')), '')
+        out.append({**r, 'live': live, 'steps': steps, 'word': word, 'took': secs(r['createdAt'], r.get('updatedAt'))})
+    return out
+
+
 def main():
+    subprocess.run(['git', '-C', ROOT, 'pull', '-q', '--ff-only'], capture_output=True, timeout=60)   # what GitHub made/posted
     rows, ins = reels()
+    mk = making()
     runs = json.loads(gh('run', 'list', '-R', REPO, '--limit', '25', '--json', 'workflowName,status,conclusion,createdAt,event,url') or '[]')
     secrets = {l.split('\t')[0] for l in gh('secret', 'list', '-R', REPO).splitlines() if l.strip()}
     wfs = [l.split('\t') for l in gh('workflow', 'list', '-R', REPO, '--all').splitlines() if l.strip()]
@@ -130,6 +172,15 @@ def main():
 <p class="meta">{E(r.get("style"))}{f" · {r['dur']:.0f} s" if r.get("dur") else ""}{f" · {r['mb']:.0f} MB" if r.get("mb") else ""} · <code>{E(r["name"])}</code></p>
 <ol class="pipe">{pills}</ol>{cap}{link}</div></article>'''
 
+    ICON = {'done': '✓', 'running': '◐', 'failed': '✕', 'skipped': '–', 'waiting': '○'}
+    def mk_steps(m):
+        return '<ol class="steps">' + ''.join(f'<li class="st {k}"><i>{ICON[k]}</i><div><b>{E(a)}</b><small>{E(b)}</small></div><time>{E(dur(t))}</time></li>' for a, b, k, t in m['steps']) + '</ol>'
+    def mk_line(m):
+        res = 'running' if m['live'] else m.get('conclusion') or ''
+        what = m['word'] or ('test render' if m['event'] == 'workflow_dispatch' and not m['word'] and res == 'success' else '')
+        return f'<li><span class="badge {"scheduled" if m["live"] else "posted" if res == "success" else "made" if res in ("cancelled", "skipped") else "draft"}">{E(res)}</span> {E(when(m["createdAt"]))} {("· <b>" + E(what) + "</b>") if what else ""} <small>{E(dur(m["took"])) if not m["live"] else ""}</small> <a href="{E(m["url"])}" target="_blank">↗</a></li>'
+    head = next((m for m in mk if m['live']), mk[0] if mk else None)
+    mk_html = ((('<p class="muted">Making a reel on GitHub right now…</p>' if head['live'] else '<p class="muted">Last make:</p>') + mk_steps(head)) if head and head['steps'] else '') +               ('<p class="muted" style="margin-top:10px">Recent makes</p><ul class="mk">' + ''.join(mk_line(m) for m in mk) + '</ul>' if mk else '<p class="muted">No reel made on GitHub yet. It runs at 05:00 and 14:00 IST.</p>')
     wf_rows = ''.join(f'<tr><td>{E(w[0])}</td><td><span class="badge {"posted" if w[1] == "active" else "draft"}">{E(w[1].replace("_", " "))}</span></td></tr>' for w in wfs)
     act_rows = ''.join(f'<li class="a {k}"><time>{E(when(t))}</time><b>{E(a)}</b><span>{E(b)}</span></li>' for t, k, a, b in act[:40]) or '<li>No activity yet.</li>'
     inbox_rows = ''.join(f'<li><b>@{E(c.get("from"))}</b> {E(c.get("text"))}<small>{E(c.get("post"))}</small></li>' for c in inbox[:8]) or '<li class="muted">No comments waiting.</li>'
@@ -138,7 +189,7 @@ def main():
     setup_rows = ''.join(f'<li class="{"ok" if ok else "todo"}">{"✓" if ok else "○"} {E(n)}</li>' for n, ok in setup)
 
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Reel Dashboard</title><style>
+<title>Reel Dashboard</title>{'<meta http-equiv="refresh" content="60">' if '--watch' in sys.argv else ''}<style>
 :root{{--bg:#f6f1e7;--card:#fffdf8;--ink:#221d19;--mute:#7a6f63;--line:#e6dccb;--red:#c0392b;--green:#2f7d4f;--amber:#b7791f;--blue:#2f5f8f}}
 @media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{--bg:#17140f;--card:#211d17;--ink:#f1eadf;--mute:#a59886;--line:#3a3328;--red:#e0675a;--green:#5fb683;--amber:#e0a84a;--blue:#7fb0e0}}}}
 :root[data-theme=dark]{{--bg:#17140f;--card:#211d17;--ink:#f1eadf;--mute:#a59886;--line:#3a3328;--red:#e0675a;--green:#5fb683;--amber:#e0a84a;--blue:#7fb0e0}}
@@ -149,6 +200,7 @@ h1{{margin:0;font-size:26px}}h2{{font-size:15px;text-transform:uppercase;letter-
 .sub{{color:var(--mute);margin:2px 0 0}}.conn{{padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-weight:600}}
 .conn.ok{{color:var(--green)}}.conn.no{{color:var(--amber)}}
 .kpis{{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}}
+.steps{{list-style:none;margin:0;padding:0}}.st{{display:grid;grid-template-columns:22px 1fr auto;gap:8px;padding:7px 0;border-bottom:1px solid var(--line)}}.st i{{font-style:normal;font-weight:700}}.st small{{display:block;color:var(--mute);font-size:12px}}.st time{{color:var(--mute);font-size:12px;white-space:nowrap}}.st.done i{{color:var(--green)}}.st.running i{{color:var(--blue);animation:spin 1.2s linear infinite;display:inline-block}}.st.running b{{color:var(--blue)}}.st.failed i,.st.failed b{{color:var(--red)}}.st.waiting,.st.skipped{{opacity:.55}}@keyframes spin{{to{{transform:rotate(360deg)}}}}.mk{{list-style:none;margin:0;padding:0;font-size:13px}}.mk li{{padding:4px 0}}
 .kpi{{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}}.kpi b{{display:block;font-size:28px}}.kpi span{{color:var(--mute);font-size:13px}}
 .grid{{display:grid;grid-template-columns:2fr 1fr;gap:18px}}@media (max-width:900px){{.grid{{grid-template-columns:1fr}}}}
 .reel{{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px}}
@@ -181,7 +233,8 @@ table{{width:100%;border-collapse:collapse}}td{{padding:5px 0;border-bottom:1px 
 <div class="kpi"><b>{len(inbox)}</b><span>comments to answer</span></div>
 </section>
 <div class="grid"><div><h2>Every reel, stage by stage</h2>{"".join(card(r) for r in sorted(rows, key=lambda r: ({"scheduled": 0, "draft": 1, "posted": 2, "made": 3}[status_of(r)[0]], (r.get("post") or {}).get("publish_at") or "")))}</div>
-<aside><h2>Setup</h2><div class="panel"><ul>{setup_rows}</ul></div>
+<aside><h2>Making{" now" if any(m["live"] for m in mk) else ""}</h2><div class="panel making">{mk_html}</div>
+<h2>Setup</h2><div class="panel"><ul>{setup_rows}</ul></div>
 <h2>Automation on GitHub</h2><div class="panel"><table>{wf_rows or "<tr><td class=muted>gh CLI not logged in</td></tr>"}</table>
 <p><a href="https://github.com/{E(REPO)}/actions" target="_blank">All runs ↗</a></p></div>
 <h2>Best time to post</h2><div class="panel">{('<p><b>' + E(' and '.join(best.get('slots_ist', []))) + ' IST</b></p><p class=muted>' + E(best.get('why', '')) + '</p>') if best else '<p class=muted>Not worked out yet (the make workflow does it).</p>'}</div>
@@ -195,4 +248,14 @@ table{{width:100%;border-collapse:collapse}}td{{padding:5px 0;border-bottom:1px 
 
 
 if __name__ == '__main__':
-    main()
+    if '--watch' in sys.argv:                         # keep rebuilding; the open page reloads itself every minute
+        import time
+        first = True
+        while True:
+            try: main()
+            except Exception as e: print('refresh failed:', e)
+            if first and '--open' in sys.argv: sys.argv.remove('--open')
+            first = False
+            time.sleep(55)
+    else:
+        main()
