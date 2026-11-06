@@ -163,7 +163,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T14:35:19+00:00",
+ "updated": "2026-11-06T14:35:20+00:00",
  "attempts": [
   "['द', 'य', 'ा']: rejected (caption has 2 asks (share, save); keep exactly one; caption: no em/en dashes (reads machine-written); use a comma or a full stop)"
  ],
@@ -264,5 +264,7 @@
    "write": "आज रूप से रूह बनो",
    "cue": null
   }
- ]
+ ],
+ "publish_at": "2026-11-07T17:30:00+05:30",
+ "duration": 39.19
 }
