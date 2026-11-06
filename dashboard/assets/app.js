@@ -61,7 +61,7 @@ function home() {
 
   <section id="reels"><div class="sh"><div><h2>Reels</h2><p>From the moment each is made to its numbers. Tap one to watch it and see everything.</p></div></div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px"><div class="filters" id="filters">
-      ${[['all', 'All'], ['scheduled', 'Scheduled'], ['posted', 'Posted'], ['draft', 'Waiting']].map(([k, t]) => `<button data-f="${k}" class="${k === 'all' ? 'on' : ''}">${t} <span class="muted">${k === 'all' ? reels.length : reels.filter(r => r.status === k).length}</span></button>`).join('')}
+      ${[['all', 'All'], ['scheduled', 'Scheduled'], ['posted', 'Posted'], ['draft', 'On hold']].map(([k, t]) => `<button data-f="${k}" class="${k === 'all' ? 'on' : ''}">${t} <span class="muted">${k === 'all' ? reels.length : reels.filter(r => r.status === k).length}</span></button>`).join('')}
     </div><input class="search" id="q" placeholder="Search a word…" aria-label="Search reels"></div>
     <div class="gallery" id="gallery"></div></section>
 

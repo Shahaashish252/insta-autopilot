@@ -107,6 +107,7 @@ def status_of(r):
     s = stages(r)
     if s[5][1]: return 'posted', 'Posted'
     if s[4][1]: return 'scheduled', 'Scheduled'
+    if (r.get('post') or {}).get('held'): return 'draft', 'On hold'
     if r.get('post'): return 'draft', 'Needs approval' if s[2][1] else 'Needs caption'
     return 'made', 'Not queued'
 

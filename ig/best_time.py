@@ -11,8 +11,8 @@ import datetime as dt, json, os, statistics
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORT, OUT = os.path.join(ROOT, 'reports', 'insights.json'), os.path.join(ROOT, 'reports', 'best_time.json')
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30), 'IST')   # India has no daylight saving
-CANDIDATES = ['08:00', '12:30', '17:00', '19:00', '21:00']     # IST; publish.yml wakes at exactly these
-PRIOR = ['19:00', '12:30', '21:00', '17:00', '08:00']          # the usual Indian evening/lunch peaks, used to break ties
+CANDIDATES = ['10:30', '13:00', '15:00', '17:30', '19:00', '21:00']   # IST; publish.yml checks every 20 minutes
+PRIOR = ['17:30', '13:00', '15:00', '19:00', '21:00', '10:30']        # afternoon-evening first (the niche's hits went out 13:00-18:30)
 try:                                                            # online_followers hours are reported in Pacific time
     from zoneinfo import ZoneInfo; OF_TZ = ZoneInfo('America/Los_Angeles')
 except Exception:                                               # (Windows without tzdata: standard time is close enough)
@@ -53,10 +53,22 @@ def post_scores(snap):
     return out
 
 
+def niche_scores():
+    """{slot: sum of outlier multiples} for the niche's outlier reels (reports/viral.json): when similar channels' hits went out."""
+    v = json.load(open(os.path.join(ROOT, 'reports', 'viral.json'), encoding='utf-8')) if os.path.isfile(os.path.join(ROOT, 'reports', 'viral.json')) else {}
+    out = {}
+    for r in v.get('outliers', []):
+        try: t = dt.datetime.fromisoformat(r['at'].replace('+0000', '+00:00')).astimezone(IST)
+        except (KeyError, ValueError): continue
+        out[nearest(t)] = out.get(nearest(t), 0) + r.get('multiple', 0)
+    return out
+
+
 def choose(snap=None):
     if snap is None:
         snap = json.load(open(REPORT, encoding='utf-8')) if os.path.isfile(REPORT) else {}
-    online, perf = online_scores(snap), post_scores(snap)
+    online, perf, niche = online_scores(snap), post_scores(snap), niche_scores()
+    tie = lambda c: (-round(niche.get(c, 0)), PRIOR.index(c))
     tried = {c: len(perf.get(c, [])) for c in CANDIDATES}
     if online:
         rank = sorted(CANDIDATES, key=lambda c: -online.get(c, 0))
@@ -66,16 +78,17 @@ def choose(snap=None):
         proven = {c: statistics.mean(v) for c, v in perf.items() if len(v) >= 2}
         if proven:
             best = max(proven, key=proven.get)
-            explore = sorted((c for c in CANDIDATES if c != best), key=lambda c: (tried[c], PRIOR.index(c)))
+            explore = sorted((c for c in CANDIDATES if c != best), key=lambda c: (tried[c], *tie(c)))
             slots = [best] + explore[:PER_DAY - 1]
             why = f'{best} IST has done best so far ({proven[best]:.1f}× your median views); the other slot keeps testing'
         else:
-            slots = sorted(CANDIDATES, key=lambda c: (tried[c], PRIOR.index(c)))[:PER_DAY]
-            why = 'not enough posts yet to compare times: testing each slot in turn (least tried first)'
+            slots = sorted(CANDIDATES, key=lambda c: (tried[c], *tie(c)))[:PER_DAY]
+            why = ('not enough of our own posts yet: these are when similar channels’ biggest reels went out; our own numbers take over as they come'
+                   if niche else 'not enough posts yet to compare times: testing each slot in turn (least tried first)')
     slots = sorted(slots, key=_mins)
     res = {'at': dt.datetime.now(dt.timezone.utc).isoformat(), 'slots_ist': slots, 'why': why,
            'tried': tried, 'performance': {c: round(statistics.mean(v), 2) for c, v in perf.items()},
-           'online_followers': online}
+           'online_followers': online, 'niche': {c: round(x, 1) for c, x in niche.items()}}
     return res
 
 
