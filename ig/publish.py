@@ -39,7 +39,10 @@ def post_one(name, folder, meta):
     if kind == 'STORIES' and path.lower().endswith(('.jpg', '.jpeg', '.png')):
         mid = api.publish_image_story(meta['image_url'])           # image stories need a public URL
     else:
-        mid = api.publish_video(kind, path, meta.get('caption', ''), meta.get('share_to_feed', True))
+        try: mid = api.publish_video(kind, path, meta.get('caption', ''), meta.get('share_to_feed', True))
+        except Exception:
+            if meta.get('asset') and os.path.isfile(path): os.remove(path)   # the release keeps it; never commit the video
+            raise
     print(f'posted {name} as {kind}: media {mid}')
     if api.DRY: return
     meta.update(media_id=mid, posted_at=dt.datetime.now(dt.timezone.utc).isoformat())
