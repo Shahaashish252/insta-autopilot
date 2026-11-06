@@ -76,7 +76,15 @@ def reslot(name, folder, meta):
     json.dump(meta, open(os.path.join(folder, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 
+def seconds_to_next():
+    """Seconds until the next approved reel is due (0 if one is due now), or -1 if nothing is waiting."""
+    now = dt.datetime.now(dt.timezone.utc)
+    ts = [dt.datetime.fromisoformat(m['publish_at']) for _, _, m in items() if m.get('approved') and m.get('publish_at')]
+    return max(0, int((min(ts) - now).total_seconds())) if ts else -1
+
+
 def main():
+    if '--next' in sys.argv: print(seconds_to_next()); return
     now = dt.datetime.now(dt.timezone.utc)
     only = sys.argv[sys.argv.index('--now') + 1] if '--now' in sys.argv else None
     done, live = 0, None

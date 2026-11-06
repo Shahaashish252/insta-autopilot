@@ -1,26 +1,49 @@
-# Posts approved queue items when they are due (slots chosen by ig/best_time.py from the channel's numbers). Wakes every
-# 20 minutes at odd minutes, because GitHub delays or drops scheduled runs at busy times (:00, :30). One reel per run; a
-# reel already on Instagram (posted by hand) is marked posted, never posted twice; one missed by over 2 h gets a new slot.
+# Posts approved queue items at their exact time (slots chosen by ig/best_time.py from the channel's numbers).
+# GitHub's own timer is often hours late, so whenever this job starts (timer, after a make, or by itself) it looks at
+# the next reel due within 5 hours, waits until that minute, posts it, and starts itself again for the next one.
+# One reel per run; a reel already on Instagram (posted by hand) is marked posted, never posted twice; one missed by
+# over 2 h gets a new slot. Held reels ("approved": false) are never posted.
 name: publish
 on:
   schedule: [{ cron: '7,27,47 * * * *' }]
+  workflow_run: { workflows: [make], types: [completed] }
   workflow_dispatch:
     inputs:
       now: { description: 'post this approved queue item immediately (folder name)', required: false }
-permissions: { contents: write }
-concurrency: { group: instagram, cancel-in-progress: false }
+permissions: { contents: write, actions: write }
+concurrency: { group: publish, cancel-in-progress: false }
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}', GH_TOKEN: '${{ github.token }}', PYTHONIOENCODING: utf-8 }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
+      - name: Wait for the next reel's minute (up to 5 hours)
+        id: wait
+        if: inputs.now == ''
+        run: |
+          s=$(python -m ig.publish --next); echo "next reel in ${s}s"
+          if [ "$s" -lt 0 ] || [ "$s" -gt 18000 ]; then echo "nothing due within 5 hours"; echo "go=no" >> "$GITHUB_OUTPUT"; exit 0; fi
+          while [ "$s" -gt 0 ]; do                     # wake every 10 min: a reel put on hold meanwhile is respected
+            sleep $(( s < 600 ? s : 600 )); git pull -q --rebase || true; s=$(python -m ig.publish --next)
+            [ "$s" -lt 0 ] && { echo "nothing waiting any more"; echo "go=no" >> "$GITHUB_OUTPUT"; exit 0; }
+          done
+          echo "go=yes" >> "$GITHUB_OUTPUT"
       - name: Post what is due
-        env: { IG_ACCESS_TOKEN: '${{ secrets.IG_ACCESS_TOKEN }}', IG_USER_ID: '${{ secrets.IG_USER_ID }}', NOW: '${{ inputs.now }}', GH_TOKEN: '${{ github.token }}' }
-        run: python -m ig.publish ${NOW:+--now "$NOW"}
+        if: inputs.now != '' || steps.wait.outputs.go == 'yes'
+        env: { NOW: '${{ inputs.now }}' }
+        run: git pull -q --rebase || true; python -m ig.publish ${NOW:+--now "$NOW"}
       - name: Record it
+        if: always()
         run: |
           git config user.name insta-autopilot; git config user.email actions@users.noreply.github.com
           git add -A queue posted
           git diff --cached --quiet || { git commit -m "posted: $(ls -t posted | head -1)"; git pull --rebase -q; git push; }
+      - name: Wait for the next one too
+        if: steps.wait.outputs.go == 'yes'
+        run: |
+          s=$(python -m ig.publish --next)
+          if [ "$s" -ge 0 ] && [ "$s" -le 18000 ]; then gh workflow run publish.yml --ref main && echo "started the next wait (${s}s)"; fi
