@@ -98,9 +98,10 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-06T14:35:13+00:00",
-   "detail": "22 MB"
+   "detail": "22 MB",
+   "ended": "2026-11-06T14:35:17+00:00"
   },
   {
    "key": "queued",
@@ -159,7 +160,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T14:35:13+00:00",
+ "updated": "2026-11-06T14:35:17+00:00",
  "attempts": [
   "['द', 'य', 'ा']: rejected (caption has 2 asks (share, save); keep exactly one; caption: no em/en dashes (reads machine-written); use a comma or a full stop)"
  ],
