@@ -72,16 +72,16 @@
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
    "state": "done",
-   "detail": null,
+   "detail": "every line readable",
    "started": "2026-11-06T15:16:59+00:00",
-   "ended": "2026-11-06T15:18:00+00:00"
+   "ended": "2026-11-06T15:18:03+00:00"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "0 %",
+   "detail": "22 % (240/1090 frames, 3 workers)",
    "started": "2026-11-06T15:18:01+00:00"
   },
   {
@@ -166,7 +166,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T15:18:01+00:00",
+ "updated": "2026-11-06T15:18:33+00:00",
  "attempts": [
   "['उध', 'ा', 'र']: rejected (N1 hook scores 53 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 45}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
