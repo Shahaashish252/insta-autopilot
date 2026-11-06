@@ -44,9 +44,10 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "running",
-   "detail": null,
-   "started": "2026-11-06T15:16:50+00:00"
+   "state": "done",
+   "detail": "mismatches: 0 (lang=hi, model=small)",
+   "started": "2026-11-06T15:16:50+00:00",
+   "ended": "2026-11-06T15:16:52+00:00"
   },
   {
    "key": "timing",
@@ -158,7 +159,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T15:16:50+00:00",
+ "updated": "2026-11-06T15:16:52+00:00",
  "attempts": [
   "['उध', 'ा', 'र']: rejected (N1 hook scores 53 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 45}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
