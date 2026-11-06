@@ -27,6 +27,7 @@ jobs:
       AUTO_APPROVE: '1'
       POSTS_PER_DAY: '2'
       PY: python
+      LEMO_COLOR: bt709          # standard yuv420p/bt709: Instagram rejected the full-range (yuvj420p) files
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
