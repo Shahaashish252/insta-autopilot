@@ -41,3 +41,9 @@ def publish_check():
 
 if __name__ == '__main__' and 'publish' in __import__('sys').argv:
     publish_check()
+
+
+if __name__ == '__main__' and 'recent' in __import__('sys').argv:
+    for m in api.get(f'{api.user_id()}/media', fields='id,caption,timestamp,media_product_type,permalink', limit=6).get('data', []):
+        print('POST', m.get('timestamp'), m.get('media_product_type'), m.get('permalink'), (m.get('caption') or '')[:50].replace('\n', ' / '))
+    show('account', api.user_id(), fields='username,media_count')
