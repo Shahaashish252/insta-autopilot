@@ -81,7 +81,7 @@
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "71 % (780/1090 frames, 3 workers)",
+   "detail": "88 % (960/1090 frames, 3 workers)",
    "started": "2026-11-06T15:18:01+00:00"
   },
   {
@@ -166,7 +166,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T15:19:31+00:00",
+ "updated": "2026-11-06T15:19:51+00:00",
  "attempts": [
   "['उध', 'ा', 'र']: rejected (N1 hook scores 53 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 45}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
