@@ -107,7 +107,10 @@
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "waiting"
+   "state": "done",
+   "ended": "2026-11-06T14:35:19+00:00",
+   "started": "2026-11-06T14:35:19+00:00",
+   "detail": "Sat 07 Nov, 05:30 PM IST"
   }
  ],
  "history": [
@@ -160,7 +163,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T14:35:17+00:00",
+ "updated": "2026-11-06T14:35:19+00:00",
  "attempts": [
   "['द', 'य', 'ा']: rejected (caption has 2 asks (share, save); keep exactly one; caption: no em/en dashes (reads machine-written); use a comma or a full stop)"
  ],
