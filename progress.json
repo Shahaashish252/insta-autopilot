@@ -1,119 +1,96 @@
 {
- "run_id": "42225800059",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225800059",
- "started": "2026-11-06T13:29:49+00:00",
- "status": "done",
+ "run_id": "42227972932",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42227972932",
+ "started": "2026-11-06T13:44:59+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-06T13:29:49+00:00",
-   "ended": "2026-11-06T13:30:38+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-06T13:44:59+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-06T13:30:43+00:00",
-   "ended": "2026-11-06T13:30:55+00:00",
-   "detail": "slots: 13:00, 17:30 IST (not enough of our own posts yet: these are when similar channels’ biggest reels went out; our own numbers take over as they come)"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-06T13:30:57+00:00",
-   "detail": "मन → मान",
-   "ended": "2026-11-06T13:33:23+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-06T13:33:24+00:00",
-   "ended": "2026-11-06T13:34:11+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-06T13:34:12+00:00",
-   "ended": "2026-11-06T13:34:13+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-06T13:34:15+00:00",
-   "ended": "2026-11-06T13:34:16+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  37.64 s  -16.0 LUFS",
-   "started": "2026-11-06T13:34:17+00:00",
-   "ended": "2026-11-06T13:34:18+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-06T13:34:19+00:00",
-   "ended": "2026-11-06T13:35:02+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "95 % (1080/1129 frames, 3 workers)",
-   "started": "2026-11-06T13:35:01+00:00",
-   "ended": "2026-11-06T13:36:36+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-06T13:36:37+00:00",
-   "ended": "2026-11-06T13:37:44+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-06T13:37:46+00:00",
-   "detail": "21 MB",
-   "ended": "2026-11-06T13:37:49+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-06T13:37:51+00:00",
-   "started": "2026-11-06T13:37:51+00:00",
-   "detail": "Sat 07 Nov, 01:00 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "42225800059",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225800059",
+   "started": "2026-11-06T13:29:49+00:00",
+   "updated": "2026-11-06T13:37:53+00:00",
+   "status": "done",
+   "word": "मन → मान",
+   "hook": "एक मात्रा से मान बनो",
+   "publish_at": "2026-11-07T13:00:00+05:30",
+   "detail": "मन → मान · posts Sat 07 Nov, 01:00 PM IST",
+   "took": 484.0
+  },
   {
    "run_id": "42225573343",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225573343",
@@ -151,108 +128,5 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T13:37:53+00:00",
- "word": "मन → मान",
- "slug": "man-maan",
- "hook": "एक मात्रा से मान बनो",
- "caption": "ये रील उस दोस्त को भेजो, जो अपनी ख़ुशी के लिए हमेशा चुप रह जाता है।\n\nमन में बस एक मात्रा जोड़ो, और वो बन जाता है मान। अपने मन की सुनना कमज़ोरी नहीं, असली ताक़त है।\n\nजो अपने मन को इज़्ज़त देता है, उसे बाहर मान खोजना नहीं पड़ता। आज से थोड़ा अपने मन की भी सुनो।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #मनऔरमान",
- "hooks": [
-  {
-   "formula": "Matra-add fix",
-   "line": "मन में एक मात्रा जोड़ो, मान बन जाओ।",
-   "card": "एक मात्रा से मान बनो",
-   "score": 79
-  },
-  {
-   "formula": "Negative command",
-   "line": "दूसरों से मान माँगना बंद करो।",
-   "card": "मान माँगना बंद करो",
-   "score": 88
-  },
-  {
-   "formula": "Sting question",
-   "line": "तुमने अपने मन की आख़िरी बार कब सुनी?",
-   "card": "मन की आख़िरी बार कब सुनी?",
-   "score": 73
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "मन में एक मात्रा जोड़ो, मान बन जाओ।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "और जवाब छुपा है, एक शब्द में।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "मन।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "हर बार दूसरों की ख़ुशी के लिए, अपना मन मार देते हैं।",
-   "write": "मन दबा देते हैं...",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "धीरे-धीरे अपनी ही नज़रों में छोटे हो जाते हैं।",
-   "write": "ख़ुद को छोटा समझते...",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द की एक छोटी-सी मात्रा, सब बदल देती है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "ये मात्रा जोड़ो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "और मन, बन जाता है मान।",
-   "write": "मन… मान।",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "जो अपने मन की सुनता है, उसे सबका मान मिलता है।",
-   "write": "अपनी सुनो… मान पाओ।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "अपने मन को इज़्ज़त दो, बाकी सब अपने आप आएगा।",
-   "write": "मन को इज़्ज़त दो।",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "जो अपना मन दबाकर रखता है, उसे ये भेज दो।",
-   "write": "जो मन दबाता है, भेजो।",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "बस इतना करो, अपने मन को मान दो।",
-   "write": "मन को मान दो।",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-07T13:00:00+05:30",
- "duration": 37.64,
- "detail": "मन → मान · posts Sat 07 Nov, 01:00 PM IST",
- "ended": "2026-11-06T13:37:53+00:00",
- "took": 484.0
+ "updated": "2026-11-06T13:44:59+00:00"
 }
