@@ -25,3 +25,19 @@ if __name__ == '__main__':
         show(f'business {b.get("name")} owned pages', f'{b["id"]}/owned_pages', fields='name,instagram_business_account{id,username}')
         show(f'business {b.get("name")} instagram', f'{b["id"]}/owned_instagram_accounts', fields='id,username')
         show(f'business {b.get("name")} instagram (assigned)', f'{b["id"]}/instagram_accounts', fields='id,username')
+
+
+def publish_check():
+    """Can this token publish? Creates one unpublished container from a public test video (never published; it expires)."""
+    uid = api.user_id()
+    show('publishing limit', f'{uid}/content_publishing_limit', fields='config,quota_usage')
+    try:
+        r = api._call('POST', f'{api.GRAPH}/{uid}/media', {'media_type': 'REELS', 'upload_type': 'resumable', 'caption': 'test (not published)'})
+        print('OK   can create a reel container:', r.get('id'))
+    except api.IGError as e:
+        print('FAIL create a reel container:', e)
+    show('app', 'app', fields='id,name')
+
+
+if __name__ == '__main__' and 'publish' in __import__('sys').argv:
+    publish_check()

@@ -26,7 +26,9 @@ def _call(method, url, params=None, data=None, headers=None, timeout=120):
             body = r.read().decode('utf-8')
     except urllib.error.HTTPError as e:
         body = e.read().decode('utf-8', 'replace')
-        try: msg = json.loads(body).get('error', {}).get('message', body)
+        try:
+            er = json.loads(body).get('error', {})
+            msg = er.get('message', body) + ''.join(f' | {k}={er[k]}' for k in ('type', 'code', 'error_subcode', 'error_user_title', 'error_user_msg', 'fbtrace_id') if er.get(k))
         except ValueError: msg = body
         raise IGError(f'{method} {url.split("?")[0]} → {e.code}: {msg}') from None
     return json.loads(body) if body else {}
