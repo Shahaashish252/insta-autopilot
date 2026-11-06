@@ -35,9 +35,10 @@
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-06T13:33:24+00:00"
+   "started": "2026-11-06T13:33:24+00:00",
+   "ended": "2026-11-06T13:34:11+00:00"
   },
   {
    "key": "speech",
@@ -132,7 +133,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T13:33:24+00:00",
+ "updated": "2026-11-06T13:34:11+00:00",
  "word": "मन → मान",
  "slug": "man-maan",
  "hook": "एक मात्रा से मान बनो",
