@@ -102,14 +102,29 @@ def publish_video(kind, path, caption='', share_to_feed=True):
     c = post(f'{uid}/media', **params)
     upload_video(c.get('uri', 'DRY_RUN'), path)
     wait_ready(c['id'])
-    return post(f'{uid}/media_publish', creation_id=c['id']).get('id')
+    return publish_container(uid, c['id'])
+
+
+def publish_container(uid, cid, tries=6, every=45):
+    """media_publish, retried: Meta often answers "internal error, try again later" right after processing. Before each
+    retry the container is checked, so a publish that went through despite the error is never repeated."""
+    if DRY: return post(f'{uid}/media_publish', creation_id=cid).get('id')
+    for i in range(tries):
+        try:
+            return post(f'{uid}/media_publish', creation_id=cid).get('id')
+        except IGError as e:
+            if i == tries - 1 or not any(k in str(e) for k in ('try again', 'code=-1', 'code=2 ', 'code=1 ', 'Internal', 'Fatal', '9007')): raise
+            print(f'publish attempt {i + 1} failed ({str(e)[:90]}); checking and retrying in {every} s')
+            time.sleep(every)
+            if get(cid, fields='status_code').get('status_code') == 'PUBLISHED':
+                for m in get(f'{uid}/media', fields='id', limit=1).get('data', []): return m['id']
 
 
 def publish_image_story(image_url):
     uid = user_id() if not DRY else 'ME'
     c = post(f'{uid}/media', media_type='STORIES', image_url=image_url)
     wait_ready(c['id'])
-    return post(f'{uid}/media_publish', creation_id=c['id']).get('id')
+    return publish_container(uid, c['id'])
 
 
 def paged(path, **params):
