@@ -13,8 +13,10 @@ Audience: young Hindi speakers in India (students, first jobs), watching on a ph
   कल → काल (add ा), सपना → अपना (स → अ), हार → हर (remove ा), चिंता → चिता (remove ं), सब्र → सब (remove ्र).
 - The pair must carry a **true, useful life lesson** that feels like an "aha": the second word comments on the first.
   Directions that work (check the used list first): मन → मान, धन → धुन, कर्म → कम. Never force a pun: if the lesson
-  needs explaining, pick another pair. Prefer lessons about patience, discipline, fear, money, phone habits, family,
-  friendship, exams, self-respect, comparison.
+  needs explaining, pick another pair. Prefer lessons that touch the heart: family (माँ, पापा, गाँव, घर), standing by people in pain,
+  relationships, debt and promises, patience, excuses, self-respect; productivity themes (phone habits, exams) less often.
+  The biggest reel in our niche (33× its account's median) was exactly our format: पर + ा = पार ("इसमें बस एक मात्रा
+  जोड़ो और पार हो जाओ"): a tiny change with a big promise, said in the first line.
 - `from` and `to` are `[before, part, after]`: they share `before` and `after` exactly; only the middle `part`
   changes, and one of the two parts may be empty. Cut by Unicode, as it is typed: सब्र = ["सब", "्र", ""] → ["सब", "", ""];
   कल → काल = ["क", "", "ल"] → ["क", "ा", "ल"]; सपना → अपना = ["", "स", "पना"] → ["", "अ", "पना"];
