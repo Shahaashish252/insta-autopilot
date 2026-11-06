@@ -35,9 +35,10 @@
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-06T14:30:36+00:00"
+   "started": "2026-11-06T14:30:36+00:00",
+   "ended": "2026-11-06T14:31:23+00:00"
   },
   {
    "key": "speech",
@@ -144,7 +145,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T14:30:36+00:00",
+ "updated": "2026-11-06T14:31:23+00:00",
  "attempts": [
   "['द', 'य', 'ा']: rejected (caption has 2 asks (share, save); keep exactly one; caption: no em/en dashes (reads machine-written); use a comma or a full stop)"
  ],
