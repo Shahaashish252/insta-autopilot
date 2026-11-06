@@ -35,43 +35,51 @@
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "waiting"
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-06T15:15:51+00:00"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "upload",
@@ -148,7 +156,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T15:15:50+00:00",
+ "updated": "2026-11-06T15:15:51+00:00",
  "attempts": [
   "['उध', 'ा', 'र']: rejected (N1 hook scores 53 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 45}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
