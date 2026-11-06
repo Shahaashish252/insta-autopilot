@@ -80,9 +80,10 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "running",
-   "detail": "86 % (1020/1176 frames, 3 workers)",
-   "started": "2026-11-06T14:32:18+00:00"
+   "state": "done",
+   "detail": "91 % (1080/1176 frames, 3 workers)",
+   "started": "2026-11-06T14:32:18+00:00",
+   "ended": "2026-11-06T14:33:59+00:00"
   },
   {
    "key": "master",
@@ -154,7 +155,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T14:33:44+00:00",
+ "updated": "2026-11-06T14:33:59+00:00",
  "attempts": [
   "['द', 'य', 'ा']: rejected (caption has 2 asks (share, save); keep exactly one; caption: no em/en dashes (reads machine-written); use a comma or a full stop)"
  ],
