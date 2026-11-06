@@ -12,5 +12,13 @@
   "hook_formula": "Matra-add fix",
   "hook_score": 79,
   "at": "2026-11-06T13:37:51.100674+00:00"
+ },
+ {
+  "slug": "roop-rooh",
+  "word": "रूप → रूह",
+  "hook": "एक अक्षर से रूप बने रूह",
+  "hook_formula": "One-letter claim",
+  "hook_score": 79,
+  "at": "2026-11-06T14:35:19.233977+00:00"
  }
 ]
