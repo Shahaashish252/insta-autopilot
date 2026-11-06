@@ -175,7 +175,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T15:21:45+00:00",
+ "updated": "2026-11-06T15:21:46+00:00",
  "attempts": [
   "['उध', 'ा', 'र']: rejected (N1 hook scores 53 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 45}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
@@ -276,5 +276,7 @@
    "write": "अगला मौका मत खोना।",
    "cue": null
   }
- ]
+ ],
+ "publish_at": "2026-11-08T13:00:00+05:30",
+ "duration": 36.33
 }
