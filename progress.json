@@ -80,8 +80,9 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "0 %",
+   "started": "2026-11-06T15:18:01+00:00"
   },
   {
    "key": "master",
@@ -165,7 +166,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T15:18:00+00:00",
+ "updated": "2026-11-06T15:18:01+00:00",
  "attempts": [
   "['उध', 'ा', 'र']: rejected (N1 hook scores 53 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 45}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
