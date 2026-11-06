@@ -2,7 +2,7 @@
  "run_id": "42227972932",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42227972932",
  "started": "2026-11-06T13:44:59+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -163,7 +163,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T14:35:20+00:00",
+ "updated": "2026-11-06T14:35:21+00:00",
  "attempts": [
   "['द', 'य', 'ा']: rejected (caption has 2 asks (share, save); keep exactly one; caption: no em/en dashes (reads machine-written); use a comma or a full stop)"
  ],
@@ -266,5 +266,8 @@
   }
  ],
  "publish_at": "2026-11-07T17:30:00+05:30",
- "duration": 39.19
+ "duration": 39.19,
+ "detail": "रूप → रूह · posts Sat 07 Nov, 05:30 PM IST",
+ "ended": "2026-11-06T14:35:21+00:00",
+ "took": 3022.0
 }
