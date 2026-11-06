@@ -2,8 +2,8 @@
 # The "Making" and comments parts are live on their own (the page reads them from the repo).
 name: pages
 on:
-  push: { branches: [main], paths: ['queue/**', 'posted/**', 'reports/**', 'maker/made.json', 'dashboard/**', 'comments/**'] }
-  workflow_run: { workflows: [make, publish, insights], types: [completed] }
+  push: { branches: [main], paths: ['queue/**', 'posted/**', 'reports/**', 'maker/made.json', 'maker/*.md', 'maker/watch.json', 'dashboard/**', 'comments/**'] }
+  workflow_run: { workflows: [make, publish, insights, learn], types: [completed] }
   schedule: [{ cron: '0 */3 * * *' }]
   workflow_dispatch:
 permissions: { contents: read, pages: write, id-token: write, actions: read }
