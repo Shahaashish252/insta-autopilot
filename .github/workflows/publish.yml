@@ -1,8 +1,9 @@
-# Posts approved queue items when they are due. Wakes at the candidate slots of ig/best_time.py (IST 08:00, 12:30, 17:00,
-# 19:00, 21:00); which slot each reel gets is decided by make.yml from the channel's numbers.
+# Posts approved queue items when they are due (slots chosen by ig/best_time.py from the channel's numbers). Wakes every
+# 20 minutes at odd minutes, because GitHub delays or drops scheduled runs at busy times (:00, :30). One reel per run; a
+# reel already on Instagram (posted by hand) is marked posted, never posted twice; one missed by over 2 h gets a new slot.
 name: publish
 on:
-  schedule: [{ cron: '30 2 * * *' }, { cron: '0 7 * * *' }, { cron: '30 11 * * *' }, { cron: '30 13 * * *' }, { cron: '30 15 * * *' }]
+  schedule: [{ cron: '7,27,47 * * * *' }]
   workflow_dispatch:
     inputs:
       now: { description: 'post this approved queue item immediately (folder name)', required: false }

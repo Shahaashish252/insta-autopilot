@@ -1,9 +1,9 @@
-# Every 15 minutes: new comments → Claude replies to the genuine ones (in the commenter's language), hides spam and
+# Every 30 minutes (at most 10 replies a run): new comments → Claude replies to the genuine ones (in the commenter's language), hides spam and
 # abuse, and holds sensitive ones for you (comments/held.json, shown on the dashboard). Claude Code is installed only
 # when there is something new. Your own replies: comments/replies.json with "approved": true (sent on push).
 name: comments
 on:
-  schedule: [{ cron: '*/15 * * * *' }]
+  schedule: [{ cron: '13,43 * * * *' }]
   push: { branches: [main], paths: ['comments/replies.json'] }
   workflow_dispatch:
 permissions: { contents: write }
@@ -16,6 +16,7 @@ jobs:
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       PYTHONIOENCODING: utf-8
+      MAX_REPLIES: '10'          # gentle pace after Meta's Nov 2026 check; raise later
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

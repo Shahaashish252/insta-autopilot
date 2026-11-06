@@ -48,16 +48,50 @@ def post_one(name, folder, meta):
     shutil.move(folder, os.path.join(POSTED, name))
 
 
+LATE_H = 2      # a reel more than this late (GitHub skipped a run, Meta was down) moves to the next good slot
+key = lambda c: ' '.join((c or '').split())[:60]
+
+
+def on_instagram():
+    """Captions of the account's recent posts -> media, so a reel you already posted by hand is never posted twice."""
+    try:
+        media = api.get(f'{api.user_id()}/media', fields='id,caption,timestamp', limit=30).get('data', [])
+    except api.IGError as e:
+        print('could not read recent posts:', e); raise
+    return {key(m.get('caption')): m for m in media if m.get('caption')}
+
+
+def mark_posted(name, folder, meta, m):
+    meta.update(media_id=m['id'], posted_at=m.get('timestamp'), posted_by='hand')
+    json.dump(meta, open(os.path.join(folder, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    shutil.move(folder, os.path.join(POSTED, name))
+    print(f'{name}: already on Instagram (media {m["id"]}), marked as posted')
+
+
+def reslot(name, folder, meta):
+    from . import best_time
+    t = best_time.next_slot()
+    print(f'{name}: missed {meta["publish_at"]} by over {LATE_H} h -> moved to {t:%a %d %b %H:%M} IST')
+    meta['publish_at'] = t.isoformat()
+    json.dump(meta, open(os.path.join(folder, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+
 def main():
     now = dt.datetime.now(dt.timezone.utc)
     only = sys.argv[sys.argv.index('--now') + 1] if '--now' in sys.argv else None
-    done = 0
+    done, live = 0, None
     for name, folder, meta in items():
         if only and name != only: continue
         if not meta.get('approved'):
             print(f'skip {name}: not approved'); continue
         if not only and not due(meta, now):
             print(f'wait {name}: due {meta.get("publish_at") or "(no time set)"}'); continue
+        if live is None: live = {} if api.DRY else on_instagram()
+        if key(meta.get('caption')) in live:
+            if not api.DRY: mark_posted(name, folder, meta, live[key(meta.get('caption'))])
+            continue
+        if not only and (done or now - dt.datetime.fromisoformat(meta['publish_at']) > dt.timedelta(hours=LATE_H)):
+            reslot(name, folder, meta); continue                    # one reel per run, and never hours late
         post_one(name, folder, meta); done += 1
     print(f'{done} posted{" (dry run)" if api.DRY else ""}')
 
