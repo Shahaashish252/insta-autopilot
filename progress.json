@@ -44,8 +44,9 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-06T13:34:12+00:00"
   },
   {
    "key": "timing",
@@ -133,7 +134,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T13:34:11+00:00",
+ "updated": "2026-11-06T13:34:12+00:00",
  "word": "मन → मान",
  "slug": "man-maan",
  "hook": "एक मात्रा से मान बनो",
