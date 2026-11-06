@@ -1,85 +1,96 @@
 {
- "run_id": "42225573343",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225573343",
- "started": "2026-11-06T13:28:15+00:00",
- "status": "failed",
+ "run_id": "42225800059",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225800059",
+ "started": "2026-11-06T13:29:49+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "failed",
-   "started": "2026-11-06T13:28:15+00:00",
-   "ended": "2026-11-06T13:29:35+00:00"
+   "state": "running",
+   "started": "2026-11-06T13:29:49+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "skipped"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "42225573343",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225573343",
+   "started": "2026-11-06T13:28:15+00:00",
+   "updated": "2026-11-06T13:29:35+00:00",
+   "status": "failed",
+   "word": null,
+   "hook": null,
+   "publish_at": null,
+   "detail": "the run stopped; see its log",
+   "took": 80.0
+  },
   {
    "run_id": "42225556509",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225556509",
@@ -105,8 +116,5 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T13:29:35+00:00",
- "detail": "the run stopped; see its log",
- "ended": "2026-11-06T13:29:35+00:00",
- "took": 80.0
+ "updated": "2026-11-06T13:29:49+00:00"
 }
