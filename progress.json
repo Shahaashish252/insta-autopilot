@@ -53,9 +53,10 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-06T13:34:15+00:00"
+   "started": "2026-11-06T13:34:15+00:00",
+   "ended": "2026-11-06T13:34:16+00:00"
   },
   {
    "key": "music",
@@ -136,7 +137,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T13:34:15+00:00",
+ "updated": "2026-11-06T13:34:16+00:00",
  "word": "मन → मान",
  "slug": "man-maan",
  "hook": "एक मात्रा से मान बनो",
