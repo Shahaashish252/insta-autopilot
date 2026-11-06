@@ -1,0 +1,35 @@
+# Weekly growth review (Sunday 08:17 IST): fresh numbers → the niche's outlier reels (Business Discovery, accounts in
+# maker/watch.json) → Claude writes maker/learnings.md (what works on this channel) and maker/swipe.md (hook formulas
+# working in the niche). Every reel made after that reads both.
+name: learn
+on:
+  schedule: [{ cron: '47 2 * * 0' }]
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: instagram, cancel-in-progress: false }
+jobs:
+  learn:
+    runs-on: ubuntu-latest
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: The channel's numbers
+        run: python -m ig.insights || echo "(insights failed; using the last report)"
+      - name: What is working in the niche
+        run: python -m ig.viral || echo "(viral research failed; using the last one)"
+      - name: Claude Code
+        run: npm install -g -s @anthropic-ai/claude-code
+      - name: Claude reviews it
+        run: python -u -m maker.learn
+      - name: Save
+        if: always()
+        run: |
+          git config user.name insta-autopilot; git config user.email actions@users.noreply.github.com
+          git add reports maker/learnings.md maker/swipe.md 2>/dev/null || true
+          git diff --cached --quiet || { git commit -m "learn: weekly review $(date -u +%F)"; git pull --rebase -q; git push; }

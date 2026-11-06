@@ -14,6 +14,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from ig import best_time  # noqa: E402
 from maker import progress as P  # noqa: E402
+from maker.hookscore import score as hook_score  # noqa: E402
+from maker.captionlint import lint as caption_lint  # noqa: E402
 
 STUDIO = os.path.join(ROOT, 'studio'); TEMPLATE = os.path.join(STUDIO, 'films', '_template')
 MADE = os.path.join(ROOT, 'maker', 'made.json')
@@ -65,11 +67,23 @@ def ai(prompt, model='sonnet'):
 
 
 RULES = open(os.path.join(ROOT, 'maker', 'brief.md'), encoding='utf-8').read()
+VIRAL = open(os.path.join(ROOT, 'maker', 'viral.md'), encoding='utf-8').read()
+HOOK_MIN = 65
+note = lambda f, empty: (open(os.path.join(ROOT, 'maker', f), encoding='utf-8').read().split('-->', 1)[-1].strip()
+                         if os.path.isfile(os.path.join(ROOT, 'maker', f)) else empty)
 
 
 def write_spec(word=None, feedback=''):
     example = jload(os.path.join(TEMPLATE, 'spec.example.json'), {})
     prompt = f"""{RULES}
+
+{VIRAL}
+
+## What works on this channel (weekly review of its own numbers; follow it unless it breaks a rule above)
+{note('learnings.md', 'No review yet (new channel): follow the playbook.')}
+
+## Hook formulas working in the niche right now (use the shapes, never anyone's words)
+{note('swipe.md', 'No niche data yet.')}
 
 ## The example (a reel that is already made; copy its shape, never its words)
 {json.dumps(example, ensure_ascii=False, indent=1)}
@@ -85,7 +99,12 @@ def write_spec(word=None, feedback=''):
 {('Your last attempt was rejected: ' + feedback + ' Fix that.') if feedback else ''}
 
 Answer with ONLY this JSON object, nothing before or after:
-{{"slug": "latin-letters-a-to-z-and-dashes, e.g. man-maan", "spec": {{…the spec, same keys as the example…}}, "caption": "…the Instagram caption…"}}"""
+{{"slug": "latin-letters-a-to-z-and-dashes, e.g. man-maan",
+ "hooks": [{{"formula": "name from the playbook", "line": "spoken hook", "card": "on-screen hook, max 6 words"}}, …three, each a different formula…],
+ "spec": {{…the spec, same keys as the example; N1.text is the strongest of your three hooks' "line" and hook.text its "card"…}},
+ "caption": "…the Instagram caption…"}}
+Hooks are scored here (4-9 words said in under 2.5 s, concrete, something at stake, payload up front, talks to "तुम";
+no preamble); N1 must score at least {HOOK_MIN} and be your best-scoring hook."""
     return ai(prompt)
 
 
@@ -124,7 +143,22 @@ def check(o):
     if spec.get('look') not in ('man', 'woman'): errs.append('look: man or woman')
     if not cap or len(cap) > 1500: errs.append('caption: 1 to 1500 characters')
     if cap.count('#') > 5: errs.append('caption: at most 5 hashtags')
-    if 'http' in cap: errs.append('caption: no links')
+    hooks = o.get('hooks') or []
+    if len(hooks) != 3 or len({(x.get('formula') or '').strip().lower() for x in hooks}) != 3 or not all(x.get('line') for x in hooks):
+        errs.append('hooks: exactly three, each with a different formula and a line')
+    elif lines:
+        scored = [(hook_score(x['line'])[0], x['line']) for x in hooks]
+        n1, best = lines[0].get('text', '').strip(), max(scored)
+        if n1 not in [x['line'].strip() for x in hooks]: errs.append('N1.text must be one of your three hooks, word for word')
+        else:
+            mine = hook_score(n1)
+            if mine[0] < HOOK_MIN: errs.append(f'N1 hook scores {mine[0]} (needs {HOOK_MIN}): {mine[1]}; make it shorter, concrete, with a stake, said to "तुम"')
+            elif mine[0] < best[0] - 10: errs.append(f'N1 is not your strongest hook: "{best[1]}" scores {best[0]}')
+    if isinstance(f, list) and isinstance(t, list) and len(f) == len(t) == 3:
+        errs += caption_lint(cap, [''.join(f), ''.join(t)])
+    else: errs += caption_lint(cap)
+    for L in lines:
+        if '—' in L.get('text', '') or '—' in (L.get('write') or ''): errs.append(f"{L.get('id')}: no em dash (—); use … or a comma")
     return errs
 
 
@@ -198,10 +232,14 @@ def queue(slug, o, dest, dur):
         if os.path.isfile(os.path.join(dest, f)): shutil.copy(os.path.join(dest, f), os.path.join(q, to))
     title = f"{''.join(spec['from'])} → {''.join(spec['to'])}"
     when = best_time.next_slot()
+    n1 = spec['lines'][0]['text']; used = next((x for x in o.get('hooks') or [] if x.get('line', '').strip() == n1.strip()), {})
     meta = {'type': 'reel', 'asset': f'{slug}.mp4', 'title': title, 'caption': cap, 'publish_at': when.isoformat(),
-            'approved': AUTO, 'share_to_feed': True, 'made_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'duration': dur}
+            'approved': AUTO, 'share_to_feed': True, 'made_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'duration': dur,
+            'hook_formula': used.get('formula'), 'hook_score': hook_score(n1)[0],
+            'hooks': [{**x, 'score': hook_score(x.get('line', ''))[0]} for x in o.get('hooks') or []]}
     json.dump(meta, open(os.path.join(q, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    made = jload(MADE, []); made.append({'slug': slug, 'word': title, 'hook': spec['hook']['text'], 'at': meta['made_at']})
+    made = jload(MADE, []); made.append({'slug': slug, 'word': title, 'hook': spec['hook']['text'], 'hook_formula': meta['hook_formula'],
+                                     'hook_score': meta['hook_score'], 'at': meta['made_at']})
     json.dump(made, open(MADE, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'queued {slug} ({title}, {dur:.1f} s) for {when:%a %d %b %H:%M} IST, {"approved" if AUTO else "waiting for approval"}')
     P.stage('queued', 'done', f'{when:%a %d %b, %I:%M %p} IST'); P.info(publish_at=when.isoformat(), slug=slug, duration=dur)
@@ -232,6 +270,7 @@ def main():
         print(f"making {o['slug']}: {o['spec']['title']} · hook: {o['spec'].get('hook', {}).get('text')}")
         sp = o['spec']; word = sp.get('title', o['slug']).split(' · ')[0]
         P.info(word=word, slug=o['slug'], hook=(sp.get('hook') or {}).get('text'), caption=o.get('caption'),
+               hooks=[{**x, 'score': hook_score(x.get('line', ''))[0]} for x in o.get('hooks') or []],
                lines=[{'id': L['id'], 'text': L['text'], 'write': L.get('write'), 'cue': L.get('cue')} for L in sp['lines']])
         P.stage('write', 'done', word)
         for st in P._load().get('stages', []):                          # a retry runs these again
