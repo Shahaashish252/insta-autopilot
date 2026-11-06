@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "39 sound cues, 37.6 s",
-   "started": "2026-11-06T13:34:17+00:00"
+   "state": "done",
+   "detail": "mix.wav  37.64 s  -16.0 LUFS",
+   "started": "2026-11-06T13:34:17+00:00",
+   "ended": "2026-11-06T13:34:18+00:00"
   },
   {
    "key": "reading",
@@ -138,7 +139,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T13:34:17+00:00",
+ "updated": "2026-11-06T13:34:18+00:00",
  "word": "मन → मान",
  "slug": "man-maan",
  "hook": "एक मात्रा से मान बनो",
