@@ -2,7 +2,7 @@
  "run_id": "42240483627",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42240483627",
  "started": "2026-11-06T15:10:13+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -175,7 +175,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T15:21:46+00:00",
+ "updated": "2026-11-06T15:21:48+00:00",
  "attempts": [
   "['उध', 'ा', 'र']: rejected (N1 hook scores 53 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 45}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
@@ -278,5 +278,8 @@
   }
  ],
  "publish_at": "2026-11-08T13:00:00+05:30",
- "duration": 36.33
+ "duration": 36.33,
+ "detail": "कर्म → कम · posts Sun 08 Nov, 01:00 PM IST",
+ "ended": "2026-11-06T15:21:48+00:00",
+ "took": 695.0
 }
