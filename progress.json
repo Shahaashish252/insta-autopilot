@@ -26,7 +26,9 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-06T14:25:08+00:00",
+   "detail": "attempt 1: Claude is choosing a word"
   },
   {
    "key": "voice",
@@ -133,5 +135,5 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T14:25:06+00:00"
+ "updated": "2026-11-06T14:25:08+00:00"
 }
