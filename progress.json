@@ -89,9 +89,10 @@
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-06T14:34:00+00:00"
+   "started": "2026-11-06T14:34:00+00:00",
+   "ended": "2026-11-06T14:35:12+00:00"
   },
   {
    "key": "upload",
@@ -156,7 +157,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T14:34:00+00:00",
+ "updated": "2026-11-06T14:35:12+00:00",
  "attempts": [
   "['द', 'य', 'ा']: rejected (caption has 2 asks (share, save); keep exactly one; caption: no em/en dashes (reads machine-written); use a comma or a full stop)"
  ],
