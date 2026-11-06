@@ -2,7 +2,7 @@
  "run_id": "42225800059",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225800059",
  "started": "2026-11-06T13:29:49+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -151,7 +151,7 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T13:37:52+00:00",
+ "updated": "2026-11-06T13:37:53+00:00",
  "word": "मन → मान",
  "slug": "man-maan",
  "hook": "एक मात्रा से मान बनो",
@@ -251,5 +251,8 @@
   }
  ],
  "publish_at": "2026-11-07T13:00:00+05:30",
- "duration": 37.64
+ "duration": 37.64,
+ "detail": "मन → मान · posts Sat 07 Nov, 01:00 PM IST",
+ "ended": "2026-11-06T13:37:53+00:00",
+ "took": 484.0
 }
