@@ -20,5 +20,13 @@
   "hook_formula": "One-letter claim",
   "hook_score": 79,
   "at": "2026-11-06T14:35:19.233977+00:00"
+ },
+ {
+  "slug": "karm-kam",
+  "word": "कर्म → कम",
+  "hook": "हर मौके पर नया बहाना?",
+  "hook_formula": "Call-out of excuses",
+  "hook_score": 87,
+  "at": "2026-11-06T15:21:45.576780+00:00"
  }
 ]
