@@ -1,119 +1,96 @@
 {
- "run_id": "42240483627",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42240483627",
- "started": "2026-11-06T15:10:13+00:00",
- "status": "done",
+ "run_id": "42332050509",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42332050509",
+ "started": "2026-11-07T03:01:53+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-06T15:10:13+00:00",
-   "ended": "2026-11-06T15:11:07+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-07T03:01:53+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-06T15:11:15+00:00",
-   "ended": "2026-11-06T15:11:25+00:00",
-   "detail": "slots: 13:00, 17:30 IST (not enough of our own posts yet: these are when similar channels’ biggest reels went out; our own numbers take over as they come)"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-06T15:11:27+00:00",
-   "detail": "कर्म → कम",
-   "ended": "2026-11-06T15:15:50+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-06T15:15:51+00:00",
-   "ended": "2026-11-06T15:16:49+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-06T15:16:50+00:00",
-   "ended": "2026-11-06T15:16:52+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-06T15:16:53+00:00",
-   "ended": "2026-11-06T15:16:55+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  36.33 s  -16.0 LUFS",
-   "started": "2026-11-06T15:16:56+00:00",
-   "ended": "2026-11-06T15:16:58+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-06T15:16:59+00:00",
-   "ended": "2026-11-06T15:18:03+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "99 % (1080/1090 frames, 3 workers)",
-   "started": "2026-11-06T15:18:01+00:00",
-   "ended": "2026-11-06T15:20:05+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-06T15:20:06+00:00",
-   "ended": "2026-11-06T15:21:37+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-06T15:21:39+00:00",
-   "detail": "21 MB",
-   "ended": "2026-11-06T15:21:44+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-06T15:21:45+00:00",
-   "started": "2026-11-06T15:21:45+00:00",
-   "detail": "Sun 08 Nov, 01:00 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "42240483627",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42240483627",
+   "started": "2026-11-06T15:10:13+00:00",
+   "updated": "2026-11-06T15:21:48+00:00",
+   "status": "done",
+   "word": "कर्म → कम",
+   "hook": "हर मौके पर नया बहाना?",
+   "publish_at": "2026-11-08T13:00:00+05:30",
+   "detail": "कर्म → कम · posts Sun 08 Nov, 01:00 PM IST",
+   "took": 695.0
+  },
   {
    "run_id": "42227972932",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42227972932",
@@ -175,111 +152,5 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-06T15:21:48+00:00",
- "attempts": [
-  "['उध', 'ा', 'र']: rejected (N1 hook scores 53 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 45}; make it shorter, concrete, with a stake, said to \"तुम\")"
- ],
- "word": "कर्म → कम",
- "slug": "karm-kam",
- "hook": "हर मौके पर नया बहाना?",
- "caption": "ये रील उसे भेजो, जो हर मौके पर बहाना बनाता है।\n\nशब्द है 'कर्म'। इसमें से बस एक छोटा 'र्' हटाओ, बन जाता है 'कम'।\n\nहर बहाना, तुम्हारे कर्म को थोड़ा और कम कर देता है। बहाना छोड़ो, तो कर्म कभी कम नहीं होगा।\n\nअगला मौका आए, तो सिर्फ़ थोड़ा-सा काम करो। बहाना मत बनाओ।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #कर्म",
- "hooks": [
-  {
-   "formula": "Call-out of excuses",
-   "line": "तुम हर मौके पर, नया बहाना बनाते हो।",
-   "card": "हर मौके पर नया बहाना?",
-   "score": 87
-  },
-  {
-   "formula": "Sting question",
-   "line": "तुम्हारा कर्म, आखिरी बार कब हुआ था?",
-   "card": "आखिरी बार कर्म कब हुआ?",
-   "score": 86
-  },
-  {
-   "formula": "Number + cost",
-   "line": "रोज़ एक बहाना, और एक मौका हाथ से गया।",
-   "card": "रोज़ एक बहाना, एक मौका गया",
-   "score": 79
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तुम हर मौके पर, नया बहाना बनाते हो।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "कर्म।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "हर नई शुरुआत में, 'बाद में करूँगा' बोल देते हो।",
-   "write": "बाद में करूँगा…",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "और वो मौका, हाथ से निकल जाता है।",
-   "write": "मौका हाथ से निकल गया।",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द का एक छोटा हिस्सा, उड़ जाता है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "ये 'र्' हटाओ।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "और कर्म, बन जाता है कम।",
-   "write": "कर्म… कम।",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "बहाना छोड़ो, तो कर्म कभी कम नहीं होता।",
-   "write": "बहाना छोड़ो, कर्म बढ़ेगा।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "रोज़ थोड़ा करो, बहाना मत ढूँढो।",
-   "write": "रोज़ थोड़ा करो, बस।",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "जिसे आज बहाना छोड़ना है, उसे भेज दो।",
-   "write": "जिसे सुनना था, भेजो।",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "और हाँ। अगला मौका, बहाने में मत खोना।",
-   "write": "अगला मौका मत खोना।",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-08T13:00:00+05:30",
- "duration": 36.33,
- "detail": "कर्म → कम · posts Sun 08 Nov, 01:00 PM IST",
- "ended": "2026-11-06T15:21:48+00:00",
- "took": 695.0
+ "updated": "2026-11-07T03:01:53+00:00"
 }
