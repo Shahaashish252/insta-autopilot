@@ -105,7 +105,7 @@ def publish_video(kind, path, caption='', share_to_feed=True):
     return publish_container(uid, c['id'])
 
 
-def publish_container(uid, cid, tries=6, every=45):
+def publish_container(uid, cid, tries=2, every=180):     # gentle: Meta flagged rapid retries as unusual activity
     """media_publish, retried: Meta often answers "internal error, try again later" right after processing. Before each
     retry the container is checked, so a publish that went through despite the error is never repeated."""
     if DRY: return post(f'{uid}/media_publish', creation_id=cid).get('id')

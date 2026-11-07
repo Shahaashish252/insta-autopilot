@@ -177,7 +177,7 @@ async function commentsLive() {
   const get = f => raw('comments/' + f).then(r => r.ok ? r.json() : []).catch(() => []);
   const [sent, held, hidden] = await Promise.all([get('sent.json'), get('held.json'), get('hidden.json')]);
   const k = $('#kreplied'); if (k) k.textContent = sent.length;
-  $('#cmeta').textContent = `Claude answers new comments every 30 minutes · ${sent.length} replied · ${hidden.length} hidden as spam`;
+  $('#cmeta').textContent = `Claude answers new comments every 2 hours · ${sent.length} replied · ${hidden.length} hidden as spam`;
   $('#clist').innerHTML = sent.length ? `<ul class="list">${sent.slice(-8).reverse().map(c => `<li><small class="muted">@${esc(c.from)} · ${ago(c.sent_at)}${c.reel ? ' · ' + esc(c.reel) : ''}</small><br>${esc(c.text)}<span class="reply">↳ ${esc(c.reply)}</span></li>`).join('')}</ul>` : '<div class="empty">No comments answered yet.</div>';
   $('#cheld').innerHTML = held.length ? `<ul class="list">${held.slice(-8).reverse().map(c => `<li><b>@${esc(c.from)}</b> ${esc(c.text)}<br><small class="muted">${esc(c.why)}${c.permalink ? ` · <a href="${esc(c.permalink)}" target="_blank" rel="noopener">answer on Instagram ↗</a>` : ''}</small></li>`).join('')}</ul>` : '<div class="empty">Nothing waiting for you. 🎉</div>';
 }

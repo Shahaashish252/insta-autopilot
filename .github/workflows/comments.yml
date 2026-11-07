@@ -1,9 +1,9 @@
-# Every 30 minutes (at most 10 replies a run): new comments → Claude replies to the genuine ones (in the commenter's language), hides spam and
+# Every 2 hours (at most 10 replies a run): new comments → Claude replies to the genuine ones (in the commenter's language), hides spam and
 # abuse, and holds sensitive ones for you (comments/held.json, shown on the dashboard). Claude Code is installed only
 # when there is something new. Your own replies: comments/replies.json with "approved": true (sent on push).
 name: comments
 on:
-  schedule: [{ cron: '13,43 * * * *' }]
+  schedule: [{ cron: '13 */2 * * *' }]   # every 2 hours: gentle on a new account
   push: { branches: [main], paths: ['comments/replies.json'] }
   workflow_dispatch:
 permissions: { contents: write }
