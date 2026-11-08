@@ -1,28 +1,49 @@
 {
- "at": "2026-11-06T15:11:25.392924+00:00",
+ "at": "2026-11-08T02:40:42.982917+00:00",
  "account": {
   "id": "17841471920376046",
-  "followers_count": 5,
+  "followers_count": 4,
   "follows_count": 3,
-  "media_count": 1,
+  "media_count": 2,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
   {
+   "id": "17873994702640719",
+   "caption": "ये रील उस दोस्त को भेजो, जो अपनी ख़ुशी के लिए हमेशा चुप रह जाता है।\n\nमन में बस ए",
+   "comments_count": 2,
+   "like_count": 6,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/DfcRS-nmVgX/",
+   "timestamp": "2026-11-07T13:18:21+0000",
+   "insights": {
+    "views": 426,
+    "reach": 0,
+    "likes": 6,
+    "comments": 2,
+    "shares": 1,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
+  {
    "id": "17920789407456992",
    "caption": "ये रील उस दोस्त को भेजो, जिसका सपना अभी सिर्फ़ सपना है।\n\nसपना में बस एक अक्षर बद",
-   "comments_count": 11,
+   "comments_count": 12,
    "like_count": 3,
    "media_product_type": "REELS",
    "media_type": "VIDEO",
    "permalink": "https://www.instagram.com/reel/DfWPtDniipY/",
    "timestamp": "2026-11-05T05:08:58+0000",
    "insights": {
-    "views": 155,
+    "views": 161,
     "reach": 0,
     "likes": 3,
-    "comments": 11,
+    "comments": 12,
     "shares": 41,
     "saved": 0,
     "total_interactions": 0,
