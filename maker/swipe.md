@@ -1,12 +1,11 @@
 <!-- written weekly by maker/learn.py from reports/insights.json and reports/viral.json; read by every new reel -->
 # Hook formulas working in the niche now
 
-- **Matra-add fix (the biggest outlier, 33.8× on its account):** 'इस [समस्या] में बस [मात्रा/अक्षर] जोड़ो और [हल/पार] हो जाओ'. It travels because it promises a tiny action with a big result and it names the trick (matra) in the first line. A hint only: it is one account and the caption shows only the start.
-- **Universal-pain question:** '[दर्द/भावना] तो सबको होता है, क्या [वर्ग A] क्या [वर्ग B]?'. It travels because it pulls in everybody and invites comments on who feels it more (11.2×).
-- **Limit-setting rule:** 'उतना ही [उधार/वादा] दो जितना [भूल सकते हो]'. It travels because it gives a rule of thumb people can screenshot and quote (7.7×).
-- **Call-out of excuses:** '[बहाने] मत बनाओ, [काम] पर ध्यान दो'. It travels through a direct, slightly stern address that people send to a friend who needs it (5.4×).
-- **One-word command:** '[गुण] रखना सीखो'. For example, patience as a skill. It travels because it is short and fits any life situation (3.6×).
-- **Redefinition:** '[शब्द] सिर्फ़ [आसान अर्थ] नहीं, [गहरा अर्थ] है'. It travels because it flips a common word, which fits this channel's word-play best (3.4×).
-- **Nostalgia question:** '[जगह/रिश्ते] को कितना याद करते हो?'. It travels because the answer is personal and makes people comment or share with family (2.3×).
-- **Guilt contrast:** 'जिनके लिए [बहुत कुछ किया], उनके लिए [छोटा काम] भी नहीं?'. It travels through emotional tension that people tag a person with (2.0×).
-- Caution: the first two lines in the list are the only ones with a large multiple, and nearly all come from one account, so treat the ranking as a hint.
+- **Matra-add promise (strongest, 35× own account):** "[शब्द] में एक मात्रा जोड़ो और [नतीजा] हो जाओ।" It travels because the action is tiny (one matra), the payoff is a clear life change, and viewers can say it in one line. This matches our best reel, so test it first.
+- **Enough-to-forget limit (8× own account):** "उतना ही [चीज़] दो/करो, जितना [भूल/संभाल] सको।" It travels because it sets a practical limit on a relatable act like lending or giving. The viewer thinks of a person they know and sends it to them.
+- **Learn-the-virtue command (4×):** "[गुण] रखना सीखो।" It's short and direct, which makes it easy to save or send to someone who needs it. The risk is that it can feel generic, so pair it with a word-play twist.
+- **Miss-it question (2.8×):** "[जगह/व्यक्ति/याद] को कितना याद करते हो?" It travels because it hits a feeling shared by many viewers (home, village, childhood) and invites a comment as an answer.
+- **Guilt contrast question (2.4×):** "जिनके लिए [बड़ा त्याग] किया, उनके लिए [छोटा काम] भी नहीं कर सकते?" It travels by stirring an emotional debt toward family, so viewers send it to a specific person. It can feel heavy, so use it sparingly.
+- **Series count + dedication (2.3–2.4×, small account of ~1,150 followers):** "दिन N/100 – [रिश्ता] के नाम" plus a short line about who it's for. It travels because it tells people there's more coming and makes the reel feel personal. This is a small account, so treat it as a weak hint.
+- **Festival greeting (2.2×):** "Happy [त्योहार] 🪔". It travels on timing alone, with no craft behind it, so it's not a repeatable formula. Use it only as a seasonal extra.
+- **Caveats:** we see only the caption starts, not the videos, and 6 of 8 outliers come from one large account (~71.5k followers). Multiples are against each account's own median, so they say little about absolute reach.
