@@ -47,3 +47,11 @@ if __name__ == '__main__' and 'recent' in __import__('sys').argv:
     for m in api.get(f'{api.user_id()}/media', fields='id,caption,timestamp,media_product_type,permalink', limit=6).get('data', []):
         print('POST', m.get('id'), m.get('timestamp'), m.get('media_product_type'), m.get('permalink'), (m.get('caption') or '')[:50].replace('\n', ' / '))
     show('account', api.user_id(), fields='username,media_count')
+
+
+if __name__ == '__main__' and 'metrics' in __import__('sys').argv:
+    # raw insights for the newest reel: why do reach / saved / watch time come back as 0?
+    mid = api.get(f'{api.user_id()}/media', fields='id', limit=1)['data'][0]['id']
+    for n in ['views', 'reach', 'saved', 'total_interactions', 'ig_reels_avg_watch_time', 'ig_reels_video_view_total_time']:
+        show(f'{mid} {n}', f'{mid}/insights', metric=n)
+    show(f'{mid} all at once', f'{mid}/insights', metric='views,reach,saved,total_interactions,ig_reels_avg_watch_time')

@@ -2,7 +2,7 @@
 name: diagnose
 on:
   workflow_dispatch:
-    inputs: { mode: { description: 'publish (default) or recent', required: false } }
+    inputs: { mode: { description: 'publish (default), recent or metrics', required: false } }
 permissions: { contents: read }
 jobs:
   diagnose:
