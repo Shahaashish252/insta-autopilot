@@ -1,14 +1,35 @@
 {
- "at": "2026-11-09T02:56:09.152566+00:00",
+ "at": "2026-11-09T08:35:41.179322+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 6,
   "follows_count": 3,
-  "media_count": 3,
+  "media_count": 4,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "17911936326577686",
+   "caption": "कौन-सी चिंता रात भर सोने नहीं देती? एक शब्द में कमेंट करो।\n\nचिंता से बस एक बिंदु",
+   "comments_count": 2,
+   "like_count": 6,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/DfgV6vUjUYJ/",
+   "timestamp": "2026-11-09T03:15:34+0000",
+   "insights": {
+    "views": 197,
+    "reach": 0,
+    "likes": 6,
+    "comments": 2,
+    "shares": 27,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "18079951748482188",
    "caption": "जो खुद को सिर्फ़ शक्ल से नापते हैं, ये रील उन्हें भेजो।\n\nरूप में बस एक अक्षर बदल",
@@ -19,7 +40,7 @@
    "permalink": "https://www.instagram.com/reel/DfeMoFTFRZn/",
    "timestamp": "2026-11-08T07:15:55+0000",
    "insights": {
-    "views": 1508,
+    "views": 1513,
     "reach": 0,
     "likes": 7,
     "comments": 2,
