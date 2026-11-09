@@ -17,8 +17,10 @@
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "running",
-   "started": "2026-11-09T02:55:53+00:00"
+   "state": "done",
+   "started": "2026-11-09T02:55:53+00:00",
+   "ended": "2026-11-09T02:56:09+00:00",
+   "detail": "slots: 17:30, 21:00 IST (not enough of our own posts yet: these are when similar channels’ biggest reels went out; our own numbers take over as they come)"
   },
   {
    "key": "write",
@@ -191,5 +193,5 @@
    "took": 57.0
   }
  ],
- "updated": "2026-11-09T02:55:53+00:00"
+ "updated": "2026-11-09T02:56:09+00:00"
 }
