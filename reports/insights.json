@@ -1,14 +1,35 @@
 {
- "at": "2026-11-09T08:35:41.179322+00:00",
+ "at": "2026-11-09T18:59:41.739476+00:00",
  "account": {
   "id": "17841471920376046",
-  "followers_count": 6,
+  "followers_count": 7,
   "follows_count": 3,
-  "media_count": 4,
+  "media_count": 5,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "18047201663823716",
+   "caption": "जो काम कल पर टाल रहे हो, उसका नाम कमेंट में लिखो। आज ही शुरू करते हैं।\n\nकल में ब",
+   "comments_count": 0,
+   "like_count": 6,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/DfhTyapkpPd/",
+   "timestamp": "2026-11-09T12:16:24+0000",
+   "insights": {
+    "views": 166,
+    "reach": 0,
+    "likes": 6,
+    "comments": 0,
+    "shares": 36,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "17911936326577686",
    "caption": "कौन-सी चिंता रात भर सोने नहीं देती? एक शब्द में कमेंट करो।\n\nचिंता से बस एक बिंदु",
@@ -19,7 +40,7 @@
    "permalink": "https://www.instagram.com/reel/DfgV6vUjUYJ/",
    "timestamp": "2026-11-09T03:15:34+0000",
    "insights": {
-    "views": 197,
+    "views": 219,
     "reach": 0,
     "likes": 6,
     "comments": 2,
