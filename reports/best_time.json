@@ -1,12 +1,12 @@
 {
- "at": "2026-11-09T18:59:41.781848+00:00",
+ "at": "2026-11-10T04:46:59.552035+00:00",
  "slots_ist": [
   "10:30",
   "21:00"
  ],
- "why": "10:30 IST has done best so far (0.9× your median views); the other slot keeps testing",
+ "why": "10:30 IST has done best so far (0.8× your median views); the other slot keeps testing",
  "tried": {
-  "10:30": 2,
+  "10:30": 3,
   "13:00": 1,
   "15:00": 0,
   "17:30": 1,
@@ -14,10 +14,10 @@
   "21:00": 0
  },
  "performance": {
-  "17:30": 0.76,
-  "10:30": 0.87,
-  "13:00": 6.91,
-  "19:00": 3.93
+  "10:30": 0.79,
+  "17:30": 0.99,
+  "13:00": 6.8,
+  "19:00": 3.87
  },
  "online_followers": {},
  "niche": {
