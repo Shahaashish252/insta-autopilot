@@ -1,14 +1,35 @@
 {
- "at": "2026-11-10T16:31:18.888605+00:00",
+ "at": "2026-11-11T02:57:44.676166+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 7,
   "follows_count": 3,
-  "media_count": 7,
+  "media_count": 8,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "17918269926539201",
+   "caption": "ये रील उसे भेजो, जो हर मौके पर बहाना बनाता है।\n\nशब्द है 'कर्म'। इसमें से बस एक छ",
+   "comments_count": 0,
+   "like_count": 2,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/DflK9HaElN8/",
+   "timestamp": "2026-11-11T00:16:04+0000",
+   "insights": {
+    "views": 151,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "18171414574473415",
    "caption": "क्या तुम पैसे के पीछे भाग रहे हो, या अपनी धुन के साथ चल रहे हो?\n\nधन में सिर्फ़ ए",
@@ -19,7 +40,7 @@
    "permalink": "https://www.instagram.com/reel/Dfj4nS_lWft/",
    "timestamp": "2026-11-10T12:16:32+0000",
    "insights": {
-    "views": 24,
+    "views": 40,
     "reach": 0,
     "likes": 1,
     "comments": 0,
@@ -40,7 +61,7 @@
    "permalink": "https://www.instagram.com/reel/DfirR_agaRW/",
    "timestamp": "2026-11-10T01:00:46+0000",
    "insights": {
-    "views": 185,
+    "views": 189,
     "reach": 0,
     "likes": 4,
     "comments": 0,
