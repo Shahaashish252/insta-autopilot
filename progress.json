@@ -1,119 +1,96 @@
 {
- "run_id": "43240086030",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43240086030",
- "started": "2026-11-12T14:45:47+00:00",
- "status": "done",
+ "run_id": "43264038973",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43264038973",
+ "started": "2026-11-12T16:56:20+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-12T14:45:47+00:00",
-   "ended": "2026-11-12T14:46:57+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-12T16:56:20+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-12T14:47:02+00:00",
-   "ended": "2026-11-12T14:47:29+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-12T14:47:31+00:00",
-   "detail": "डर → कर",
-   "ended": "2026-11-12T14:51:16+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-12T14:51:18+00:00",
-   "ended": "2026-11-12T14:52:08+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-12T14:52:09+00:00",
-   "ended": "2026-11-12T14:52:11+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-12T14:52:12+00:00",
-   "ended": "2026-11-12T14:52:13+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  33.39 s  -16.0 LUFS",
-   "started": "2026-11-12T14:52:15+00:00",
-   "ended": "2026-11-12T14:52:16+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-12T14:52:17+00:00",
-   "ended": "2026-11-12T14:53:05+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "89 % (900/1002 frames, 3 workers)",
-   "started": "2026-11-12T14:53:03+00:00",
-   "ended": "2026-11-12T14:54:53+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-12T14:54:54+00:00",
-   "ended": "2026-11-12T14:56:14+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-12T14:56:15+00:00",
-   "detail": "17 MB",
-   "ended": "2026-11-12T14:56:19+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-12T14:56:20+00:00",
-   "started": "2026-11-12T14:56:20+00:00",
-   "detail": "Fri 13 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "43240086030",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43240086030",
+   "started": "2026-11-12T14:45:47+00:00",
+   "updated": "2026-11-12T14:56:23+00:00",
+   "status": "done",
+   "word": "डर → कर",
+   "hook": "1 अक्षर से डर बने कर",
+   "publish_at": "2026-11-13T18:45:00+05:30",
+   "detail": "डर → कर · posts Fri 13 Nov, 06:45 PM IST",
+   "took": 636.0
+  },
   {
    "run_id": "43152137160",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43152137160",
@@ -281,119 +258,7 @@
    "publish_at": null,
    "detail": "the run stopped; see its log",
    "took": 80.0
-  },
-  {
-   "run_id": "42225556509",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225556509",
-   "started": "2026-11-06T13:27:02+00:00",
-   "updated": "2026-11-06T13:27:58+00:00",
-   "status": "failed",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "the run stopped; see its log",
-   "took": 56.0
   }
  ],
- "updated": "2026-11-12T14:56:23+00:00",
- "attempts": [
-  "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"'खुद' में ही छुपा है 'खुश' रहने का राज़।\" scores 92)"
- ],
- "word": "डर → कर",
- "slug": "dar-kar",
- "hook": "1 अक्षर से डर बने कर",
- "caption": "जो डर की वजह से आज भी कुछ शुरू नहीं कर रहा, ये रील उसे भेज दो।\n\nडर और कर, बस एक अक्षर का फ़र्क़ है। पर यही एक अक्षर बताता है कि डरते रहने से कुछ नहीं बदलता, करने से सब बदल जाता है।\n\nये छोटा-सा शब्द बदलाव एक बड़ी ज़िंदगी की सीख है। डर दिमाग़ में रहता है, कर हाथों में।\n\nअगली बार डर लगे, तो बस एक काम शुरू कर दो। बाकी डर अपने आप पीछे छूट जाएगा।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #डरबनेकर",
- "hooks": [
-  {
-   "formula": "one-letter claim",
-   "line": "सिर्फ़ एक अक्षर बदलो, और डर बन जाए कर।",
-   "card": "1 अक्षर से डर बने कर",
-   "score": 92
-  },
-  {
-   "formula": "sting question",
-   "line": "तुम्हारा डर, कब तक तुम्हें रोकेगा?",
-   "card": "डर कब तक रोकेगा तुम्हें?",
-   "score": 86
-  },
-  {
-   "formula": "identity call",
-   "line": "जो हर बार डर के आगे रुक जाते हो, ये तुम्हारे लिए है।",
-   "card": "डर के आगे रुक जाते हो?",
-   "score": 75
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "सिर्फ़ एक अक्षर बदलो, और डर बन जाए कर।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, सिर्फ़ एक अक्षर में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "डर।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "एग्ज़ाम से पहले रात, नींद ही नहीं आती।",
-   "write": "रात… नींद नहीं आती",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "हाथ काँपते हैं, पर पैर आगे नहीं बढ़ते।",
-   "write": "काँपते हो, बढ़ते नहीं",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द का एक छोटा-सा अक्षर, सब बदल देता है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "ड को क कर दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "और डर, बन जाता है कर।",
-   "write": "डर… बन जाता है कर",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "जो डरना छोड़कर करने लगता है, वही जीतता है।",
-   "write": "डरना छोड़ो, करने लगो",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "जो आज डर के सामने रुका है, उसे ये भेज दो।",
-   "write": "जिसे डर रोके, उसे भेजो",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "याद रखो, सिर्फ़ एक अक्षर से डर बन जाए कर।",
-   "write": "डर बन जाए कर",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-13T18:45:00+05:30",
- "duration": 33.39,
- "detail": "डर → कर · posts Fri 13 Nov, 06:45 PM IST",
- "ended": "2026-11-12T14:56:23+00:00",
- "took": 636.0
+ "updated": "2026-11-12T16:56:20+00:00"
 }
