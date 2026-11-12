@@ -71,9 +71,10 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-12T14:52:17+00:00"
+   "started": "2026-11-12T14:52:17+00:00",
+   "ended": "2026-11-12T14:53:02+00:00"
   },
   {
    "key": "picture",
@@ -284,7 +285,7 @@
    "took": 56.0
   }
  ],
- "updated": "2026-11-12T14:52:17+00:00",
+ "updated": "2026-11-12T14:53:02+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"'खुद' में ही छुपा है 'खुश' रहने का राज़।\" scores 92)"
  ],
