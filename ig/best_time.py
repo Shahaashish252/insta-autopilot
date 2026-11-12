@@ -18,6 +18,8 @@ try:                                                            # online_followe
 except Exception:                                               # (Windows without tzdata: standard time is close enough)
     OF_TZ = dt.timezone(dt.timedelta(hours=-8))
 PER_DAY = int(os.environ.get('POSTS_PER_DAY', '2'))
+# Fixed by the user (12 Nov 2026): one reel a day at 19:00 Nepal time = 18:45 IST. Empty POST_SLOTS = choose from the data again.
+FIXED = [x for x in os.environ.get('POST_SLOTS', '18:45').split(',') if x.strip()]
 
 
 def _mins(hhmm): h, m = map(int, hhmm.split(':')); return h * 60 + m
@@ -85,6 +87,7 @@ def choose(snap=None):
             slots = sorted(CANDIDATES, key=lambda c: (tried[c], *tie(c)))[:PER_DAY]
             why = ('not enough of our own posts yet: these are when similar channels’ biggest reels went out; our own numbers take over as they come'
                    if niche else 'not enough posts yet to compare times: testing each slot in turn (least tried first)')
+    if FIXED: slots, why = FIXED, 'set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST)'
     slots = sorted(slots, key=_mins)
     res = {'at': dt.datetime.now(dt.timezone.utc).isoformat(), 'slots_ist': slots, 'why': why,
            'tried': tried, 'performance': {c: round(statistics.mean(v), 2) for c, v in perf.items()},
