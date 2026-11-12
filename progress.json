@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-12T17:06:23+00:00",
+   "detail": "19 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:06:21+00:00",
+ "updated": "2026-11-12T17:06:23+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
