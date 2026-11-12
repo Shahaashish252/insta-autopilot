@@ -71,8 +71,9 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-12T17:02:08+00:00"
   },
   {
    "key": "picture",
@@ -283,7 +284,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:02:07+00:00",
+ "updated": "2026-11-12T17:02:08+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
