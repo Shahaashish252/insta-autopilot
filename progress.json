@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "39 sound cues, 37.6 s",
-   "started": "2026-11-12T17:02:04+00:00"
+   "state": "done",
+   "detail": "mix.wav  37.63 s  -16.0 LUFS",
+   "started": "2026-11-12T17:02:04+00:00",
+   "ended": "2026-11-12T17:02:07+00:00"
   },
   {
    "key": "reading",
@@ -282,7 +283,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:02:04+00:00",
+ "updated": "2026-11-12T17:02:07+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
