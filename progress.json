@@ -53,8 +53,9 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-12T14:52:12+00:00"
   },
   {
    "key": "music",
@@ -279,7 +280,7 @@
    "took": 56.0
   }
  ],
- "updated": "2026-11-12T14:52:11+00:00",
+ "updated": "2026-11-12T14:52:12+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"'खुद' में ही छुपा है 'खुश' रहने का राज़।\" scores 92)"
  ],
