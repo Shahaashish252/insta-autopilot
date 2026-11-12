@@ -53,8 +53,9 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-12T17:02:02+00:00"
   },
   {
    "key": "music",
@@ -279,7 +280,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:02:00+00:00",
+ "updated": "2026-11-12T17:02:02+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
