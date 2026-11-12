@@ -36,5 +36,13 @@
   "hook_formula": "one-letter claim",
   "hook_score": 92,
   "at": "2026-11-12T14:56:20.685271+00:00"
+ },
+ {
+  "slug": "jeet-jee",
+  "word": "जीत → जी",
+  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
+  "hook_formula": "one-letter claim (matra/letter-fix)",
+  "hook_score": 79,
+  "at": "2026-11-12T17:06:28.362315+00:00"
  }
 ]
