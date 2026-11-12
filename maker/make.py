@@ -29,6 +29,25 @@ def jload(p, d):
     except (OSError, ValueError): return d
 
 
+def series_no():
+    """This reel's number in the series: every reel posted or waiting, plus this one."""
+    return 1 + sum(len([n for n in os.listdir(os.path.join(ROOT, w)) if os.path.isfile(os.path.join(ROOT, w, n, 'post.json'))])
+                   for w in ('queue', 'posted') if os.path.isdir(os.path.join(ROOT, w)))
+
+
+SERIES, NL = 'एक अक्षर का खेल', chr(10)
+
+
+def signoff(cap, n):
+    """Add the series line above the hashtags (after the caption check: it is a sign-off, not a second ask)."""
+    line = f'{SERIES} #{n}. हर शाम 7 बजे एक नया शब्द। अगला शब्द कौन-सा हो?'
+    if SERIES in cap: return cap
+    parts = cap.rstrip().rsplit(NL, 1)
+    if len(parts) == 2 and parts[1].strip().startswith('#'):
+        return parts[0].rstrip() + NL * 2 + line + NL * 2 + parts[1].strip()
+    return cap.rstrip() + NL * 2 + line
+
+
 def used_words():
     words = list(SEED_WORDS) + [m['word'] for m in jload(MADE, [])]
     for where in ('queue', 'posted'):
@@ -233,6 +252,7 @@ def queue(slug, o, dest, dur):
     title = f"{''.join(spec['from'])} → {''.join(spec['to'])}"
     when = best_time.next_slot()
     n1 = spec['lines'][0]['text']; used = next((x for x in o.get('hooks') or [] if x.get('line', '').strip() == n1.strip()), {})
+    cap = signoff(cap, series_no())
     meta = {'type': 'reel', 'asset': f'{slug}.mp4', 'title': title, 'caption': cap, 'publish_at': when.isoformat(),
             'approved': AUTO, 'share_to_feed': True, 'made_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'duration': dur,
             'manual': os.environ.get('MANUAL_POST', '0') == '1',   # automatic again from 12 Nov 2026 (MANUAL_POST=1: you post by hand)

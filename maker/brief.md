@@ -21,7 +21,7 @@ Views so far (median 269): रूप → रूह 1,513 · हार → हर
   "जो खुद को सिर्फ़ शक्ल से नापते हैं…". Hook (N1) and caption line 1 both start from that moment.
 - **The ask is share or save, never "comment".** Reels that asked for a one-word comment got 0–2 comments. Use one ask:
   send it to a specific person, or save it for the next bad day.
-- **Shorter.** The 30 s reel (हार → हर) beat the 44 s one (कल → काल) by 3.5×. Aim for 28–34 seconds and 9–11 lines.
+- **Shorter.** The 30 s reel (हार → हर) beat the 44 s one (कल → काल) by 3.5×. Aim for 28–34 seconds and 10–12 short lines.
 - Still unknown (Meta hides reach, saves and watch time for this account): retention, and which posting time is best.
 
 ## The word change (the most important choice)
@@ -42,7 +42,7 @@ Views so far (median 269): रूप → रूह 1,513 · हार → हर
 
 ## The script (`lines`)
 
-- 9 to 11 lines, ids N1, N2, … in order; each `text` is spoken, short, plain conversational Hindi (Devanagari, the way
+- 10 to 12 lines, ids N1, N2, … in order; each `text` is spoken, short, plain conversational Hindi (Devanagari, the way
   a friend talks; Urdu-origin everyday words are fine). Under 60 characters per line. Total 28 to 34 seconds.
 - **N1 is the hook**, said in the first second: a Negative Command ("…बंद करो"), a surprising claim, or a question that
   stings; with a number if there is one. N2 makes the promise ("जवाब इस एक शब्द में है").
@@ -50,7 +50,8 @@ Views so far (median 269): रूप → रूह 1,513 · हार → हर
   (two lines), the `"cue": "lift"` line (the red part is noticed: "पर इस शब्द की एक छोटी-सी मात्रा…"), the `"cue": "swap"`
   line (the change happens: "ये बिंदु हटाओ।"), then a line with `"clear": true` that says "X, बन जाता है Y", then the
   `"cue": "resolve"` line (the lesson, the person stands up), one more line that lands it, **one ask** (share with a
-  specific person: "जिसे आज ये सुनना था, उसे भेज दो।", or save it for a bad day; never ask for comments), and **a loop line**
+  specific person: "जिसे आज ये सुनना था, उसे भेज दो।", or save it for a bad day; never ask for comments), then **a follow line** said warmly, close to "हर शाम सात बजे, एक नया शब्द।" (it brings viewers back: say it,
+  don't beg for a follow), and **a loop line**
   that repeats the hook's words so the replay feels seamless.
 - `write`: the short on-screen version, on most lines (muted viewers), at most 22 characters, never on N1–N3 (the hook
   card covers those) and never on the lift or swap lines (the camera is on the red part then). Use "…" freely; no full stops needed.
@@ -67,7 +68,8 @@ Views so far (median 269): रूप → रूह 1,513 · हार → हर
 
 Hindi (Devanagari). Line 1 (≤ 120 characters, shows before "more"): name the viewer's moment and give the one ask (send or save), not a
 repeat of the hook and never a request to comment. Then 2–3 short paragraphs (the change, the lesson, one line of encouragement), one
-blank line between each. Last line: exactly 3 hashtags, e.g. #शब्दोंकाखेल #हिंदीमोटिवेशन plus one about the word. No links,
+blank line between each. (A series line, "एक अक्षर का खेल #N…", is added above the hashtags for you; don't write one.)
+Last line: exactly 3 hashtags, e.g. #शब्दोंकाखेल #हिंदीमोटिवेशन plus one about the word. No links,
 no emoji at the start, at most 2 emoji in all.
 
 ## Before you answer, check yourself
