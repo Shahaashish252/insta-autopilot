@@ -1,14 +1,35 @@
 {
- "at": "2026-11-11T08:13:35.031769+00:00",
+ "at": "2026-11-12T04:04:13.930967+00:00",
  "account": {
   "id": "17841471920376046",
-  "followers_count": 7,
+  "followers_count": 11,
   "follows_count": 3,
-  "media_count": 8,
+  "media_count": 9,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "18139537186651410",
+   "caption": "आज हार गए हो तो ये रील सेव कर लो। अगली बार गिरो, तो फिर से देखना।\n\nहार की मात्रा",
+   "comments_count": 0,
+   "like_count": 19,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/DfmdVDaCbI2/",
+   "timestamp": "2026-11-11T12:15:55+0000",
+   "insights": {
+    "views": 714,
+    "reach": 0,
+    "likes": 19,
+    "comments": 0,
+    "shares": 2,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "17918269926539201",
    "caption": "ये रील उसे भेजो, जो हर मौके पर बहाना बनाता है।\n\nशब्द है 'कर्म'। इसमें से बस एक छ",
@@ -19,11 +40,11 @@
    "permalink": "https://www.instagram.com/reel/DflK9HaElN8/",
    "timestamp": "2026-11-11T00:16:04+0000",
    "insights": {
-    "views": 325,
+    "views": 597,
     "reach": 0,
     "likes": 4,
     "comments": 0,
-    "shares": 0,
+    "shares": 1,
     "saved": 0,
     "total_interactions": 0,
     "ig_reels_avg_watch_time": 0,
@@ -40,7 +61,7 @@
    "permalink": "https://www.instagram.com/reel/Dfj4nS_lWft/",
    "timestamp": "2026-11-10T12:16:32+0000",
    "insights": {
-    "views": 44,
+    "views": 50,
     "reach": 0,
     "likes": 1,
     "comments": 0,
@@ -166,7 +187,7 @@
    "permalink": "https://www.instagram.com/reel/DfWPtDniipY/",
    "timestamp": "2026-11-05T05:08:58+0000",
    "insights": {
-    "views": 165,
+    "views": 167,
     "reach": 0,
     "likes": 3,
     "comments": 12,
