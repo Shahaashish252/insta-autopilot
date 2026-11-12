@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-12T14:56:15+00:00",
+   "detail": "17 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 56.0
   }
  ],
- "updated": "2026-11-12T14:56:14+00:00",
+ "updated": "2026-11-12T14:56:15+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"'खुद' में ही छुपा है 'खुश' रहने का राज़।\" scores 92)"
  ],
