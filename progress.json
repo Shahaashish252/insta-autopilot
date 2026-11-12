@@ -107,7 +107,10 @@
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "waiting"
+   "state": "done",
+   "ended": "2026-11-12T14:56:20+00:00",
+   "started": "2026-11-12T14:56:20+00:00",
+   "detail": "Fri 13 Nov, 06:45 PM IST"
   }
  ],
  "history": [
@@ -292,7 +295,7 @@
    "took": 56.0
   }
  ],
- "updated": "2026-11-12T14:56:19+00:00",
+ "updated": "2026-11-12T14:56:20+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"'खुद' में ही छुपा है 'खुश' रहने का राज़।\" scores 92)"
  ],
