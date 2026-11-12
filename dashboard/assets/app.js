@@ -1,7 +1,7 @@
 const D = DATA, REPO = D.repo, $ = s => document.querySelector(s), app = $('#app');
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt = n => n == null ? '–' : n >= 1e6 ? (n / 1e6).toFixed(1) + 'M' : n >= 1e4 ? (n / 1e3).toFixed(1) + 'K' : Number(n).toLocaleString('en-IN');
-const ist = (t, o) => t ? new Date(t).toLocaleString('en-IN', Object.assign({timeZone:'Asia/Kolkata', day:'numeric', month:'short', hour:'numeric', minute:'2-digit'}, o || {})) : '';
+const ist = (t, o) => t ? new Date(t).toLocaleString('en-IN', Object.assign({timeZone:'Asia/Kathmandu', day:'numeric', month:'short', hour:'numeric', minute:'2-digit'}, o || {})) : '';
 const ago = t => { if (!t) return ''; const s = (Date.now() - new Date(t)) / 1000, f = Math.abs(s), fut = s < 0;
   const v = f < 60 ? 'just now' : f < 3600 ? Math.round(f / 60) + ' min' : f < 86400 ? Math.round(f / 3600) + ' h' : Math.round(f / 86400) + ' d';
   return v === 'just now' ? v : fut ? 'in ' + v : v + ' ago'; };
@@ -10,6 +10,9 @@ const dur = x => x == null ? '' : x >= 60 ? `${Math.floor(x / 60)} min ${String(
 const raw = p => fetch(`https://api.github.com/repos/${REPO}/contents/${p}${p.includes('?') ? '&' : '?'}t=${Date.now()}`, {headers:{Accept:'application/vnd.github.raw'}, cache:'no-store'});
 const reels = D.reels, posted = reels.filter(r => r.status === 'posted'), sched = reels.filter(r => r.status === 'scheduled').sort((a, b) => a.publish_at.localeCompare(b.publish_at));
 const sum = k => posted.reduce((a, r) => a + (r.ins[k] || 0), 0);
+// Meta returns 0 for reach, saves, follows and watch time on this account (checked 9 Nov 2026): show '–', not a fake 0
+const MUTE = posted.length > 0 && sum('reach') === 0 && sum('saved') === 0;
+if (MUTE) posted.forEach(r => { if (r.ins) ['reach', 'saved', 'follows', 'ig_reels_avg_watch_time'].forEach(k => { if (!r.ins[k]) r.ins[k] = null; }); });
 const scores = reels.map(r => r.hook_score).filter(x => x != null);
 
 // ───────── shell
@@ -22,7 +25,7 @@ function shell(inner) {
     <span class="chip" title="GitHub automation" style="display:var(--hide-sm,inline-flex)"><span class="dot ${wfBad ? 'bad' : off ? 'warn' : 'ok'}"></span>${wfBad ? 'a job failed' : off ? off + ' paused' : 'all systems on'}</span>
     <button class="icon-btn" id="theme" aria-label="Switch light or dark">◐</button></div>
     <div class="wrap"><nav class="tabs">${tab('#overview', 'Overview')}${tab('#reels', 'Reels')}${tab('#schedule', 'Schedule')}${tab('#growth', 'Growth')}${tab('#comments', 'Comments')}${tab('#system', 'Automation')}<a href="making.html" class="${home ? '' : 'on'}">Making ◐</a></nav></div></div>
-    <main class="wrap">${inner}</main><footer>Updated ${ist(D.updated)} IST · <a href="https://github.com/${esc(REPO)}" target="_blank" rel="noopener">GitHub repo</a> · refreshes by itself</footer>
+    <main class="wrap">${inner}</main><footer>Updated ${ist(D.updated)} NPT · <a href="https://github.com/${esc(REPO)}" target="_blank" rel="noopener">GitHub repo</a> · refreshes by itself</footer>
     <dialog id="dlg"></dialog>`;
   $('#theme').onclick = () => { const r = document.documentElement, dark = r.dataset.theme ? r.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
     r.dataset.theme = dark ? 'light' : 'dark'; try { localStorage.setItem('theme', r.dataset.theme); } catch (e) {} };
@@ -34,20 +37,21 @@ function home() {
   const nx = sched[0];
   const kpi = (ic, label, v, s) => `<div class="card kpi fade"><span class="ic">${ic}</span><div class="label">${label}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;
   const views = sum('views'), shares = sum('shares'), saves = sum('saved'), comments = sum('comments');
+  const HID = "Meta doesn't share this yet";
   const per = (x) => views ? (1000 * x / views).toFixed(0) : '–';
   shell(`
   <div class="hero" id="overview">
     ${nx ? `<div class="card next fade"><button class="cv" data-open="${esc(nx.name)}" aria-label="Watch ${esc(nx.title)}">${nx.cover ? `<img src="${esc(nx.cover)}" alt="">` : ''}</button>
-      <div><div class="label">Next post</div><h3>${esc(nx.title)}</h3><div class="when">${ist(nx.publish_at, {weekday:'short'})} IST</div>
+      <div><div class="label">Next post</div><h3>${esc(nx.title)}</h3><div class="when">${ist(nx.publish_at, {weekday:'short'})} NPT (Nepal)</div>
       <div class="count" data-count="${esc(nx.publish_at)}"></div><div class="small" style="opacity:.85">${sched.length} scheduled · posts by itself from GitHub</div></div></div>`
-      : `<div class="card next fade"><div class="cv"></div><div><div class="label">Next post</div><h3>Nothing scheduled</h3><div class="when">GitHub makes the next reel at 05:00 or 14:00 IST.</div></div></div>`}
+      : `<div class="card next fade"><div class="cv"></div><div><div class="label">Next post</div><h3>Nothing scheduled</h3><div class="when">GitHub makes the next reel at about 5:15 AM or 2:15 PM NPT and posts it at 7:00 PM NPT.</div></div></div>`}
     <div class="card make fade" id="now"><div class="label">Making</div><p class="muted">Loading the live progress…</p></div>
   </div>
   <div class="kpis">
     ${kpi('👥', 'Followers', fmt(D.account.followers_count), `${fmt(D.account.media_count)} posts on Instagram`)}
     ${kpi('▶', 'Views', fmt(views), `${posted.length} reels posted`)}
     ${kpi('↗', 'Shares', fmt(shares), `${per(shares)} per 1,000 views`)}
-    ${kpi('🔖', 'Saves', fmt(saves), `${per(saves)} per 1,000 views`)}
+    ${kpi('🔖', 'Saves', MUTE ? '–' : fmt(saves), MUTE ? HID : `${per(saves)} per 1,000 views`)}
     ${kpi('💬', 'Comments', fmt(comments), `<span id="kreplied">…</span> answered by Claude`)}
     ${kpi('🎯', 'Hook score', scores.length ? Math.round(scores.reduce((a, b) => a + b) / scores.length) : '–', scores.length ? `avg of ${scores.length} new reels · bar 65` : 'scored from the next reel')}
   </div>
@@ -55,7 +59,7 @@ function home() {
   <section><div class="grid g2">
     <div class="card chart"><div class="sh"><div><h2>Views per reel</h2><p>Each posted reel; the line is the channel median.</p></div></div>${chart()}</div>
     <div class="card"><div class="sh"><div><h2>What people do</h2><p>Per 1,000 views, all posted reels. Shares grow a new channel fastest.</p></div></div>
-      <div class="rates">${[['Shares', shares, 120], ['Saves', saves, 60], ['Comments', comments, 60], ['Likes', sum('likes'), 150], ['Follows', sum('follows'), 20]].map(([n, x, top]) =>
+      <div class="rates">${[['Shares', shares, 120], ['Saves', saves, 60], ['Comments', comments, 60], ['Likes', sum('likes'), 150], ['Follows', sum('follows'), 20]].filter(([n]) => !MUTE || (n !== 'Saves' && n !== 'Follows')).map(([n, x, top]) =>
         `<div class="rate"><div class="row"><span>${n}</span><b>${views ? (1000 * x / views).toFixed(1) : '–'}</b></div><div class="meter"><b style="width:${views ? Math.min(100, 100 * (1000 * x / views) / top) : 0}%"></b></div></div>`).join('')}</div></div>
   </div></section>
 
@@ -68,11 +72,11 @@ function home() {
   <section id="schedule"><div class="grid g2">
     <div class="card"><div class="sh"><div><h2>Schedule</h2><p>Posted automatically at these times. A reel that misses its slot moves to the next one.</p></div></div>
       ${sched.length ? `<ul class="tline">${sched.map(r => { const d = new Date(r.publish_at);
-        return `<li><div class="d"><b>${d.toLocaleString('en-IN', {timeZone:'Asia/Kolkata', day:'numeric'})}</b><span>${d.toLocaleString('en-IN', {timeZone:'Asia/Kolkata', weekday:'short'})}</span></div>
-        ${r.cover ? `<img src="${esc(r.cover)}" alt="">` : '<img alt="">'}<div class="t"><b>${esc(r.title)}</b><small>${ist(r.publish_at, {day:undefined, month:undefined})} IST${r.hook_score != null ? ` · hook ${r.hook_score}` : ''}</small></div><span class="pill" data-rel="${esc(r.publish_at)}">${ago(r.publish_at)}</span></li>`; }).join('')}</ul>` : '<div class="empty">Nothing scheduled yet.</div>'}</div>
+        return `<li><div class="d"><b>${d.toLocaleString('en-IN', {timeZone:'Asia/Kathmandu', day:'numeric'})}</b><span>${d.toLocaleString('en-IN', {timeZone:'Asia/Kathmandu', weekday:'short'})}</span></div>
+        ${r.cover ? `<img src="${esc(r.cover)}" alt="">` : '<img alt="">'}<div class="t"><b>${esc(r.title)}</b><small>${ist(r.publish_at, {day:undefined, month:undefined})} NPT${r.hook_score != null ? ` · hook ${r.hook_score}` : ''}</small></div><span class="pill" data-rel="${esc(r.publish_at)}">${ago(r.publish_at)}</span></li>`; }).join('')}</ul>` : '<div class="empty">Nothing scheduled yet.</div>'}</div>
     <div class="card"><div class="sh"><div><h2>Best time to post</h2><p>Learned from when your followers are online and how each slot did.</p></div></div>
       <div class="slots">${(D.best.slots || []).map(s => `<span>${esc(s)}</span>`).join('') || '<span>—</span>'}</div><p class="small muted" style="margin:6px 0 0">${esc(D.best.why)}</p>
-      <hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><div class="label">Making</div><p class="small" style="margin:6px 0 0">A new reel at 05:00 and 14:00 IST whenever fewer than 3 are waiting. <a href="https://github.com/${esc(REPO)}/actions/workflows/make.yml" target="_blank" rel="noopener">Make one now ↗</a></p></div>
+      <hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><div class="label">Making</div><p class="small" style="margin:6px 0 0">A new reel at about 5:15 AM and 2:15 PM NPT whenever fewer than 3 are waiting; one is posted each day at 7:00 PM NPT. <a href="https://github.com/${esc(REPO)}/actions/workflows/make.yml" target="_blank" rel="noopener">Make one now ↗</a></p></div>
   </div></section>
 
   <section id="growth"><div class="sh"><div><h2>Growth</h2><p>Every Sunday Claude reviews the numbers and the niche; every new reel reads these notes.</p></div></div>
@@ -136,7 +140,7 @@ function openReel(name) {
   const r = reels.find(x => x.name === name); if (!r) return; const dlg = $('#dlg');
   dlg.innerHTML = `<button class="x" aria-label="Close">✕</button><div class="dlg">${r.video ? `<video controls playsinline autoplay src="${esc(r.video)}" poster="${esc(r.cover || '')}"></video>` : r.cover ? `<img src="${esc(r.cover)}" alt="" style="width:100%;display:block">` : '<div class="empty">Video not on this device</div>'}
     <div class="side"><span class="label">${esc(r.label)}${r.dur ? ' · ' + Math.round(r.dur) + ' s' : ''}</span><h3>${esc(r.title)}</h3>
-    <p class="small muted" style="margin:0 0 10px">${r.status === 'posted' ? 'Posted ' + ist(r.posted_at) + (r.by_hand ? ' (by hand)' : '') : r.publish_at ? 'Posts ' + ist(r.publish_at, {weekday:'short'}) + ' IST' : ''}${r.permalink ? ` · <a href="${esc(r.permalink)}" target="_blank" rel="noopener">open on Instagram ↗</a>` : ''}</p>
+    <p class="small muted" style="margin:0 0 10px">${r.status === 'posted' ? 'Posted ' + ist(r.posted_at) + (r.by_hand ? ' (by hand)' : '') : r.publish_at ? 'Posts ' + ist(r.publish_at, {weekday:'short'}) + ' NPT' : ''}${r.permalink ? ` · <a href="${esc(r.permalink)}" target="_blank" rel="noopener">open on Instagram ↗</a>` : ''}</p>
     ${r.status === 'posted' ? `<div class="stats" style="margin-bottom:12px">${[['▶', 'views'], ['👁', 'reach'], ['♥', 'likes'], ['💬', 'comments'], ['↗', 'shares'], ['🔖', 'saved'], ['➕', 'follows']].map(([i, k]) => `<span>${i} <b>${fmt(r.ins[k])}</b> ${k}</span>`).join('')}</div>` : ''}
     <div class="label">Stages</div><div class="stagelist">${r.stages.map(s => `<div class="${s[1] ? 'on' : ''}">${s[1] ? '✓' : '○'} ${esc(s[0])}${s[2] ? `<small>${esc(s[2])}</small>` : ''}</div>`).join('')}</div>
     ${r.hooks.length ? `<div class="label" style="margin-top:12px">Hook contest</div><ul class="hooks">${r.hooks.sort((a, b) => b.score - a.score).map(h => `<li><div class="ring" style="--p:${h.score}"><span>${h.score}</span></div><div><b>${esc(h.line)}</b><br><small class="muted">${esc(h.formula)}${h.line === r.hook_line ? ' · <span class="ok">used</span>' : ''}</small></div></li>`).join('')}</ul>`
@@ -194,7 +198,7 @@ function making() {
     $('#main').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center"><span class="label">${on ? 'Making now' : 'Last make'}</span><span class="chip"><span class="dot ${on ? 'live' : p.status === 'done' ? 'ok' : p.status === 'failed' ? 'bad' : ''}"></span>${esc(p.status)}</span></div>
       <div class="word" style="font-size:30px">${esc(p.word || (on ? 'Claude is choosing a word…' : '—'))}</div>${p.hook ? `<div class="muted">hook card: ${esc(p.hook)}</div>` : ''}
       <div class="prog"><b style="width:${pct(p)}%"></b></div>
-      <p class="small muted" style="margin:0 0 6px">started ${ist(p.started)} · ${on ? 'running for <span data-since="' + esc(p.started) + '"></span>' : 'took ' + dur(p.took)}${p.publish_at ? ' · posts ' + ist(p.publish_at) + ' IST' : ''}${p.run_url ? ` · <a href="${esc(p.run_url)}" target="_blank" rel="noopener">run log ↗</a>` : ''}</p>
+      <p class="small muted" style="margin:0 0 6px">started ${ist(p.started)} · ${on ? 'running for <span data-since="' + esc(p.started) + '"></span>' : 'took ' + dur(p.took)}${p.publish_at ? ' · posts ' + ist(p.publish_at) + ' NPT' : ''}${p.run_url ? ` · <a href="${esc(p.run_url)}" target="_blank" rel="noopener">run log ↗</a>` : ''}</p>
       ${p.detail && !on ? `<p style="margin:0 0 6px"><b>${esc(p.detail)}</b></p>` : ''}
       <ol class="steps">${(p.stages || []).map((s, i) => `<li class="${s.state}"><span class="n">${ICON[s.state] || i + 1}</span><div><b>${esc(s.label)}</b><span class="about">${esc(s.about)}</span>${s.detail ? `<span class="det">${esc(s.detail)}</span>` : ''}</div><time>${s.started ? dur(secs(s.started, s.ended)) : ''}</time></li>`).join('')}</ol>
       ${(p.attempts || []).length ? `<div class="label" style="margin-top:12px">Tries that were rejected</div><ul class="list small">${p.attempts.map(a => `<li>${esc(a)}</li>`).join('')}</ul>` : ''}

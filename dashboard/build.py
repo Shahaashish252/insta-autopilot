@@ -10,6 +10,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.dirname(HERE)
 FILMS = os.environ.get('FILMS', os.path.join(os.path.dirname(ROOT), 'lemo-opuscar', 'films'))
 REPO = os.environ.get('REPO', os.environ.get('GITHUB_REPOSITORY', 'Shahaashish252/insta-autopilot'))
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
+NPT = dt.timezone(dt.timedelta(hours=5, minutes=45))   # the user is in Nepal: times on the page are Nepal time
 SITE = sys.argv[sys.argv.index('--site') + 1] if '--site' in sys.argv else None
 OUT = os.path.abspath(SITE) if SITE else HERE
 E = lambda s: html.escape(str(s if s is not None else ''))
@@ -34,7 +35,7 @@ def when(t):
     if isinstance(t, str):
         try: t = dt.datetime.fromisoformat(t.replace('Z', '+00:00'))
         except ValueError: return t
-    return t.astimezone(IST).strftime('%d %b, %I:%M %p').lstrip('0').replace(' 0', ' ')
+    return t.astimezone(NPT).strftime('%d %b, %I:%M %p').lstrip('0').replace(' 0', ' ')
 
 
 def rel(p):
@@ -151,7 +152,7 @@ def data():
         spec = jload(os.path.join(folder, 'spec.json'), {}) or {}
         out.append({'name': r['name'], 'title': r['title'], 'status': k, 'label': label, 'style': r.get('style'), 'dur': r.get('dur'),
                     'cover': r.get('cover'), 'video': r.get('video'), 'made': r['made'].isoformat() if r.get('made') else None,
-                    'publish_at': p.get('publish_at'), 'posted_at': p.get('posted_at'), 'by_hand': p.get('posted_by') == 'hand',
+                    'publish_at': p.get('publish_at'), 'posted_at': p.get('posted_at'), 'by_hand': str(p.get('posted_by') or '').startswith('hand'),
                     'permalink': (r.get('ins') or {}).get('permalink'), 'caption': p.get('caption'),
                     'stages': [[n, ok, note_] for n, ok, note_ in stages(r)],
                     'hook_line': ((spec.get('lines') or [{}])[0]).get('text'), 'hook_card': (spec.get('hook') or {}).get('text'),
@@ -166,7 +167,7 @@ def data():
         if r['made']: act.append({'at': r['made'], 'kind': 'made', 'title': f'Reel made · {r["title"]}', 'sub': f'{r["dur"]:.0f} s' if r.get('dur') else ''})
         if r['posted_at']: act.append({'at': r['posted_at'], 'kind': 'posted', 'title': f'Posted · {r["title"]}', 'sub': 'by hand' if r['by_hand'] else 'by GitHub'})
     for run in runs[:40]:
-        act.append({'at': run['createdAt'], 'kind': 'run' if run.get('conclusion') in ('success', None) else 'fail',
+        act.append({'at': run['createdAt'], 'kind': 'fail' if run.get('conclusion') in ('failure', 'timed_out', 'startup_failure') else 'run',
                     'title': run['workflowName'], 'sub': f'{run.get("conclusion") or run.get("status")} · {run.get("event")}', 'url': run.get('url')})
     for c in sent[-20:]:
         act.append({'at': c['sent_at'], 'kind': 'reply', 'title': f'Replied to @{c.get("from")}', 'sub': (c.get('reply') or '')[:70]})

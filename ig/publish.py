@@ -13,6 +13,7 @@ QUEUE, POSTED = os.path.join(ROOT, 'queue'), os.path.join(ROOT, 'posted')
 
 
 def items():
+    if not os.path.isdir(QUEUE): return
     for name in sorted(os.listdir(QUEUE)):
         p = os.path.join(QUEUE, name, 'post.json')
         if os.path.isfile(p):
