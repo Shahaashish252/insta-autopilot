@@ -2,7 +2,7 @@
  "run_id": "43264038973",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43264038973",
  "started": "2026-11-12T16:56:20+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:06:29+00:00",
+ "updated": "2026-11-12T17:06:30+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
@@ -395,5 +395,8 @@
   }
  ],
  "publish_at": "2026-11-14T18:45:00+05:30",
- "duration": 37.63
+ "duration": 37.63,
+ "detail": "जीत → जी · posts Sat 14 Nov, 06:45 PM IST",
+ "ended": "2026-11-12T17:06:30+00:00",
+ "took": 610.0
 }
