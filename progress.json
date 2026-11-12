@@ -2,7 +2,7 @@
  "run_id": "43240086030",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43240086030",
  "started": "2026-11-12T14:45:47+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 56.0
   }
  ],
- "updated": "2026-11-12T14:56:21+00:00",
+ "updated": "2026-11-12T14:56:23+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"'खुद' में ही छुपा है 'खुश' रहने का राज़।\" scores 92)"
  ],
@@ -392,5 +392,8 @@
   }
  ],
  "publish_at": "2026-11-13T18:45:00+05:30",
- "duration": 33.39
+ "duration": 33.39,
+ "detail": "डर → कर · posts Fri 13 Nov, 06:45 PM IST",
+ "ended": "2026-11-12T14:56:23+00:00",
+ "took": 636.0
 }
