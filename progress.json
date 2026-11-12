@@ -89,9 +89,10 @@
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-12T17:04:53+00:00"
+   "started": "2026-11-12T17:04:53+00:00",
+   "ended": "2026-11-12T17:06:21+00:00"
   },
   {
    "key": "upload",
@@ -288,7 +289,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:04:53+00:00",
+ "updated": "2026-11-12T17:06:21+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
