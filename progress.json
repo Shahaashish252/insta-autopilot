@@ -35,43 +35,51 @@
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "waiting"
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-12T17:01:07+00:00"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "waiting"
+   "state": "waiting",
+   "detail": null
   },
   {
    "key": "upload",
@@ -268,7 +276,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:01:06+00:00",
+ "updated": "2026-11-12T17:01:07+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
