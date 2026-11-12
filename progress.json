@@ -80,8 +80,9 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "0 %",
+   "started": "2026-11-12T14:53:03+00:00"
   },
   {
    "key": "master",
@@ -285,7 +286,7 @@
    "took": 56.0
   }
  ],
- "updated": "2026-11-12T14:53:02+00:00",
+ "updated": "2026-11-12T14:53:03+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"'खुद' में ही छुपा है 'खुश' रहने का राज़।\" scores 92)"
  ],
