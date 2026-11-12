@@ -35,9 +35,10 @@
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-12T17:01:07+00:00"
+   "started": "2026-11-12T17:01:07+00:00",
+   "ended": "2026-11-12T17:01:58+00:00"
   },
   {
    "key": "speech",
@@ -276,7 +277,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:01:07+00:00",
+ "updated": "2026-11-12T17:01:58+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
