@@ -80,9 +80,10 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "running",
-   "detail": "85 % (960/1129 frames, 3 workers)",
-   "started": "2026-11-12T17:02:53+00:00"
+   "state": "done",
+   "detail": "95 % (1080/1129 frames, 3 workers)",
+   "started": "2026-11-12T17:02:53+00:00",
+   "ended": "2026-11-12T17:04:52+00:00"
   },
   {
    "key": "master",
@@ -286,7 +287,7 @@
    "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:04:37+00:00",
+ "updated": "2026-11-12T17:04:52+00:00",
  "word": "जीत → जी",
  "slug": "jeet-jee",
  "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
