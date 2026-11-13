@@ -80,9 +80,10 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "running",
-   "detail": "60 % (600/989 frames, 3 workers)",
-   "started": "2026-11-13T03:38:55+00:00"
+   "state": "done",
+   "detail": "91 % (900/989 frames, 3 workers)",
+   "started": "2026-11-13T03:38:55+00:00",
+   "ended": "2026-11-13T03:40:01+00:00"
   },
   {
    "key": "master",
@@ -286,7 +287,7 @@
    "took": 484.0
   }
  ],
- "updated": "2026-11-13T03:39:38+00:00",
+ "updated": "2026-11-13T03:40:01+00:00",
  "attempts": [
   "['ह', 'ा', 'ल']: rejected (N1 is not your strongest hook: \"तुम्हारा 'हाल' कब से यही हाल है?\" scores 100)"
  ],
