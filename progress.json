@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-13T03:40:49+00:00",
+   "detail": "17 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 484.0
   }
  ],
- "updated": "2026-11-13T03:40:48+00:00",
+ "updated": "2026-11-13T03:40:49+00:00",
  "attempts": [
   "['ह', 'ा', 'ल']: rejected (N1 is not your strongest hook: \"तुम्हारा 'हाल' कब से यही हाल है?\" scores 100)"
  ],
