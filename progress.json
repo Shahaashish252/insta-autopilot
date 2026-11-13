@@ -2,7 +2,7 @@
  "run_id": "43359585831",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43359585831",
  "started": "2026-11-13T03:32:09+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 484.0
   }
  ],
- "updated": "2026-11-13T03:40:56+00:00",
+ "updated": "2026-11-13T03:40:57+00:00",
  "attempts": [
   "['ह', 'ा', 'ल']: rejected (N1 is not your strongest hook: \"तुम्हारा 'हाल' कब से यही हाल है?\" scores 100)"
  ],
@@ -398,5 +398,8 @@
   }
  ],
  "publish_at": "2026-11-15T18:45:00+05:30",
- "duration": 32.95
+ "duration": 32.95,
+ "detail": "हाल → हल · posts Sun 15 Nov, 06:45 PM IST",
+ "ended": "2026-11-13T03:40:57+00:00",
+ "took": 528.0
 }
