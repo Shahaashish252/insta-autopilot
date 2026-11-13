@@ -44,8 +44,9 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-13T03:38:20+00:00"
   },
   {
    "key": "timing",
@@ -277,7 +278,7 @@
    "took": 484.0
   }
  ],
- "updated": "2026-11-13T03:38:19+00:00",
+ "updated": "2026-11-13T03:38:20+00:00",
  "attempts": [
   "['ह', 'ा', 'ल']: rejected (N1 is not your strongest hook: \"तुम्हारा 'हाल' कब से यही हाल है?\" scores 100)"
  ],
