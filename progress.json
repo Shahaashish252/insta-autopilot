@@ -71,8 +71,9 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-13T03:38:26+00:00"
   },
   {
    "key": "picture",
@@ -283,7 +284,7 @@
    "took": 484.0
   }
  ],
- "updated": "2026-11-13T03:38:25+00:00",
+ "updated": "2026-11-13T03:38:26+00:00",
  "attempts": [
   "['ह', 'ा', 'ल']: rejected (N1 is not your strongest hook: \"तुम्हारा 'हाल' कब से यही हाल है?\" scores 100)"
  ],
