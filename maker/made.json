@@ -44,5 +44,13 @@
   "hook_formula": "one-letter claim (matra/letter-fix)",
   "hook_score": 79,
   "at": "2026-11-12T17:06:28.362315+00:00"
+ },
+ {
+  "slug": "haal-hal",
+  "word": "हाल → हल",
+  "hook": "कब तक यही हाल?",
+  "hook_formula": "sting question",
+  "hook_score": 100,
+  "at": "2026-11-13T03:40:55.826065+00:00"
  }
 ]
