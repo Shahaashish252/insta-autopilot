@@ -17,7 +17,8 @@
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-13T16:38:49+00:00"
   },
   {
    "key": "write",
@@ -262,5 +263,5 @@
    "took": 3022.0
   }
  ],
- "updated": "2026-11-13T16:38:43+00:00"
+ "updated": "2026-11-13T16:38:49+00:00"
 }
