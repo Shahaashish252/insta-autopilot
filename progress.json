@@ -1,119 +1,96 @@
 {
- "run_id": "43264038973",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43264038973",
- "started": "2026-11-12T16:56:20+00:00",
- "status": "done",
+ "run_id": "43359585831",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43359585831",
+ "started": "2026-11-13T03:32:09+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-12T16:56:20+00:00",
-   "ended": "2026-11-12T16:57:20+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-13T03:32:09+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-12T16:57:25+00:00",
-   "ended": "2026-11-12T16:58:01+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-12T16:58:03+00:00",
-   "detail": "जीत → जी",
-   "ended": "2026-11-12T17:01:06+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-12T17:01:07+00:00",
-   "ended": "2026-11-12T17:01:58+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-12T17:01:59+00:00",
-   "ended": "2026-11-12T17:02:00+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-12T17:02:02+00:00",
-   "ended": "2026-11-12T17:02:03+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  37.63 s  -16.0 LUFS",
-   "started": "2026-11-12T17:02:04+00:00",
-   "ended": "2026-11-12T17:02:07+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-12T17:02:08+00:00",
-   "ended": "2026-11-12T17:02:54+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "95 % (1080/1129 frames, 3 workers)",
-   "started": "2026-11-12T17:02:53+00:00",
-   "ended": "2026-11-12T17:04:52+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-12T17:04:53+00:00",
-   "ended": "2026-11-12T17:06:21+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-12T17:06:23+00:00",
-   "detail": "19 MB",
-   "ended": "2026-11-12T17:06:27+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-12T17:06:28+00:00",
-   "started": "2026-11-12T17:06:28+00:00",
-   "detail": "Sat 14 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "43264038973",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43264038973",
+   "started": "2026-11-12T16:56:20+00:00",
+   "updated": "2026-11-12T17:06:30+00:00",
+   "status": "done",
+   "word": "जीत → जी",
+   "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
+   "publish_at": "2026-11-14T18:45:00+05:30",
+   "detail": "जीत → जी · posts Sat 14 Nov, 06:45 PM IST",
+   "took": 610.0
+  },
   {
    "run_id": "43240086030",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43240086030",
@@ -281,122 +258,7 @@
    "publish_at": "2026-11-07T13:00:00+05:30",
    "detail": "मन → मान · posts Sat 07 Nov, 01:00 PM IST",
    "took": 484.0
-  },
-  {
-   "run_id": "42225573343",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42225573343",
-   "started": "2026-11-06T13:28:15+00:00",
-   "updated": "2026-11-06T13:29:35+00:00",
-   "status": "failed",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "the run stopped; see its log",
-   "took": 80.0
   }
  ],
- "updated": "2026-11-12T17:06:30+00:00",
- "word": "जीत → जी",
- "slug": "jeet-jee",
- "hook": "सिर्फ़ 1 अक्षर, जीत से जी",
- "caption": "जो जीतकर भी अंदर से थका और खाली महसूस करते हैं, ये रील उन्हें भेज दो।\n\nजीत शब्द से बस एक अक्षर 'त' हटाओ, बन जाता है 'जी', तुम्हारा मन, तुम्हारी साँस, तुम्हारा असली हिस्सा।\n\nबाहर की जीत अच्छी लगती है, पर अगर अंदर का जी हार जाए, तो वो जीत भी खाली लग सकती है। असली सीख यही है, अपने जी को कभी मत हराओ।\n\nआज अगर कोई ट्रॉफ़ी, नंबर या तारीफ़ के बाद भी खाली महसूस कर रहा है, उसे बता दो, पहले अपना जी जीतो, बाकी सब पीछे आ जाएगा।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #जीतसेजी",
- "hooks": [
-  {
-   "formula": "one-letter claim (matra/letter-fix)",
-   "line": "सिर्फ़ एक अक्षर हटाओ, जीत बन जाए जी।",
-   "card": "सिर्फ़ 1 अक्षर, जीत से जी",
-   "score": 79
-  },
-  {
-   "formula": "sting question",
-   "line": "तुम्हारी जीत में तुम्हारा जी कहाँ है?",
-   "card": "तुम्हारी जीत में जी कहाँ?",
-   "score": 86
-  },
-  {
-   "formula": "identity call",
-   "line": "जो जीतकर भी अंदर से हारा हुआ महसूस करें, ये तुम्हारे लिए है।",
-   "card": "जीतकर भी हारा हुआ लगे?",
-   "score": 61
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "सिर्फ़ एक अक्षर हटाओ, जीत बन जाए जी।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द के अंदर ही छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "जीत।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "एग्ज़ाम में नंबर आ गए, तारीफ़ भी मिली।",
-   "write": "नंबर आए…",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर अंदर से तुम खाली जैसा महसूस करते हो।",
-   "write": "पर अंदर खाली",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द का आख़िरी अक्षर, कुछ छुपा रहा है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "ये 'त' हटा दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "और जीत, बन जाती है जी।",
-   "write": "जीत… जी",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "असली जीत वो है, जब तुम्हारा जी भी जीत जाए।",
-   "write": "जी जीते, तभी जीत",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "जो जीतकर भी थका हुआ लगे, उसे ये भेज दो।",
-   "write": "थका लगे? भेज दो",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम 7 बजे…",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "याद रखो, एक अक्षर से जीत, जी बन जाती है।",
-   "write": "1 अक्षर से जी",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-14T18:45:00+05:30",
- "duration": 37.63,
- "detail": "जीत → जी · posts Sat 14 Nov, 06:45 PM IST",
- "ended": "2026-11-12T17:06:30+00:00",
- "took": 610.0
+ "updated": "2026-11-13T03:32:09+00:00"
 }
