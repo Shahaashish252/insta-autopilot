@@ -89,9 +89,10 @@
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-15T14:02:44+00:00"
+   "started": "2026-11-15T14:02:44+00:00",
+   "ended": "2026-11-15T14:03:54+00:00"
   },
   {
    "key": "upload",
@@ -288,7 +289,7 @@
    "took": 89.0
   }
  ],
- "updated": "2026-11-15T14:02:44+00:00",
+ "updated": "2026-11-15T14:03:54+00:00",
  "word": "सोच → सच",
  "slug": "soch-sach",
  "hook": "एक मात्रा हटाओ, सोच बने सच",
