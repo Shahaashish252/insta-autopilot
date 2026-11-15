@@ -1,119 +1,96 @@
 {
- "run_id": "43719345825",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43719345825",
- "started": "2026-11-15T13:30:44+00:00",
- "status": "done",
+ "run_id": "43720286880",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43720286880",
+ "started": "2026-11-15T13:41:20+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-15T13:30:44+00:00",
-   "ended": "2026-11-15T13:31:40+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-15T13:41:20+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-15T13:31:49+00:00",
-   "ended": "2026-11-15T13:32:27+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-15T13:32:28+00:00",
-   "detail": "जग → जाग",
-   "ended": "2026-11-15T13:34:52+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-15T13:34:53+00:00",
-   "ended": "2026-11-15T13:35:50+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-15T13:35:51+00:00",
-   "ended": "2026-11-15T13:35:52+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-15T13:35:54+00:00",
-   "ended": "2026-11-15T13:35:55+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  41.94 s  -16.0 LUFS",
-   "started": "2026-11-15T13:35:56+00:00",
-   "ended": "2026-11-15T13:35:58+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-15T13:36:00+00:00",
-   "ended": "2026-11-15T13:36:53+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "85 % (1080/1258 frames, 3 workers)",
-   "started": "2026-11-15T13:36:52+00:00",
-   "ended": "2026-11-15T13:39:05+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-15T13:39:06+00:00",
-   "ended": "2026-11-15T13:40:44+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-15T13:40:45+00:00",
-   "detail": "20 MB",
-   "ended": "2026-11-15T13:40:49+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-15T13:40:50+00:00",
-   "started": "2026-11-15T13:40:50+00:00",
-   "detail": "Thu 19 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "43719345825",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43719345825",
+   "started": "2026-11-15T13:30:44+00:00",
+   "updated": "2026-11-15T13:40:52+00:00",
+   "status": "done",
+   "word": "जग → जाग",
+   "hook": "एक मात्रा जोड़ो, जाग जाओ",
+   "publish_at": "2026-11-19T18:45:00+05:30",
+   "detail": "जग → जाग · posts Thu 19 Nov, 06:45 PM IST",
+   "took": 608.0
+  },
   {
    "run_id": "43670170575",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43670170575",
@@ -281,122 +258,7 @@
    "publish_at": null,
    "detail": "6 approved reels are already waiting (max 3); nothing to make",
    "took": 82.0
-  },
-  {
-   "run_id": "42494840506",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42494840506",
-   "started": "2026-11-08T15:26:54+00:00",
-   "updated": "2026-11-08T15:28:00+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "7 approved reels are already waiting (max 3); nothing to make",
-   "took": 66.0
   }
  ],
- "updated": "2026-11-15T13:40:52+00:00",
- "word": "जग → जाग",
- "slug": "jag-jaag",
- "hook": "एक मात्रा जोड़ो, जाग जाओ",
- "caption": "जो हर फैसले से पहले दुनिया से पूछते हैं, ये रील उन्हें भेज दो।\n\nजग में बस एक मात्रा जोड़ो, और बन जाता है जाग। एक छोटा बदलाव, मतलब बिल्कुल अलग।\n\nजग यानी दुनिया की नज़र, जाग यानी अपनी नज़र से जीना। जो दुनिया की बातों में उलझा रहता है, वो कभी अपने लिए नहीं जी पाता।\n\nआज से दुनिया की नज़र नहीं, अपनी नज़र से जियो। यही ज़िंदगी का सबसे ज़रूरी सीख है।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #जगसेजाग",
- "hooks": [
-  {
-   "formula": "One-letter claim",
-   "line": "'जग' में बस एक मात्रा जोड़ो, और जाग जाओ।",
-   "card": "एक मात्रा जोड़ो, जाग जाओ",
-   "score": 79
-  },
-  {
-   "formula": "Sting question",
-   "line": "तुम कब तक दुनिया की नज़रों में जीते रहोगे?",
-   "card": "कब तक दुनिया की नज़रों में?",
-   "score": 73
-  },
-  {
-   "formula": "Negative command",
-   "line": "दुनिया क्या कहेगी, ये सोचना बंद करो।",
-   "card": "'दुनिया क्या कहेगी' सोचना बंद करो",
-   "score": 74
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "'जग' में बस एक मात्रा जोड़ो, और जाग जाओ।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "क्योंकि इस एक मात्रा में ही जवाब छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "जग।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "हर फैसले से पहले सोचते हो, 'लोग क्या कहेंगे'।",
-   "write": "लोग क्या कहेंगे?",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "दोस्त, कपड़े, करियर, हर जगह बस डर।",
-   "write": "हर जगह बस डर",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द की एक छोटी-सी मात्रा, सब बदल देती है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "इसमें ये मात्रा जोड़ दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "और जग, बन जाता है जाग।",
-   "write": "जग... जाग।",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "जो खुद के लिए जाग जाता है, उसे दुनिया की हँसी नहीं डराती।",
-   "write": "खुद के लिए जागो।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "जो हर फैसले से पहले सबसे पूछते हैं, उन्हें ये रील भेज दो।",
-   "write": "उन्हें ये भेज दो।",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, एक नया शब्द।",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "तो आज ही, अपने 'जग' में मात्रा जोड़ो, और जाग जाओ।",
-   "write": "मात्रा जोड़ो, जाग जाओ।",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-19T18:45:00+05:30",
- "duration": 41.94,
- "detail": "जग → जाग · posts Thu 19 Nov, 06:45 PM IST",
- "ended": "2026-11-15T13:40:52+00:00",
- "took": 608.0
+ "updated": "2026-11-15T13:41:20+00:00"
 }
