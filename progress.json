@@ -44,9 +44,10 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "running",
-   "detail": null,
-   "started": "2026-11-15T13:35:51+00:00"
+   "state": "done",
+   "detail": "mismatches: 0 (lang=hi, model=small)",
+   "started": "2026-11-15T13:35:51+00:00",
+   "ended": "2026-11-15T13:35:52+00:00"
   },
   {
    "key": "timing",
@@ -278,7 +279,7 @@
    "took": 66.0
   }
  ],
- "updated": "2026-11-15T13:35:51+00:00",
+ "updated": "2026-11-15T13:35:52+00:00",
  "word": "जग → जाग",
  "slug": "jag-jaag",
  "hook": "एक मात्रा जोड़ो, जाग जाओ",
