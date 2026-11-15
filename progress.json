@@ -26,9 +26,10 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-15T14:06:37+00:00",
-   "detail": "attempt 2: Claude is choosing a word"
+   "detail": "कीमत → कीमती",
+   "ended": "2026-11-15T14:12:19+00:00"
   },
   {
    "key": "voice",
@@ -267,7 +268,7 @@
    "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:12:18+00:00",
+ "updated": "2026-11-15T14:12:19+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
  ],
