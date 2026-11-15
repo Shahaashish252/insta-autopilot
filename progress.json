@@ -53,8 +53,9 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-15T14:00:13+00:00"
   },
   {
    "key": "music",
@@ -279,7 +280,7 @@
    "took": 89.0
   }
  ],
- "updated": "2026-11-15T14:00:11+00:00",
+ "updated": "2026-11-15T14:00:13+00:00",
  "word": "सोच → सच",
  "slug": "soch-sach",
  "hook": "एक मात्रा हटाओ, सोच बने सच",
