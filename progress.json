@@ -267,5 +267,8 @@
    "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:06:37+00:00"
+ "updated": "2026-11-15T14:09:04+00:00",
+ "attempts": [
+  "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
+ ]
 }
