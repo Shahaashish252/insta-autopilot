@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-15T13:54:37+00:00",
+   "detail": "19 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 82.0
   }
  ],
- "updated": "2026-11-15T13:54:36+00:00",
+ "updated": "2026-11-15T13:54:37+00:00",
  "attempts": [
   "['र', 'ं', 'ग']: rejected (N1 is not your strongest hook: \"हर बदलते रंग में खुद को मत खोना।\" scores 92)"
  ],
