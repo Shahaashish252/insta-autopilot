@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-15T14:17:45+00:00",
+   "detail": "20 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:17:43+00:00",
+ "updated": "2026-11-15T14:17:45+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
  ],
