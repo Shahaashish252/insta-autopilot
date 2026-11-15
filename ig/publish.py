@@ -96,7 +96,11 @@ def main():
         if only and name != only: continue
         if not meta.get('approved'):
             print(f'skip {name}: not approved'); continue
-        if meta.get('manual') and not only:
+        if meta.get('manual') and not only:              # you post it (dashboard: Post by hand); once it is live, record it
+            if due(meta, now):
+                if live is None: live = {} if api.DRY else on_instagram()
+                m = live.get(key(meta.get('caption')))
+                if m and not api.DRY: mark_posted(name, folder, meta, m); continue
             print(f'skip {name}: you post this one by hand'); continue
         if not only and not due(meta, now):
             print(f'wait {name}: due {meta.get("publish_at") or "(no time set)"}'); continue

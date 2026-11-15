@@ -134,3 +134,5 @@ footer{color:var(--mute);font-size:12px;text-align:center;padding:30px 0 50px}
 .notes{max-height:560px;overflow:auto}.brand{min-width:0}.brand b,.brand small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:600px){.brand small{display:none}.top .wrap{gap:8px}.chip{padding:6px 9px}}
 .notes code{font-family:inherit;font-size:inherit;background:var(--bg2);padding:1px 6px;border-radius:6px}
+
+.postbox{display:flex;gap:8px;flex-wrap:wrap}.postbox .btn{flex:1;min-width:150px;padding:10px 12px;font-size:14px}

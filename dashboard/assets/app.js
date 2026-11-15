@@ -43,7 +43,7 @@ function home() {
   <div class="hero" id="overview">
     ${nx ? `<div class="card next fade"><button class="cv" data-open="${esc(nx.name)}" aria-label="Watch ${esc(nx.title)}">${nx.cover ? `<img src="${esc(nx.cover)}" alt="">` : ''}</button>
       <div><div class="label">Next post</div><h3>${esc(nx.title)}</h3><div class="when">${ist(nx.publish_at, {weekday:'short'})} NPT (Nepal)</div>
-      <div class="count" data-count="${esc(nx.publish_at)}"></div><div class="small" style="opacity:.85">${sched.length} scheduled · posts by itself from GitHub</div></div></div>`
+      <div class="count" data-count="${esc(nx.publish_at)}"></div><div class="small" style="opacity:.85">${sched.length} scheduled · post it from the dashboard (📤 Post)</div></div></div>`
       : `<div class="card next fade"><div class="cv"></div><div><div class="label">Next post</div><h3>Nothing scheduled</h3><div class="when">GitHub makes the next reel at about 5:15 AM or 2:15 PM NPT and posts it at 7:00 PM NPT.</div></div></div>`}
     <div class="card make fade" id="now"><div class="label">Making</div><p class="muted">Loading the live progress…</p></div>
   </div>
@@ -133,7 +133,45 @@ function gallery(f, q) {
     <div class="body">${r.status === 'posted' ? `<div class="stats"><span>▶ <b>${fmt(r.ins.views)}</b></span><span>↗ <b>${fmt(r.ins.shares)}</b></span><span>💬 <b>${fmt(r.ins.comments)}</b></span><span>♥ <b>${fmt(r.ins.likes)}</b></span></div>`
       : `<div class="stats">${r.hook_formula ? `<span>${esc(r.hook_formula)}</span>` : `<span>${esc(r.style || '')}</span>`}</div>`}
       <div class="pipe" title="${esc(r.stages.map(s => s[0] + (s[1] ? ' ✓' : '')).join(' · '))}">${r.stages.map(s => `<i class="${s[1] ? 'on' : ''}"></i>`).join('')}</div>
-      <div class="acts"><button class="btn pri" data-open="${esc(r.name)}">${r.video ? '▶ Watch' : 'Details'}</button>${r.permalink ? `<a class="btn" href="${esc(r.permalink)}" target="_blank" rel="noopener">Instagram ↗</a>` : ''}</div></div></article>`).join('') || '<div class="empty">No reels here.</div>';
+      <div class="acts"><button class="btn pri" data-open="${esc(r.name)}">${r.status === 'scheduled' ? '📤 Post' : r.video ? '▶ Watch' : 'Details'}</button>${r.permalink ? `<a class="btn" href="${esc(r.permalink)}" target="_blank" rel="noopener">Instagram ↗</a>` : ''}</div></div></article>`).join('') || '<div class="empty">No reels here.</div>';
+}
+
+// ───────── posting from the dashboard (reels are posted by hand while Meta refuses automated posting)
+const COMPOSER = 'https://business.facebook.com/latest/reels_composer';
+function postBox(r) {
+  return `<div class="label" style="margin-top:12px">Post this reel</div>
+    <div class="postbox"><button class="btn pri" data-hand="${esc(r.name)}">📋 Post by hand</button><button class="btn" data-gh="${esc(r.name)}">🚀 Post now via GitHub</button></div>
+    <p class="small muted" id="pmsg" style="margin:8px 0 0">By hand: copies the caption, downloads the video and opens Meta's composer. Paste, pick the video, then Share or Schedule.</p>`;
+}
+async function copyText(t) {
+  try { await navigator.clipboard.writeText(t); return true; } catch (e) {}
+  const ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+  let ok = false; try { ok = document.execCommand('copy'); } catch (e) {} ta.remove(); return ok;
+}
+async function postByHand(r) {
+  const tab = window.open(COMPOSER, '_blank', 'noopener');               // opened first, while the click still counts
+  if (r.video) { const a = document.createElement('a'); a.href = r.video; a.download = r.name + '.mp4'; document.body.appendChild(a); a.click(); a.remove(); }
+  const ok = await copyText(r.caption || '');
+  $('#pmsg').innerHTML = `${ok ? '✓ Caption copied.' : 'Copy the caption below by hand.'} ${r.video ? '✓ Video downloading (' + esc(r.name) + '.mp4).' : 'The video is in reels-to-schedule on your computer.'} ${tab ? '✓ Meta composer opened in a new tab.' : `<a href="${COMPOSER}" target="_blank" rel="noopener">Open Meta's composer ↗</a>`}<br>It shows as posted here after the next check (within the hour).`;
+}
+async function postViaGitHub(r) {
+  const msg = $('#pmsg');
+  if (!confirm(`Post "${r.title}" to Instagram now through GitHub?\n\nOne try. Meta has refused GitHub's posts lately, so it may fail; you can still post by hand.`)) return;
+  let tok = ''; try { tok = localStorage.getItem('ghtoken') || ''; } catch (e) {}
+  if (!tok) {
+    tok = (prompt('Paste a GitHub token (fine-grained, this repo only, "Actions: read and write"). It stays in this browser only.\n\nMake one at github.com/settings/personal-access-tokens/new') || '').trim();
+    if (!tok) return;
+  }
+  msg.textContent = 'Asking GitHub…';
+  const res = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/publish.yml/dispatches`, {method: 'POST',
+    headers: {Authorization: 'Bearer ' + tok, Accept: 'application/vnd.github+json'}, body: JSON.stringify({ref: 'main', inputs: {now: r.name}})}).catch(() => null);
+  if (res && res.status === 204) {
+    try { localStorage.setItem('ghtoken', tok); } catch (e) {}
+    msg.innerHTML = `✓ Started. It takes 2–5 minutes. <a href="https://github.com/${esc(REPO)}/actions/workflows/publish.yml" target="_blank" rel="noopener">Watch the run ↗</a>. If it fails, use Post by hand.`;
+  } else {
+    if (res && (res.status === 401 || res.status === 403)) { try { localStorage.removeItem('ghtoken'); } catch (e) {} }
+    msg.textContent = `GitHub said ${res ? res.status : 'no answer'}${res && res.status === 401 ? ' (token not accepted; try again with a new one)' : ''}. Use Post by hand.`;
+  }
 }
 
 function openReel(name) {
@@ -145,10 +183,14 @@ function openReel(name) {
     <div class="label">Stages</div><div class="stagelist">${r.stages.map(s => `<div class="${s[1] ? 'on' : ''}">${s[1] ? '✓' : '○'} ${esc(s[0])}${s[2] ? `<small>${esc(s[2])}</small>` : ''}</div>`).join('')}</div>
     ${r.hooks.length ? `<div class="label" style="margin-top:12px">Hook contest</div><ul class="hooks">${r.hooks.sort((a, b) => b.score - a.score).map(h => `<li><div class="ring" style="--p:${h.score}"><span>${h.score}</span></div><div><b>${esc(h.line)}</b><br><small class="muted">${esc(h.formula)}${h.line === r.hook_line ? ' · <span class="ok">used</span>' : ''}</small></div></li>`).join('')}</ul>`
       : r.hook_line ? `<div class="label" style="margin-top:12px">Hook</div><p style="margin:4px 0">${esc(r.hook_line)}</p>` : ''}
+    ${r.status === 'scheduled' ? postBox(r) : ''}
     ${r.caption ? `<div class="label" style="margin-top:12px">Caption</div><pre>${esc(r.caption)}</pre>` : ''}</div></div>`;
   dlg.showModal();
   const close = () => dlg.close(); dlg.querySelector('.x').onclick = close;
 }
+document.addEventListener('click', e => {
+  const h = e.target.closest('[data-hand]'), g = e.target.closest('[data-gh]'), find = n => reels.find(x => x.name === n);
+  if (h) return postByHand(find(h.dataset.hand)); if (g) return postViaGitHub(find(g.dataset.gh)); });
 document.addEventListener('click', e => { const b = e.target.closest('[data-open]'); if (b) openReel(b.dataset.open); const d = $('#dlg'); if (e.target === d) d.close(); });
 document.addEventListener('close', e => { const v = e.target.querySelector && e.target.querySelector('video'); if (v) { v.pause(); v.removeAttribute('src'); v.load(); } }, true);
 
