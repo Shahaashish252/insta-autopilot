@@ -26,9 +26,10 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-15T13:42:33+00:00",
-   "detail": "attempt 2: Claude is choosing a word"
+   "detail": "गम → गुम",
+   "ended": "2026-11-15T13:50:12+00:00"
   },
   {
    "key": "voice",
@@ -267,7 +268,7 @@
    "took": 82.0
   }
  ],
- "updated": "2026-11-15T13:50:11+00:00",
+ "updated": "2026-11-15T13:50:12+00:00",
  "attempts": [
   "['र', 'ं', 'ग']: rejected (N1 is not your strongest hook: \"हर बदलते रंग में खुद को मत खोना।\" scores 92)"
  ],
