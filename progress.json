@@ -72,16 +72,16 @@
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
    "state": "done",
-   "detail": null,
+   "detail": "every line readable",
    "started": "2026-11-15T14:13:23+00:00",
-   "ended": "2026-11-15T14:14:07+00:00"
+   "ended": "2026-11-15T14:14:09+00:00"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "0 %",
+   "detail": "20 % (240/1172 frames, 3 workers)",
    "started": "2026-11-15T14:14:08+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:14:08+00:00",
+ "updated": "2026-11-15T14:14:36+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
  ],
