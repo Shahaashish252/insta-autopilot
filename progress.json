@@ -2,7 +2,7 @@
  "run_id": "43720286880",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43720286880",
  "started": "2026-11-15T13:41:20+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 82.0
   }
  ],
- "updated": "2026-11-15T13:54:42+00:00",
+ "updated": "2026-11-15T13:54:43+00:00",
  "attempts": [
   "['र', 'ं', 'ग']: rejected (N1 is not your strongest hook: \"हर बदलते रंग में खुद को मत खोना।\" scores 92)"
  ],
@@ -398,5 +398,8 @@
   }
  ],
  "publish_at": "2026-11-20T18:45:00+05:30",
- "duration": 39.19
+ "duration": 39.19,
+ "detail": "गम → गुम · posts Fri 20 Nov, 06:45 PM IST",
+ "ended": "2026-11-15T13:54:43+00:00",
+ "took": 803.0
 }
