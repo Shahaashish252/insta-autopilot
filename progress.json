@@ -62,8 +62,9 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "39 sound cues, 39.2 s",
+   "started": "2026-11-15T13:50:58+00:00"
   },
   {
    "key": "reading",
