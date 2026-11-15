@@ -62,8 +62,9 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "39 sound cues, 39.0 s",
+   "started": "2026-11-15T14:13:19+00:00"
   },
   {
    "key": "reading",
@@ -281,7 +282,7 @@
    "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:13:18+00:00",
+ "updated": "2026-11-15T14:13:19+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
  ],
