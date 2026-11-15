@@ -2,7 +2,7 @@
  "run_id": "43722365165",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43722365165",
  "started": "2026-11-15T14:04:56+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:17:50+00:00",
+ "updated": "2026-11-15T14:17:51+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
  ],
@@ -398,5 +398,8 @@
   }
  ],
  "publish_at": "2026-11-21T18:45:00+05:30",
- "duration": 39.05
+ "duration": 39.05,
+ "detail": "कीमत → कीमती · posts Sat 21 Nov, 06:45 PM IST",
+ "ended": "2026-11-15T14:17:51+00:00",
+ "took": 775.0
 }
