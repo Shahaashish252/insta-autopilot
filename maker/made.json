@@ -68,5 +68,13 @@
   "hook_formula": "One-letter claim",
   "hook_score": 100,
   "at": "2026-11-15T13:54:41.211120+00:00"
+ },
+ {
+  "slug": "soch-sach",
+  "word": "सोच → सच",
+  "hook": "एक मात्रा हटाओ, सोच बने सच",
+  "hook_formula": "One-letter claim",
+  "hook_score": 92,
+  "at": "2026-11-15T14:04:01.149664+00:00"
  }
 ]
