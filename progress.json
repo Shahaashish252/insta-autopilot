@@ -71,8 +71,9 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-15T14:13:23+00:00"
   },
   {
    "key": "picture",
@@ -283,7 +284,7 @@
    "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:13:21+00:00",
+ "updated": "2026-11-15T14:13:23+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
  ],
