@@ -76,5 +76,13 @@
   "hook_formula": "One-letter claim",
   "hook_score": 92,
   "at": "2026-11-15T14:04:01.149664+00:00"
+ },
+ {
+  "slug": "keemat-keemti",
+  "word": "कीमत → कीमती",
+  "hook": "सिर्फ़ एक मात्रा से कीमती बनो",
+  "hook_formula": "One-letter claim",
+  "hook_score": 92,
+  "at": "2026-11-15T14:17:49.398418+00:00"
  }
 ]
