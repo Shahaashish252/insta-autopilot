@@ -2,7 +2,7 @@
  "run_id": "43721505440",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43721505440",
  "started": "2026-11-15T13:55:18+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 89.0
   }
  ],
- "updated": "2026-11-15T14:04:02+00:00",
+ "updated": "2026-11-15T14:04:03+00:00",
  "word": "सोच → सच",
  "slug": "soch-sach",
  "hook": "एक मात्रा हटाओ, सोच बने सच",
@@ -395,5 +395,8 @@
   }
  ],
  "publish_at": "2026-11-19T18:45:00+05:30",
- "duration": 39.24
+ "duration": 39.24,
+ "detail": "सोच → सच · posts Thu 19 Nov, 06:45 PM IST",
+ "ended": "2026-11-15T14:04:03+00:00",
+ "took": 525.0
 }
