@@ -1,119 +1,96 @@
 {
- "run_id": "43722365165",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43722365165",
- "started": "2026-11-15T14:04:56+00:00",
- "status": "done",
+ "run_id": "43731584017",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43731584017",
+ "started": "2026-11-15T15:44:56+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-15T14:04:56+00:00",
-   "ended": "2026-11-15T14:05:49+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-15T15:44:56+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-15T14:05:54+00:00",
-   "ended": "2026-11-15T14:06:35+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-15T14:06:37+00:00",
-   "detail": "कीमत → कीमती",
-   "ended": "2026-11-15T14:12:19+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-15T14:12:20+00:00",
-   "ended": "2026-11-15T14:13:13+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-15T14:13:14+00:00",
-   "ended": "2026-11-15T14:13:15+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-15T14:13:16+00:00",
-   "ended": "2026-11-15T14:13:18+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  39.05 s  -16.0 LUFS",
-   "started": "2026-11-15T14:13:19+00:00",
-   "ended": "2026-11-15T14:13:21+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-15T14:13:23+00:00",
-   "ended": "2026-11-15T14:14:09+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "92 % (1080/1172 frames, 3 workers)",
-   "started": "2026-11-15T14:14:08+00:00",
-   "ended": "2026-11-15T14:16:11+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-15T14:16:12+00:00",
-   "ended": "2026-11-15T14:17:43+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-15T14:17:45+00:00",
-   "detail": "20 MB",
-   "ended": "2026-11-15T14:17:48+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-15T14:17:49+00:00",
-   "started": "2026-11-15T14:17:49+00:00",
-   "detail": "Sat 21 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "43722365165",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43722365165",
+   "started": "2026-11-15T14:04:56+00:00",
+   "updated": "2026-11-15T14:17:51+00:00",
+   "status": "done",
+   "word": "कीमत → कीमती",
+   "hook": "सिर्फ़ एक मात्रा से कीमती बनो",
+   "publish_at": "2026-11-21T18:45:00+05:30",
+   "detail": "कीमत → कीमती · posts Sat 21 Nov, 06:45 PM IST",
+   "took": 775.0
+  },
   {
    "run_id": "43721505440",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43721505440",
@@ -281,125 +258,7 @@
    "publish_at": null,
    "detail": "6 approved reels are already waiting (max 3); nothing to make",
    "took": 85.0
-  },
-  {
-   "run_id": "42757724534",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/42757724534",
-   "started": "2026-11-10T04:44:20+00:00",
-   "updated": "2026-11-10T04:47:01+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "6 approved reels are already waiting (max 3); nothing to make",
-   "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:17:51+00:00",
- "attempts": [
-  "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
- ],
- "word": "कीमत → कीमती",
- "slug": "keemat-keemti",
- "hook": "सिर्फ़ एक मात्रा से कीमती बनो",
- "caption": "जो अपनी कीमत हमेशा दूसरों से पूछते हैं, ये रील उन्हें भेज दो।\n\nकीमत में बस एक मात्रा जोड़ो, और वो बन जाता है कीमती। एक छोटा-सा बदलाव, पर मतलब पूरा बदल जाता है।\n\nदुनिया तुम्हारी कीमत लगा सकती है, पर तुम्हारी कीमत तय नहीं कर सकती। तुम कीमत नहीं हो, तुम कीमती हो।\n\nआज ये सीख अपने पास रख लो। हिंदी के एक शब्द में इतनी बड़ी ज़िंदगी की बात छुपी है।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #कीमतीकीमत",
- "hooks": [
-  {
-   "formula": "One-letter claim",
-   "line": "सिर्फ़ एक मात्रा जोड़ो, और तुम्हारी कीमत बदल जाए।",
-   "card": "सिर्फ़ एक मात्रा से कीमती बनो",
-   "score": 92
-  },
-  {
-   "formula": "Sting question",
-   "line": "तुम्हारी कीमत किसने तय की है?",
-   "card": "तुम्हारी कीमत किसने तय की?",
-   "score": 86
-  },
-  {
-   "formula": "Negative command",
-   "line": "अपनी कीमत दूसरों से मत पूछो।",
-   "card": "अपनी कीमत किसी से मत पूछो",
-   "score": 78
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "सिर्फ़ एक मात्रा जोड़ो, और तुम्हारी कीमत बदल जाए।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, बस एक मात्रा में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "कीमत।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "हर जगह बस एक सवाल होता है, तुम्हारी कीमत क्या है।",
-   "write": "तुम्हारी कीमत क्या है?",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "और तुम भी खुद को नंबर से तोलने लगते हो।",
-   "write": "नंबर से मत तोलो",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द की एक छोटी-सी मात्रा, सब बदल देती है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "ये मात्रा जोड़ो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "और कीमत, बन जाती है कीमती।",
-   "write": "कीमत… कीमती",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "क्योंकि इंसान की कीमत नहीं होती, वो तो कीमती होता है।",
-   "write": "तुम कीमती हो",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "ये रील उसे भेजो, जो अपनी कीमत दूसरों से पूछता है।",
-   "write": "जो पूछता है, उसे भेजो",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, एक नया शब्द",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "सिर्फ़ एक मात्रा, और तुम कीमती हो।",
-   "write": "मात्रा जोड़ो, कीमती बनो",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-21T18:45:00+05:30",
- "duration": 39.05,
- "detail": "कीमत → कीमती · posts Sat 21 Nov, 06:45 PM IST",
- "ended": "2026-11-15T14:17:51+00:00",
- "took": 775.0
+ "updated": "2026-11-15T15:44:56+00:00"
 }
