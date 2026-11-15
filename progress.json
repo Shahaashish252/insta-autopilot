@@ -44,9 +44,10 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "running",
-   "detail": null,
-   "started": "2026-11-15T13:50:55+00:00"
+   "state": "done",
+   "detail": "mismatches: 0 (lang=hi, model=small)",
+   "started": "2026-11-15T13:50:55+00:00",
+   "ended": "2026-11-15T13:50:55+00:00"
   },
   {
    "key": "timing",
