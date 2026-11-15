@@ -52,5 +52,13 @@
   "hook_formula": "sting question",
   "hook_score": 100,
   "at": "2026-11-13T03:40:55.826065+00:00"
+ },
+ {
+  "slug": "jag-jaag",
+  "word": "जग → जाग",
+  "hook": "एक मात्रा जोड़ो, जाग जाओ",
+  "hook_formula": "One-letter claim",
+  "hook_score": 79,
+  "at": "2026-11-15T13:40:50.284167+00:00"
  }
 ]
