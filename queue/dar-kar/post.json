@@ -8,7 +8,7 @@
  "share_to_feed": true,
  "made_at": "2026-11-12T14:56:20.685271+00:00",
  "duration": 33.39,
- "manual": true,
+ "manual": false,
  "hook_formula": "one-letter claim",
  "hook_score": 92,
  "hooks": [

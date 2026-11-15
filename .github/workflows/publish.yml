@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       now: { description: 'post this approved queue item immediately (folder name)', required: false }
-permissions: { contents: write, actions: write }
+permissions: { contents: write, actions: write, issues: write }
 concurrency: { group: publish, cancel-in-progress: false }
 jobs:
   publish:
@@ -41,7 +41,8 @@ jobs:
         run: |
           git config user.name insta-autopilot; git config user.email actions@users.noreply.github.com
           mkdir -p queue posted; git add -A queue posted
-          git diff --cached --quiet || { git commit -m "posted: $(ls -t posted | head -1)"; git pull --rebase -q; git push; }
+          git diff --cached --quiet || { git commit -m "publish: $(git diff --cached --name-status | grep -oE "(posted|queue)/[^/]+" | sort -u | tr "
+" " ")"; git pull --rebase -q; git push; }
       - name: Wait for the next one too
         if: steps.wait.outputs.go == 'yes'
         run: |

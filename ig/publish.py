@@ -70,6 +70,42 @@ def mark_posted(name, folder, meta, m):
     json.dump(meta, open(os.path.join(folder, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     shutil.move(folder, os.path.join(POSTED, name))
     print(f'{name}: already on Instagram (media {m["id"]}), marked as posted')
+    if meta.get('auto_failed'): close_issue(name, m['id'])
+
+
+OWNER = os.environ.get('GITHUB_REPOSITORY', 'Shahaashish252/insta-autopilot').split('/')[0]
+SITE = os.environ.get('DASHBOARD_URL', f'https://{OWNER.lower()}.github.io/insta-autopilot/')
+
+
+def gh(*args):
+    try: return subprocess.run(['gh', *args], capture_output=True, text=True, encoding='utf-8', timeout=60)
+    except (OSError, subprocess.SubprocessError) as e: print('gh failed:', e)
+
+
+def hand_over(name, folder, meta, err):
+    """The automatic try failed: stop trying, mark it for posting by hand, and email the owner (a GitHub issue)."""
+    print(f'{name}: automatic posting failed ({str(err)[:160]}); handed over for posting by hand')
+    meta.update(manual=True, auto_failed=dt.datetime.now(dt.timezone.utc).isoformat(), auto_error=str(err)[:300])
+    json.dump(meta, open(os.path.join(folder, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    title = f'Post by hand: {meta.get("title", name)} ({name})'
+    when = dt.datetime.fromisoformat(meta['publish_at']).astimezone(dt.timezone(dt.timedelta(hours=5, minutes=45)))
+    nl = chr(10)
+    body = nl.join([
+        f'@{OWNER} Instagram refused the automatic post for **{meta.get("title", name)}** '
+        f'(due {when:%a %d %b, %I:%M %p} Nepal time). GitHub will not try again.', '',
+        f'**Post it by hand:** open the dashboard → Reels → {meta.get("title", name)} → **📤 Post** → **📋 Post by hand**',
+        SITE, '',
+        'First check your profile: if it is already there, do nothing. This issue closes by itself once the reel is on Instagram.', '',
+        "<details><summary>Meta's answer</summary>", '', '```', str(err)[:600], '```', '</details>'])
+    r = gh('issue', 'create', '--title', title, '--body', body)
+    print('emailed you (GitHub issue):', (r.stdout or r.stderr).strip() if r else 'gh missing')
+
+
+def close_issue(name, mid):
+    r = gh('issue', 'list', '--state', 'open', '--search', f'{name} in:title', '--json', 'number,title')
+    for i in json.loads(r.stdout or '[]') if r and r.returncode == 0 else []:
+        if f'({name})' in i['title']:
+            gh('issue', 'close', str(i['number']), '--comment', f'Posted ✓ (media {mid}).')
 
 
 def reslot(name, folder, meta):
@@ -110,7 +146,11 @@ def main():
             continue
         if not only and (done or now - dt.datetime.fromisoformat(meta['publish_at']) > dt.timedelta(hours=LATE_H)):
             reslot(name, folder, meta); continue                    # one reel per run, and never hours late
-        post_one(name, folder, meta); done += 1
+        try:
+            post_one(name, folder, meta); done += 1
+        except Exception as e:                                       # one try only: Meta flags repeated attempts
+            if api.DRY or only: raise
+            hand_over(name, folder, meta, e)
     print(f'{done} posted{" (dry run)" if api.DRY else ""}')
 
 

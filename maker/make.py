@@ -255,7 +255,7 @@ def queue(slug, o, dest, dur):
     cap = signoff(cap, series_no())
     meta = {'type': 'reel', 'asset': f'{slug}.mp4', 'title': title, 'caption': cap, 'publish_at': when.isoformat(),
             'approved': AUTO, 'share_to_feed': True, 'made_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'duration': dur,
-            'manual': os.environ.get('MANUAL_POST', '1') == '1',   # by hand from 15 Nov 2026: Meta refuses GitHub's uploads (dashboard: Post)
+            'manual': os.environ.get('MANUAL_POST', '0') == '1',   # one automatic try; if Meta refuses it turns manual + emails you (ig/publish.py)
             'hook_formula': used.get('formula'), 'hook_score': hook_score(n1)[0],
             'hooks': [{**x, 'score': hook_score(x.get('line', ''))[0]} for x in o.get('hooks') or []]}
     json.dump(meta, open(os.path.join(q, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
