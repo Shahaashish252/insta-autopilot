@@ -72,16 +72,16 @@
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
    "state": "done",
-   "detail": null,
+   "detail": "every line readable",
    "started": "2026-11-15T13:51:01+00:00",
-   "ended": "2026-11-15T13:51:43+00:00"
+   "ended": "2026-11-15T13:51:45+00:00"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "0 %",
+   "detail": "20 % (240/1176 frames, 3 workers)",
    "started": "2026-11-15T13:51:44+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 82.0
   }
  ],
- "updated": "2026-11-15T13:51:44+00:00",
+ "updated": "2026-11-15T13:52:08+00:00",
  "attempts": [
   "['र', 'ं', 'ग']: rejected (N1 is not your strongest hook: \"हर बदलते रंग में खुद को मत खोना।\" scores 92)"
  ],
