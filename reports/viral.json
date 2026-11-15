@@ -1,16 +1,16 @@
 {
- "at": "2026-11-12T14:42:00+00:00",
+ "at": "2026-11-15T09:56:15+00:00",
  "accounts": [
   {
    "account": "_navaratan_",
-   "followers": 71025,
-   "median": 2915.5,
+   "followers": 70446,
+   "median": 1923.0,
    "reels": 30
   },
   {
    "account": "its_sanakimotivation",
-   "followers": 1149,
-   "median": 33.0,
+   "followers": 1147,
+   "median": 33.5,
    "reels": 30
   }
  ],
@@ -23,39 +23,29 @@
  "outliers": [
   {
    "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 53.7,
-   "likes": 153018,
-   "comments": 1179,
-   "at": "2026-11-03T12:15:10+0000",
-   "caption": "Par ma matra jodho aur paar karjau♥️\n\nVoiceover by _navaratan_",
-   "permalink": "https://www.instagram.com/reel/DfR23KJvdPb/"
-  },
-  {
-   "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 6.57,
-   "likes": 18591,
-   "comments": 187,
+   "followers": 70446,
+   "multiple": 10.19,
+   "likes": 19020,
+   "comments": 190,
    "at": "2026-11-05T12:28:37+0000",
    "caption": "Sabr rakhna sikho🤞\n\nVoiceover by _navaratan_",
    "permalink": "https://www.instagram.com/reel/DfXB_X8AqUK/"
   },
   {
    "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 4.62,
-   "likes": 13252,
-   "comments": 71,
+   "followers": 70446,
+   "multiple": 7.16,
+   "likes": 13544,
+   "comments": 76,
    "at": "2026-11-05T07:46:11+0000",
    "caption": "Gaon ko kitna yaad karte ho🙏🏻\n\nVoiceover by _navaratan_",
    "permalink": "https://www.instagram.com/reel/DfWhk6kPndn/"
   },
   {
    "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 3.4,
-   "likes": 9635,
+   "followers": 70446,
+   "multiple": 5.18,
+   "likes": 9670,
    "comments": 94,
    "at": "2026-11-05T04:38:00+0000",
    "caption": "Happy deepawali 🪔",
@@ -63,28 +53,48 @@
   },
   {
    "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 3.02,
-   "likes": 8553,
-   "comments": 88,
-   "at": "2026-11-04T07:26:56+0000",
-   "caption": "Sukh tho khush rehne ma ha 🙏🏻\n\nVoiceover by _navaratan_",
-   "permalink": "https://www.instagram.com/reel/DfT6retvFok/"
+   "followers": 70446,
+   "multiple": 3.76,
+   "likes": 6897,
+   "comments": 108,
+   "at": "2026-11-04T19:45:55+0000",
+   "caption": "Thoda thoda aap khidko tod rahe ho ♥️\n\nVoiceover by _navaratan_",
+   "permalink": "https://www.instagram.com/reel/DfVPOEUTxYi/"
   },
   {
    "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 2.48,
-   "likes": 6979,
-   "comments": 84,
-   "at": "2026-11-03T11:45:29+0000",
-   "caption": "Diwali pe sona kaaredoge? 🙌🏻\n\nVoiceover by _navaratan_",
-   "permalink": "https://www.instagram.com/reel/DfRzTPmAXAl/"
+   "followers": 70446,
+   "multiple": 3.25,
+   "likes": 5963,
+   "comments": 96,
+   "at": "2026-11-07T09:24:44+0000",
+   "caption": "Aasman chahiye tho aasan kaise? \n\nVoiceover by _navaratan_",
+   "permalink": "https://www.instagram.com/reel/Dfb2T63vyY4/"
+  },
+  {
+   "account": "_navaratan_",
+   "followers": 70446,
+   "multiple": 2.64,
+   "likes": 4903,
+   "comments": 59,
+   "at": "2026-11-05T13:05:31+0000",
+   "caption": "Zid pe aade voh zinda rahe ♥️\n\nVoiceover by _navaratan_",
+   "permalink": "https://www.instagram.com/reel/DfXGNViPd7E/"
+  },
+  {
+   "account": "_navaratan_",
+   "followers": 70446,
+   "multiple": 2.4,
+   "likes": 4521,
+   "comments": 32,
+   "at": "2026-11-06T06:19:49+0000",
+   "caption": "Aapna kaam aaj se 1 ghanta sirf🙌🏻🫂\n\nVoiceover by _navaratan_",
+   "permalink": "https://www.instagram.com/reel/DfY8lvfgEBH/"
   },
   {
    "account": "its_sanakimotivation",
-   "followers": 1149,
-   "multiple": 2.39,
+   "followers": 1147,
+   "multiple": 2.36,
    "likes": 79,
    "comments": 0,
    "at": "2026-09-24T14:32:02+0000",
@@ -92,44 +102,14 @@
    "permalink": "https://www.instagram.com/reel/DdrGsYCy5NP/"
   },
   {
-   "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 2.31,
-   "likes": 6432,
-   "comments": 98,
-   "at": "2026-11-04T19:45:55+0000",
-   "caption": "Thoda thoda aap khidko tod rahe ho ♥️\n\nVoiceover by _navaratan_",
-   "permalink": "https://www.instagram.com/reel/DfVPOEUTxYi/"
-  },
-  {
-   "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 2.3,
-   "likes": 6447,
-   "comments": 85,
-   "at": "2026-11-03T06:47:59+0000",
-   "caption": "Betting apps se dur rahe 🙌🏻🙏🏻 aapni daulat bachaye - dau lagana ha tho khidpe lagayo♥️\n\nVOICEOVER BY _navaratan_",
-   "permalink": "https://www.instagram.com/reel/DfRRZp9P48B/"
-  },
-  {
    "account": "its_sanakimotivation",
-   "followers": 1149,
-   "multiple": 2.3,
+   "followers": 1147,
+   "multiple": 2.27,
    "likes": 76,
    "comments": 0,
    "at": "2026-09-26T08:18:05+0000",
    "caption": "​47/100 ✅ \"Ek din duniya ki sari khushiyaan tere kadmon me rakhunga maa...\" ❤️✨\n\n​Aaj 100 Videos Challenge ka 47va din hai, aur public place se shoot hui aaj ki yeh video meri Maa ke naam. Ek din apni maa ke sapne poore karne aur unhe saari khushiyan dene ka wada hi sabse badi taqat hota hai.\n\n​Agar",
    "permalink": "https://www.instagram.com/reel/Ddvlirnuq5y/"
-  },
-  {
-   "account": "_navaratan_",
-   "followers": 71025,
-   "multiple": 2.06,
-   "likes": 5716,
-   "comments": 93,
-   "at": "2026-11-07T09:24:44+0000",
-   "caption": "Aasman chahiye tho aasan kaise? \n\nVoiceover by _navaratan_",
-   "permalink": "https://www.instagram.com/reel/Dfb2T63vyY4/"
   }
  ]
 }
