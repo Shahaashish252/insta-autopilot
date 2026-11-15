@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-15T14:03:55+00:00",
+   "detail": "20 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 89.0
   }
  ],
- "updated": "2026-11-15T14:03:54+00:00",
+ "updated": "2026-11-15T14:03:55+00:00",
  "word": "सोच → सच",
  "slug": "soch-sach",
  "hook": "एक मात्रा हटाओ, सोच बने सच",
