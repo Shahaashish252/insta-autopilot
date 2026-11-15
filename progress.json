@@ -8,8 +8,10 @@
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "running",
-   "started": "2026-11-15T02:58:06+00:00"
+   "state": "done",
+   "started": "2026-11-15T02:58:06+00:00",
+   "ended": "2026-11-15T02:59:01+00:00",
+   "detail": "ffmpeg, renderer, Claude Code"
   },
   {
    "key": "numbers",
@@ -260,5 +262,5 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-15T02:58:06+00:00"
+ "updated": "2026-11-15T02:59:01+00:00"
 }
