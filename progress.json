@@ -72,16 +72,16 @@
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
    "state": "done",
-   "detail": null,
+   "detail": "every line readable",
    "started": "2026-11-15T13:36:00+00:00",
-   "ended": "2026-11-15T13:36:50+00:00"
+   "ended": "2026-11-15T13:36:53+00:00"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "0 %",
+   "detail": "19 % (240/1258 frames, 3 workers)",
    "started": "2026-11-15T13:36:52+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 66.0
   }
  ],
- "updated": "2026-11-15T13:36:52+00:00",
+ "updated": "2026-11-15T13:37:22+00:00",
  "word": "जग → जाग",
  "slug": "jag-jaag",
  "hook": "एक मात्रा जोड़ो, जाग जाओ",
