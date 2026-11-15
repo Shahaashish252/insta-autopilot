@@ -71,8 +71,9 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-15T14:00:18+00:00"
   },
   {
    "key": "picture",
@@ -283,7 +284,7 @@
    "took": 89.0
   }
  ],
- "updated": "2026-11-15T14:00:17+00:00",
+ "updated": "2026-11-15T14:00:18+00:00",
  "word": "सोच → सच",
  "slug": "soch-sach",
  "hook": "एक मात्रा हटाओ, सोच बने सच",
