@@ -35,9 +35,10 @@
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-15T14:12:20+00:00"
+   "started": "2026-11-15T14:12:20+00:00",
+   "ended": "2026-11-15T14:13:13+00:00"
   },
   {
    "key": "speech",
@@ -276,7 +277,7 @@
    "took": 161.0
   }
  ],
- "updated": "2026-11-15T14:12:20+00:00",
+ "updated": "2026-11-15T14:13:13+00:00",
  "attempts": [
   "['खु', 'द', '']: rejected (N1 is not your strongest hook: \"जो खुद से नाराज़ रहते हैं, सुनो।\" scores 86)"
  ],
