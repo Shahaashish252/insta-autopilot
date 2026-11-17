@@ -1,27 +1,48 @@
 {
- "at": "2026-11-17T05:13:12.710068+00:00",
+ "at": "2026-11-17T13:29:55.352068+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 12,
   "follows_count": 0,
-  "media_count": 11,
+  "media_count": 12,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
   {
+   "id": "17918282289548023",
+   "caption": "जो जीतकर भी अंदर से थका और खाली महसूस करते हैं, ये रील उन्हें भेज दो।\n\nजीत शब्द ",
+   "comments_count": 0,
+   "like_count": 0,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/Df2A-R5CDgr/",
+   "timestamp": "2026-11-17T13:15:55+0000",
+   "insights": {
+    "views": 0,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
+  {
    "id": "18389203999224602",
    "caption": "जो डर की वजह से आज भी कुछ शुरू नहीं कर रहा, ये रील उसे भेज दो।\n\nडर और कर, बस एक ",
    "comments_count": 0,
-   "like_count": 2,
+   "like_count": 3,
    "media_product_type": "REELS",
    "media_type": "VIDEO",
    "permalink": "https://www.instagram.com/reel/DfzcMYWEqAz/",
    "timestamp": "2026-11-16T13:16:04+0000",
    "insights": {
-    "views": 193,
+    "views": 304,
     "reach": 0,
-    "likes": 2,
+    "likes": 3,
     "comments": 0,
     "shares": 0,
     "saved": 0,
@@ -187,7 +208,7 @@
    "permalink": "https://www.instagram.com/reel/DfeMoFTFRZn/",
    "timestamp": "2026-11-08T07:15:55+0000",
    "insights": {
-    "views": 1523,
+    "views": 1524,
     "reach": 0,
     "likes": 9,
     "comments": 4,
