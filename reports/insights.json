@@ -1,14 +1,35 @@
 {
- "at": "2026-11-18T07:33:31.812357+00:00",
+ "at": "2026-11-18T17:17:40.704054+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 13,
   "follows_count": 0,
-  "media_count": 12,
+  "media_count": 13,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "18004978554036190",
+   "caption": "जो हर फैसले से पहले दुनिया से पूछते हैं, ये रील उन्हें भेज दो।\n\nजग में बस एक मात",
+   "comments_count": 0,
+   "like_count": 2,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/Df4l0N6iMRg/",
+   "timestamp": "2026-11-18T13:16:21+0000",
+   "insights": {
+    "views": 134,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "17918282289548023",
    "caption": "जो जीतकर भी अंदर से थका और खाली महसूस करते हैं, ये रील उन्हें भेज दो।\n\nजीत शब्द ",
@@ -19,11 +40,11 @@
    "permalink": "https://www.instagram.com/reel/Df2A-R5CDgr/",
    "timestamp": "2026-11-17T13:15:55+0000",
    "insights": {
-    "views": 478,
+    "views": 546,
     "reach": 0,
     "likes": 8,
     "comments": 0,
-    "shares": 0,
+    "shares": 1,
     "saved": 0,
     "total_interactions": 0,
     "ig_reels_avg_watch_time": 0,
@@ -61,7 +82,7 @@
    "permalink": "https://www.instagram.com/reel/Dfw53zyE8HW/",
    "timestamp": "2026-11-15T13:37:39+0000",
    "insights": {
-    "views": 1389,
+    "views": 1392,
     "reach": 0,
     "likes": 26,
     "comments": 2,
