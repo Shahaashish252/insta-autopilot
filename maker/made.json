@@ -84,5 +84,13 @@
   "hook_formula": "One-letter claim",
   "hook_score": 92,
   "at": "2026-11-15T14:17:49.398418+00:00"
+ },
+ {
+  "slug": "gir-phir",
+  "word": "गिर → फिर",
+  "hook": "एक अक्षर से गिर बने फिर",
+  "hook_formula": "One-letter claim",
+  "hook_score": 79,
+  "at": "2026-11-19T17:40:03.959699+00:00"
  }
 ]

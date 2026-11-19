@@ -1,14 +1,35 @@
 {
- "at": "2026-11-19T13:14:43.226355+00:00",
+ "at": "2026-11-19T17:33:55.229786+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 13,
   "follows_count": 1,
-  "media_count": 13,
+  "media_count": 14,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "18031057016878142",
+   "caption": "जो खुद को कमज़ोर सोचते हैं, ये रील उन्हें भेज दो।\n\nसोच से बस एक मात्रा हटाओ, और ",
+   "comments_count": 0,
+   "like_count": 6,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/Df7Km_7E55N/",
+   "timestamp": "2026-11-19T13:16:21+0000",
+   "insights": {
+    "views": 157,
+    "reach": 0,
+    "likes": 6,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "18004978554036190",
    "caption": "जो हर फैसले से पहले दुनिया से पूछते हैं, ये रील उन्हें भेज दो।\n\nजग में बस एक मात",
@@ -103,7 +124,7 @@
    "permalink": "https://www.instagram.com/reel/DfmdVDaCbI2/",
    "timestamp": "2026-11-11T12:15:55+0000",
    "insights": {
-    "views": 964,
+    "views": 965,
     "reach": 0,
     "likes": 26,
     "comments": 0,
@@ -187,7 +208,7 @@
    "permalink": "https://www.instagram.com/reel/DfhTyapkpPd/",
    "timestamp": "2026-11-09T12:16:24+0000",
    "insights": {
-    "views": 269,
+    "views": 270,
     "reach": 0,
     "likes": 13,
     "comments": 0,
