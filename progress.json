@@ -71,8 +71,9 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-19T17:36:59+00:00"
   },
   {
    "key": "picture",
@@ -283,7 +284,7 @@
    "took": 84.0
   }
  ],
- "updated": "2026-11-19T17:36:58+00:00",
+ "updated": "2026-11-19T17:36:59+00:00",
  "word": "गिर → फिर",
  "slug": "gir-phir",
  "hook": "एक अक्षर से गिर बने फिर",
