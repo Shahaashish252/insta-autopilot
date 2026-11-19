@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "40 sound cues, 35.1 s",
-   "started": "2026-11-19T17:36:55+00:00"
+   "state": "done",
+   "detail": "mix.wav  35.07 s  -16.0 LUFS",
+   "started": "2026-11-19T17:36:55+00:00",
+   "ended": "2026-11-19T17:36:58+00:00"
   },
   {
    "key": "reading",
@@ -282,7 +283,7 @@
    "took": 84.0
   }
  ],
- "updated": "2026-11-19T17:36:55+00:00",
+ "updated": "2026-11-19T17:36:58+00:00",
  "word": "गिर → फिर",
  "slug": "gir-phir",
  "hook": "एक अक्षर से गिर बने फिर",
