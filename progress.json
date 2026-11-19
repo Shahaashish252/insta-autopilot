@@ -44,8 +44,9 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-19T17:36:51+00:00"
   },
   {
    "key": "timing",
@@ -277,7 +278,7 @@
    "took": 84.0
   }
  ],
- "updated": "2026-11-19T17:36:50+00:00",
+ "updated": "2026-11-19T17:36:51+00:00",
  "word": "गिर → फिर",
  "slug": "gir-phir",
  "hook": "एक अक्षर से गिर बने फिर",
