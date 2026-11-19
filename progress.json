@@ -53,8 +53,9 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-19T17:36:53+00:00"
   },
   {
    "key": "music",
@@ -279,7 +280,7 @@
    "took": 84.0
   }
  ],
- "updated": "2026-11-19T17:36:52+00:00",
+ "updated": "2026-11-19T17:36:53+00:00",
  "word": "गिर → फिर",
  "slug": "gir-phir",
  "hook": "एक अक्षर से गिर बने फिर",
