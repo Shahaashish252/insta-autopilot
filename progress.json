@@ -2,7 +2,7 @@
  "run_id": "44735876861",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44735876861",
  "started": "2026-11-20T12:27:14+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 482.0
   }
  ],
- "updated": "2026-11-20T12:37:10+00:00",
+ "updated": "2026-11-20T12:37:11+00:00",
  "word": "घाव → चाव",
  "slug": "ghaav-chaav",
  "hook": "वो पुराना घाव अब भी हरा?",
@@ -395,5 +395,8 @@
   }
  ],
  "publish_at": "2026-12-06T18:45:00+05:30",
- "duration": 33.2
+ "duration": 33.2,
+ "detail": "घाव → चाव · posts Sun 06 Dec, 06:45 PM IST",
+ "ended": "2026-11-20T12:37:11+00:00",
+ "took": 597.0
 }
