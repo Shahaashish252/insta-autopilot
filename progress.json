@@ -89,9 +89,10 @@
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T12:35:45+00:00"
+   "started": "2026-11-20T12:35:45+00:00",
+   "ended": "2026-11-20T12:37:03+00:00"
   },
   {
    "key": "upload",
@@ -288,7 +289,7 @@
    "took": 482.0
   }
  ],
- "updated": "2026-11-20T12:35:45+00:00",
+ "updated": "2026-11-20T12:37:03+00:00",
  "word": "घाव → चाव",
  "slug": "ghaav-chaav",
  "hook": "वो पुराना घाव अब भी हरा?",
