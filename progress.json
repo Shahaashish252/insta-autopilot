@@ -26,9 +26,10 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-20T08:23:41+00:00",
-   "detail": "attempt 1: Claude is choosing a word"
+   "detail": "जन → जान",
+   "ended": "2026-11-20T08:27:24+00:00"
   },
   {
    "key": "voice",
@@ -267,7 +268,7 @@
    "took": 525.0
   }
  ],
- "updated": "2026-11-20T08:27:23+00:00",
+ "updated": "2026-11-20T08:27:24+00:00",
  "word": "जन → जान",
  "slug": "jan-jaan",
  "hook": "भीड़ में बस एक जन?",
