@@ -26,9 +26,10 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-20T10:39:33+00:00",
-   "detail": "attempt 1: Claude is choosing a word"
+   "detail": "संग → संगत",
+   "ended": "2026-11-20T10:44:55+00:00"
   },
   {
    "key": "voice",
@@ -267,7 +268,7 @@
    "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:44:54+00:00",
+ "updated": "2026-11-20T10:44:55+00:00",
  "word": "संग → संगत",
  "slug": "sang-sangat",
  "hook": "संग तुझे कहाँ ले जा रहा?",
