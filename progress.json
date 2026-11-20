@@ -53,9 +53,10 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T09:39:00+00:00"
+   "started": "2026-11-20T09:39:00+00:00",
+   "ended": "2026-11-20T09:39:01+00:00"
   },
   {
    "key": "music",
@@ -280,7 +281,7 @@
    "took": 92.0
   }
  ],
- "updated": "2026-11-20T09:39:00+00:00",
+ "updated": "2026-11-20T09:39:01+00:00",
  "word": "राज़ → राज",
  "slug": "raaz-raaj",
  "hook": "अपना राज़ खुद क्यों बताते?",
