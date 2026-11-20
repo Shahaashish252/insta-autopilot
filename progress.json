@@ -1,119 +1,96 @@
 {
- "run_id": "44699070572",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44699070572",
- "started": "2026-11-20T08:00:09+00:00",
- "status": "done",
+ "run_id": "44700606289",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44700606289",
+ "started": "2026-11-20T08:11:55+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T08:00:09+00:00",
-   "ended": "2026-11-20T08:00:55+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T08:11:55+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T08:01:00+00:00",
-   "ended": "2026-11-20T08:01:59+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T08:02:00+00:00",
-   "detail": "खुद → खुश",
-   "ended": "2026-11-20T08:08:07+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:08:08+00:00",
-   "ended": "2026-11-20T08:08:33+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T08:08:34+00:00",
-   "ended": "2026-11-20T08:08:35+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:08:36+00:00",
-   "ended": "2026-11-20T08:08:38+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  33.36 s  -16.0 LUFS",
-   "started": "2026-11-20T08:08:39+00:00",
-   "ended": "2026-11-20T08:08:40+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T08:08:41+00:00",
-   "ended": "2026-11-20T08:09:09+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "89 % (900/1001 frames, 3 workers)",
-   "started": "2026-11-20T08:09:08+00:00",
-   "ended": "2026-11-20T08:10:14+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:10:15+00:00",
-   "ended": "2026-11-20T08:11:01+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T08:11:02+00:00",
-   "detail": "17 MB",
-   "ended": "2026-11-20T08:11:05+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T08:11:07+00:00",
-   "started": "2026-11-20T08:11:07+00:00",
-   "detail": "Tue 24 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44699070572",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44699070572",
+   "started": "2026-11-20T08:00:09+00:00",
+   "updated": "2026-11-20T08:11:09+00:00",
+   "status": "done",
+   "word": "खुद → खुश",
+   "hook": "आख़िरी बार कब हँसे तुम?",
+   "publish_at": "2026-11-24T18:45:00+05:30",
+   "detail": "खुद → खुश · posts Tue 24 Nov, 06:45 PM IST",
+   "took": 660.0
+  },
   {
    "run_id": "44698034169",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44698034169",
@@ -281,113 +258,7 @@
    "publish_at": "2026-11-20T18:45:00+05:30",
    "detail": "गम → गुम · posts Fri 20 Nov, 06:45 PM IST",
    "took": 803.0
-  },
-  {
-   "run_id": "43719345825",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43719345825",
-   "started": "2026-11-15T13:30:44+00:00",
-   "updated": "2026-11-15T13:40:52+00:00",
-   "status": "done",
-   "word": "जग → जाग",
-   "hook": "एक मात्रा जोड़ो, जाग जाओ",
-   "publish_at": "2026-11-19T18:45:00+05:30",
-   "detail": "जग → जाग · posts Thu 19 Nov, 06:45 PM IST",
-   "took": 608.0
   }
  ],
- "updated": "2026-11-20T08:11:09+00:00",
- "attempts": [
-  "['थ', '', 'म']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
- ],
- "word": "खुद → खुश",
- "slug": "khud-khush",
- "hook": "आख़िरी बार कब हँसे तुम?",
- "caption": "जो हर किसी को खुश रखते-रखते खुद को भूल गए हैं, ये रील उन्हें भेज दो।\n\n'खुद' शब्द में से बस एक अक्षर बदलो, 'द' हटाओ और 'श' जोड़ो, बन जाता है 'खुश'।\n\nजब तक तुम सबको खुश रखने में लगे रहोगे और खुद को भूलते रहोगे, असली खुश नहीं रह पाओगे। पहले खुद को अपनाओ, तभी सच में खुश रहोगे।\n\nहिंदी के इस छोटे शब्द के खेल में ज़िंदगी की बड़ी सीख छुपी है। खुद को थोड़ा समय दो, यही असली मोटिवेशन है।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #खुदसेखुश",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "तुम आख़िरी बार कब सच में हँसे थे?",
-   "card": "आख़िरी बार कब हँसे तुम?",
-   "score": 86
-  },
-  {
-   "formula": "Negative command",
-   "line": "दिखावे की मुस्कान अब बंद करो।",
-   "card": "दिखावे की मुस्कान बंद करो",
-   "score": 74
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो सबको खुश रखते हो, सुनो तुम।",
-   "card": "सबको खुश रखने वालों, सुनो",
-   "score": 73
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तुम आख़िरी बार कब सच में हँसे थे?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "खुद।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "सबको खुश रखते-रखते, खुद को भूल बैठे।",
-   "write": "सबको खुश रखा खुद को?",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर इस शब्द का एक छोटा हिस्सा, कुछ और कहता है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N6",
-   "text": "ये 'द' हटाओ, 'श' जोड़ो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N7",
-   "text": "खुद, बन जाता है खुश।",
-   "write": "खुद… खुश।",
-   "cue": null
-  },
-  {
-   "id": "N8",
-   "text": "जो खुद को अपनाता है, सच में वही खुश रहता है।",
-   "write": "खुद अपनाओ खुश रहो",
-   "cue": "resolve"
-  },
-  {
-   "id": "N9",
-   "text": "जो बस सबको खुश रखने में लगा है, उसे भेजो।",
-   "write": "उसे भेजो जो थका है",
-   "cue": null
-  },
-  {
-   "id": "N10",
-   "text": "हर शाम सात बजे, एक नया शब्द। तब तक, सच में खुश रहो तुम।",
-   "write": "हर शाम 7 बजे नया शब्द",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-24T18:45:00+05:30",
- "duration": 33.36,
- "detail": "खुद → खुश · posts Tue 24 Nov, 06:45 PM IST",
- "ended": "2026-11-20T08:11:09+00:00",
- "took": 660.0
+ "updated": "2026-11-20T08:11:55+00:00"
 }
