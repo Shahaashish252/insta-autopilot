@@ -81,7 +81,7 @@
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "23 % (240/1023 frames, 3 workers)",
+   "detail": "58 % (600/1023 frames, 3 workers)",
    "started": "2026-11-20T10:46:06+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:46:24+00:00",
+ "updated": "2026-11-20T10:46:47+00:00",
  "word": "संग → संगत",
  "slug": "sang-sangat",
  "hook": "संग तुझे कहाँ ले जा रहा?",
