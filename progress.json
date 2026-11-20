@@ -1,119 +1,96 @@
 {
- "run_id": "44704868014",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44704868014",
- "started": "2026-11-20T08:44:01+00:00",
- "status": "done",
+ "run_id": "44705803152",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44705803152",
+ "started": "2026-11-20T08:51:10+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T08:44:01+00:00",
-   "ended": "2026-11-20T08:44:45+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T08:51:10+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T08:44:50+00:00",
-   "ended": "2026-11-20T08:45:30+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T08:45:32+00:00",
-   "detail": "दागी → दाग",
-   "ended": "2026-11-20T08:47:53+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:47:54+00:00",
-   "ended": "2026-11-20T08:48:19+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T08:48:21+00:00",
-   "ended": "2026-11-20T08:48:22+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:48:23+00:00",
-   "ended": "2026-11-20T08:48:24+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  29.93 s  -16.0 LUFS",
-   "started": "2026-11-20T08:48:26+00:00",
-   "ended": "2026-11-20T08:48:27+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T08:48:28+00:00",
-   "ended": "2026-11-20T08:48:50+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "80 % (720/898 frames, 3 workers)",
-   "started": "2026-11-20T08:48:48+00:00",
-   "ended": "2026-11-20T08:49:50+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:49:51+00:00",
-   "ended": "2026-11-20T08:50:33+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T08:50:35+00:00",
-   "detail": "16 MB",
-   "ended": "2026-11-20T08:50:38+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T08:50:39+00:00",
-   "started": "2026-11-20T08:50:39+00:00",
-   "detail": "Sat 28 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44704868014",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44704868014",
+   "started": "2026-11-20T08:44:01+00:00",
+   "updated": "2026-11-20T08:50:42+00:00",
+   "status": "done",
+   "word": "दागी → दाग",
+   "hook": "कब तक खुद को 'दागी' मानोगे?",
+   "publish_at": "2026-11-28T18:45:00+05:30",
+   "detail": "दागी → दाग · posts Sat 28 Nov, 06:45 PM IST",
+   "took": 401.0
+  },
   {
    "run_id": "44703309920",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44703309920",
@@ -281,110 +258,7 @@
    "publish_at": null,
    "detail": "6 approved reels are already waiting (max 3); nothing to make",
    "took": 79.0
-  },
-  {
-   "run_id": "43731584017",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43731584017",
-   "started": "2026-11-15T15:44:56+00:00",
-   "updated": "2026-11-15T15:46:11+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "6 approved reels are already waiting (max 3); nothing to make",
-   "took": 75.0
   }
  ],
- "updated": "2026-11-20T08:50:42+00:00",
- "word": "दागी → दाग",
- "slug": "daagi-daag",
- "hook": "कब तक खुद को 'दागी' मानोगे?",
- "caption": "जिसे लोग आज भी उसकी एक गलती से जज करते हैं, ये रील उसे भेज दो।\n\nशब्द है 'दागी'। एक मात्रा हटाओ, बन जाता है 'दाग'।\n\nलोग एक गलती से पूरी ज़िंदगी को दागी बना देते हैं, पर सच ये है कि एक दाग कभी पूरी पहचान नहीं होता।\n\nहिंदी के इस छोटे शब्द-खेल की सीख बड़ी है: दाग धुल जाता है, तुम नहीं मिटते। ये मोटिवेशन आज किसी को भेज दो।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #दागीनहींदाग",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "लोग तुम्हें कब से 'दागी' बुलाते हैं?",
-   "card": "कब तक खुद को 'दागी' मानोगे?",
-   "score": 87
-  },
-  {
-   "formula": "Negative command",
-   "line": "एक गलती से खुद को दागी मत मानो।",
-   "card": "एक गलती, पूरी ज़िंदगी नहीं",
-   "score": 92
-  },
-  {
-   "formula": "Identity call",
-   "line": "जिसे लोग 'दागी' कहते हैं, ये तुम्हारे लिए है।",
-   "card": "जिसे 'दागी' कहा गया, ये तुम्हारे लिए",
-   "score": 96
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "लोग तुम्हें कब से 'दागी' बुलाते हैं?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "दागी।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "एक गलती हुई, और लोगों ने लेबल लगा दिया।",
-   "write": "एक गलती… लेबल लगा",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर इस शब्द की एक मात्रा, सच दिखाती है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N6",
-   "text": "ये 'ी' मात्रा हटाओ।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N7",
-   "text": "दागी, बन जाता है दाग।",
-   "write": "दागी… दाग।",
-   "cue": null
-  },
-  {
-   "id": "N8",
-   "text": "एक दाग, पूरी पहचान नहीं होता।",
-   "write": "एक दाग, पूरी पहचान नहीं",
-   "cue": "resolve"
-  },
-  {
-   "id": "N9",
-   "text": "जिसे लोग एक गलती से जज करते हैं, उसे भेज दो।",
-   "write": "जिसे जज करते हैं, भेजो",
-   "cue": null
-  },
-  {
-   "id": "N10",
-   "text": "अब दागी नहीं, बस एक दाग कहो खुद को।",
-   "write": "दागी नहीं… बस एक दाग",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-28T18:45:00+05:30",
- "duration": 29.93,
- "detail": "दागी → दाग · posts Sat 28 Nov, 06:45 PM IST",
- "ended": "2026-11-20T08:50:42+00:00",
- "took": 401.0
+ "updated": "2026-11-20T08:51:10+00:00"
 }
