@@ -1,119 +1,96 @@
 {
- "run_id": "44722316251",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44722316251",
- "started": "2026-11-20T10:48:37+00:00",
- "status": "done",
+ "run_id": "44727930644",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727930644",
+ "started": "2026-11-20T11:29:00+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T10:48:37+00:00",
-   "ended": "2026-11-20T10:49:22+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T11:29:00+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T10:49:28+00:00",
-   "ended": "2026-11-20T10:50:30+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T10:50:32+00:00",
-   "detail": "रुक → रुख",
-   "ended": "2026-11-20T10:55:39+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T10:55:41+00:00",
-   "ended": "2026-11-20T10:56:16+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T10:56:17+00:00",
-   "ended": "2026-11-20T10:56:19+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T10:56:20+00:00",
-   "ended": "2026-11-20T10:56:21+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  38.79 s  -16.0 LUFS",
-   "started": "2026-11-20T10:56:23+00:00",
-   "ended": "2026-11-20T10:56:24+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T10:56:26+00:00",
-   "ended": "2026-11-20T10:57:02+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "92 % (1080/1164 frames, 3 workers)",
-   "started": "2026-11-20T10:57:00+00:00",
-   "ended": "2026-11-20T10:58:22+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T10:58:24+00:00",
-   "ended": "2026-11-20T10:59:19+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T10:59:20+00:00",
-   "detail": "20 MB",
-   "ended": "2026-11-20T10:59:24+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T10:59:25+00:00",
-   "started": "2026-11-20T10:59:25+00:00",
-   "detail": "Thu 03 Dec, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44722316251",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44722316251",
+   "started": "2026-11-20T10:48:37+00:00",
+   "updated": "2026-11-20T10:59:28+00:00",
+   "status": "done",
+   "word": "रुक → रुख",
+   "hook": "हर हार पर रुकना बंद करो",
+   "publish_at": "2026-12-03T18:45:00+05:30",
+   "detail": "रुक → रुख · posts Thu 03 Dec, 06:45 PM IST",
+   "took": 651.0
+  },
   {
    "run_id": "44720823120",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44720823120",
@@ -281,128 +258,7 @@
    "publish_at": null,
    "detail": "3 approved reels are already waiting (max 3); nothing to make",
    "took": 718.0
-  },
-  {
-   "run_id": "44358410154",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44358410154",
-   "started": "2026-11-18T17:25:06+00:00",
-   "updated": "2026-11-18T17:26:48+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "3 approved reels are already waiting (max 3); nothing to make",
-   "took": 102.0
   }
  ],
- "updated": "2026-11-20T10:59:28+00:00",
- "word": "रुक → रुख",
- "slug": "ruk-rukh",
- "hook": "हर हार पर रुकना बंद करो",
- "caption": "जो बार-बार एक ही मोड़ पर रुक जाता है, ये रील उसे भेज दो।\n\nरुक और रुख, बस एक अक्षर का फ़र्क़ है। लेकिन मतलब पूरा बदल जाता है।\n\nरुकना हार मानने जैसा लगता है। मगर ज़िंदगी में कभी-कभी सिर्फ़ अपना रुख बदलने की ज़रूरत होती है, रुकने की नहीं।\n\nयही हिंदी शब्दों की सीख है। आज से मत रुको, सिर्फ़ दिशा बदलो।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #रुकरुख",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "कब तक एक ही जगह रुके रहोगे?",
-   "card": "कब तक यहीं रुके रहोगे?",
-   "score": 87
-  },
-  {
-   "formula": "Negative command",
-   "line": "हर हार के सामने रुकना बंद करो।",
-   "card": "हर हार पर रुकना बंद करो",
-   "score": 100
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो बार-बार रुक जाते हैं, सुनो।",
-   "card": "बार-बार रुकने वालों के लिए",
-   "score": 73
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "हर हार के सामने रुकना बंद करो।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "रुक।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "कोई एक बार 'नहीं' कहे, तुम वहीं रुक जाते हो।",
-   "write": "'नहीं' सुनकर रुक जाना",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "फिर वही सोच में दिन निकल जाता है।",
-   "write": "वही सोच… वही दिन",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द का एक छोटा हिस्सा, सब बदल देता है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "ये 'क' हटाओ, 'ख' लगाओ।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "रुक, बन जाता है रुख।",
-   "write": "रुक… बन जाता रुख",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "मत रुको, सिर्फ़ अपना रुख बदलो।",
-   "write": "मत रुको… रुख बदलो",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "जो दिशा बदलता है, वो कभी नहीं हारता।",
-   "write": "दिशा बदलो… मत हारो",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "जो हर मोड़ पर रुक जाता है, ये रील उसे भेज दो।",
-   "write": "जो रुकता है, उसे भेजो",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, एक नया शब्द",
-   "cue": null
-  },
-  {
-   "id": "N13",
-   "text": "तो आज से, हार के सामने रुकना बंद करो।",
-   "write": "हार पर रुकना बंद करो",
-   "cue": null
-  }
- ],
- "publish_at": "2026-12-03T18:45:00+05:30",
- "duration": 38.79,
- "detail": "रुक → रुख · posts Thu 03 Dec, 06:45 PM IST",
- "ended": "2026-11-20T10:59:28+00:00",
- "took": 651.0
+ "updated": "2026-11-20T11:29:00+00:00"
 }
