@@ -172,5 +172,13 @@
   "hook_formula": "Sting question",
   "hook_score": 87,
   "at": "2026-11-20T10:48:06.405790+00:00"
+ },
+ {
+  "slug": "ruk-rukh",
+  "word": "रुक → रुख",
+  "hook": "हर हार पर रुकना बंद करो",
+  "hook_formula": "Negative command",
+  "hook_score": 100,
+  "at": "2026-11-20T10:59:25.503045+00:00"
  }
 ]
