@@ -1,14 +1,35 @@
 {
- "at": "2026-11-20T12:39:48.468387+00:00",
+ "at": "2026-11-20T16:59:19.676087+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 13,
   "follows_count": 1,
-  "media_count": 14,
+  "media_count": 15,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "18120038291017136",
+   "caption": "जो अपना गम किसी को नहीं बताता, और अंदर ही अंदर टूटता है, ये रील उसे भेज दो।\n\nगम ",
+   "comments_count": 0,
+   "like_count": 2,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/Df9vbWXCuOk/",
+   "timestamp": "2026-11-20T13:16:30+0000",
+   "insights": {
+    "views": 269,
+    "reach": 0,
+    "likes": 2,
+    "comments": 0,
+    "shares": 21,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "18031057016878142",
    "caption": "जो खुद को कमज़ोर सोचते हैं, ये रील उन्हें भेज दो।\n\nसोच से बस एक मात्रा हटाओ, और ",
@@ -19,7 +40,7 @@
    "permalink": "https://www.instagram.com/reel/Df7Km_7E55N/",
    "timestamp": "2026-11-19T13:16:21+0000",
    "insights": {
-    "views": 257,
+    "views": 262,
     "reach": 0,
     "likes": 7,
     "comments": 0,
