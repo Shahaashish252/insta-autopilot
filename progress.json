@@ -26,9 +26,10 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-20T08:34:35+00:00",
-   "detail": "attempt 1: Claude is choosing a word"
+   "detail": "राह → राहत",
+   "ended": "2026-11-20T08:38:06+00:00"
   },
   {
    "key": "voice",
@@ -267,7 +268,7 @@
    "took": 775.0
   }
  ],
- "updated": "2026-11-20T08:38:05+00:00",
+ "updated": "2026-11-20T08:38:06+00:00",
  "word": "राह → राहत",
  "slug": "raah-raahat",
  "hook": "राह कब ख़त्म होगी?",
