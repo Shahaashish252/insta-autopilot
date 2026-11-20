@@ -2,7 +2,7 @@
  "run_id": "44737425939",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44737425939",
  "started": "2026-11-20T12:38:22+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 660.0
   }
  ],
- "updated": "2026-11-20T12:52:54+00:00",
+ "updated": "2026-11-20T12:52:55+00:00",
  "attempts": [
   "['तन', '्ह', 'ा']: rejected (N1 is not your strongest hook: \"तुम्हारी तन्हाई में ही एक ताक़त छुपी है।\" scores 100)"
  ],
@@ -392,5 +392,8 @@
   }
  ],
  "publish_at": "2026-12-07T18:45:00+05:30",
- "duration": 35.65
+ "duration": 35.65,
+ "detail": "सूना → सुना · posts Mon 07 Dec, 06:45 PM IST",
+ "ended": "2026-11-20T12:52:55+00:00",
+ "took": 873.0
 }
