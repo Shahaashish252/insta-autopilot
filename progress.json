@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "33 sound cues, 29.7 s",
-   "started": "2026-11-20T08:28:09+00:00"
+   "state": "done",
+   "detail": "mix.wav  29.67 s  -16.0 LUFS",
+   "started": "2026-11-20T08:28:09+00:00",
+   "ended": "2026-11-20T08:28:10+00:00"
   },
   {
    "key": "reading",
@@ -282,7 +283,7 @@
    "took": 525.0
   }
  ],
- "updated": "2026-11-20T08:28:09+00:00",
+ "updated": "2026-11-20T08:28:10+00:00",
  "word": "जन → जान",
  "slug": "jan-jaan",
  "hook": "भीड़ में बस एक जन?",
