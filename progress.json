@@ -26,9 +26,10 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-20T11:41:29+00:00",
-   "detail": "attempt 2: Claude is choosing a word"
+   "detail": "कच्चा → सच्चा",
+   "ended": "2026-11-20T11:47:52+00:00"
   },
   {
    "key": "voice",
@@ -267,7 +268,7 @@
    "took": 611.0
   }
  ],
- "updated": "2026-11-20T11:47:51+00:00",
+ "updated": "2026-11-20T11:47:52+00:00",
  "attempts": [
   "['कद', '', '']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
