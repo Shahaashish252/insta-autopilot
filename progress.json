@@ -62,8 +62,9 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "42 sound cues, 35.1 s",
+   "started": "2026-11-20T08:17:05+00:00"
   },
   {
    "key": "reading",
@@ -281,7 +282,7 @@
    "took": 803.0
   }
  ],
- "updated": "2026-11-20T08:17:04+00:00",
+ "updated": "2026-11-20T08:17:05+00:00",
  "word": "अंत → अनंत",
  "slug": "ant-anant",
  "hook": "सब ख़त्म हो गया?",
