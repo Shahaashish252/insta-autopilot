@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-20T07:59:26+00:00",
+   "detail": "19 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 81.0
   }
  ],
- "updated": "2026-11-20T07:59:25+00:00",
+ "updated": "2026-11-20T07:59:26+00:00",
  "word": "भूल → फूल",
  "slug": "bhool-phool",
  "hook": "हर भूल पर खुद को कोसना?",
