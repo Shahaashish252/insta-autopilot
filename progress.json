@@ -2,7 +2,7 @@
  "run_id": "44705803152",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44705803152",
  "started": "2026-11-20T08:51:10+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-20T08:58:22+00:00",
+ "updated": "2026-11-20T08:58:23+00:00",
  "word": "थम → थाम",
  "slug": "tham-thaam",
  "hook": "कब से यहीं थमी है ज़िंदगी?",
@@ -389,5 +389,8 @@
   }
  ],
  "publish_at": "2026-11-29T18:45:00+05:30",
- "duration": 32.17
+ "duration": 32.17,
+ "detail": "थम → थाम · posts Sun 29 Nov, 06:45 PM IST",
+ "ended": "2026-11-20T08:58:23+00:00",
+ "took": 433.0
 }
