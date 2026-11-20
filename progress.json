@@ -44,8 +44,9 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T07:56:40+00:00"
   },
   {
    "key": "timing",
@@ -277,7 +278,7 @@
    "took": 81.0
   }
  ],
- "updated": "2026-11-20T07:56:39+00:00",
+ "updated": "2026-11-20T07:56:40+00:00",
  "word": "भूल → फूल",
  "slug": "bhool-phool",
  "hook": "हर भूल पर खुद को कोसना?",
