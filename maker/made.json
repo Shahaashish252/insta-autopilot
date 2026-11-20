@@ -100,5 +100,13 @@
   "hook_formula": "Sting question",
   "hook_score": 81,
   "at": "2026-11-20T07:59:30.673290+00:00"
+ },
+ {
+  "slug": "khud-khush",
+  "word": "खुद → खुश",
+  "hook": "आख़िरी बार कब हँसे तुम?",
+  "hook_formula": "Sting question",
+  "hook_score": 86,
+  "at": "2026-11-20T08:11:07.060418+00:00"
  }
 ]
