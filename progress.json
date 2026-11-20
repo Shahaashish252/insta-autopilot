@@ -72,16 +72,16 @@
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
    "state": "done",
-   "detail": null,
+   "detail": "every line readable",
    "started": "2026-11-20T12:22:12+00:00",
-   "ended": "2026-11-20T12:22:53+00:00"
+   "ended": "2026-11-20T12:22:56+00:00"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "0 %",
+   "detail": "24 % (240/967 frames, 3 workers)",
    "started": "2026-11-20T12:22:55+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:22:55+00:00",
+ "updated": "2026-11-20T12:23:23+00:00",
  "word": "रंग → रग",
  "slug": "rang-rag",
  "hook": "रंग पर कितनी बार ताना?",
