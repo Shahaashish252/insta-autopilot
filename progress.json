@@ -62,8 +62,9 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "37 sound cues, 35.6 s",
+   "started": "2026-11-20T12:48:30+00:00"
   },
   {
    "key": "reading",
@@ -281,7 +282,7 @@
    "took": 660.0
   }
  ],
- "updated": "2026-11-20T12:48:29+00:00",
+ "updated": "2026-11-20T12:48:30+00:00",
  "attempts": [
   "['तन', '्ह', 'ा']: rejected (N1 is not your strongest hook: \"तुम्हारी तन्हाई में ही एक ताक़त छुपी है।\" scores 100)"
  ],
