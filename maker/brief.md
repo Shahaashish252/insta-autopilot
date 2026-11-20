@@ -21,7 +21,7 @@ Views so far (median 269): रूप → रूह 1,513 · हार → हर
   "जो खुद को सिर्फ़ शक्ल से नापते हैं…". Hook (N1) and caption line 1 both start from that moment.
 - **The ask is share or save, never "comment".** Reels that asked for a one-word comment got 0–2 comments. Use one ask:
   send it to a specific person, or save it for the next bad day.
-- **Shorter.** The 30 s reel (हार → हर) beat the 44 s one (कल → काल) by 3.5×. Aim for 28–34 seconds and 10–12 short lines.
+- **Shorter.** The 30 s reel (हार → हर) beat the 44 s one (कल → काल) by 3.5×. Aim for 26–32 seconds and 8–10 short lines.
 - Still unknown (Meta hides reach, saves and watch time for this account): retention, and which posting time is best.
 
 ## Week 2 update (20 Nov 2026, 14 reels): vary the hook, and keep it short
