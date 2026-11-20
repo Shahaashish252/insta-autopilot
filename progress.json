@@ -35,9 +35,10 @@
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T10:44:56+00:00"
+   "started": "2026-11-20T10:44:56+00:00",
+   "ended": "2026-11-20T10:45:29+00:00"
   },
   {
    "key": "speech",
@@ -276,7 +277,7 @@
    "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:44:56+00:00",
+ "updated": "2026-11-20T10:45:29+00:00",
  "word": "संग → संगत",
  "slug": "sang-sangat",
  "hook": "संग तुझे कहाँ ले जा रहा?",
