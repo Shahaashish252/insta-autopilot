@@ -1,119 +1,96 @@
 {
- "run_id": "44700606289",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44700606289",
- "started": "2026-11-20T08:11:55+00:00",
- "status": "done",
+ "run_id": "44701943149",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44701943149",
+ "started": "2026-11-20T08:22:06+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T08:11:55+00:00",
-   "ended": "2026-11-20T08:12:48+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T08:22:06+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T08:12:53+00:00",
-   "ended": "2026-11-20T08:13:35+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T08:13:37+00:00",
-   "detail": "अंत → अनंत",
-   "ended": "2026-11-20T08:16:10+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:16:11+00:00",
-   "ended": "2026-11-20T08:16:59+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T08:17:00+00:00",
-   "ended": "2026-11-20T08:17:01+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:17:02+00:00",
-   "ended": "2026-11-20T08:17:04+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  35.06 s  -16.0 LUFS",
-   "started": "2026-11-20T08:17:05+00:00",
-   "ended": "2026-11-20T08:17:06+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T08:17:08+00:00",
-   "ended": "2026-11-20T08:17:59+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "85 % (900/1052 frames, 3 workers)",
-   "started": "2026-11-20T08:17:58+00:00",
-   "ended": "2026-11-20T08:19:51+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:19:52+00:00",
-   "ended": "2026-11-20T08:21:16+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T08:21:18+00:00",
-   "detail": "18 MB",
-   "ended": "2026-11-20T08:21:21+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T08:21:22+00:00",
-   "started": "2026-11-20T08:21:22+00:00",
-   "detail": "Wed 25 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44700606289",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44700606289",
+   "started": "2026-11-20T08:11:55+00:00",
+   "updated": "2026-11-20T08:21:25+00:00",
+   "status": "done",
+   "word": "अंत → अनंत",
+   "hook": "सब ख़त्म हो गया?",
+   "publish_at": "2026-11-25T18:45:00+05:30",
+   "detail": "अंत → अनंत · posts Wed 25 Nov, 06:45 PM IST",
+   "took": 570.0
+  },
   {
    "run_id": "44699070572",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44699070572",
@@ -281,128 +258,7 @@
    "publish_at": "2026-11-19T18:45:00+05:30",
    "detail": "सोच → सच · posts Thu 19 Nov, 06:45 PM IST",
    "took": 525.0
-  },
-  {
-   "run_id": "43720286880",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43720286880",
-   "started": "2026-11-15T13:41:20+00:00",
-   "updated": "2026-11-15T13:54:43+00:00",
-   "status": "done",
-   "word": "गम → गुम",
-   "hook": "गम में बस एक मात्रा",
-   "publish_at": "2026-11-20T18:45:00+05:30",
-   "detail": "गम → गुम · posts Fri 20 Nov, 06:45 PM IST",
-   "took": 803.0
   }
  ],
- "updated": "2026-11-20T08:21:25+00:00",
- "word": "अंत → अनंत",
- "slug": "ant-anant",
- "hook": "सब ख़त्म हो गया?",
- "caption": "जो आज सोचता है कि सब कुछ ख़त्म हो गया, ये रील उसे भेज दो।\n\nअंत में बस एक 'न' जोड़ो, और बन जाता है अनंत। एक छोटा-सा अक्षर, पूरा मतलब बदल देता है।\n\nज़िंदगी में जो खत्म लगता है, असल में वहीं से एक नई शुरुआत होती है। कुछ भी सच में अंत नहीं होता, बस रास्ता बदलता है।\n\nजो आज गिरा है, वो कल फिर खड़ा होगा। यही इस शब्द की सबसे बड़ी सीख है।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #अंतअनंत",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "लगता है सब ख़त्म हो गया?",
-   "card": "सब ख़त्म हो गया?",
-   "score": 74
-  },
-  {
-   "formula": "Negative command",
-   "line": "रोते हुए ख़ुद को 'अंत' मत कहो।",
-   "card": "ख़ुद को 'अंत' मत कहो",
-   "score": 80
-  },
-  {
-   "formula": "Nobody tells you",
-   "line": "कोई नहीं बताता, अंत में अनंत छुपा है।",
-   "card": "अंत में छुपा है अनंत",
-   "score": 78
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "लगता है सब ख़त्म हो गया?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "अंत।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "नौकरी न मिले, दिल टूटे।",
-   "write": "नौकरी न मिले…",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "लगे जैसे यहीं सब बंद हो गया।",
-   "write": "सब बंद हो गया?",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द में एक छोटा-सा अक्षर छुपा है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "बीच में ये छोटा-सा 'न' जोड़ दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "अंत, बन जाता है अनंत।",
-   "write": "अंत… अनंत।",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "यानी कुछ भी सच में खत्म नहीं होता।",
-   "write": "कुछ खत्म नहीं होता।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "जो गिरा था, वही फिर से खड़ा होता है।",
-   "write": "गिरो… फिर खड़े हो।",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "जो आज हार मान बैठा है, उसे भेज दो।",
-   "write": "जो हारा है, उसे भेजो।",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "शाम 7 बजे… नया शब्द।",
-   "cue": null
-  },
-  {
-   "id": "N13",
-   "text": "तो अब भी लगता है, सब ख़त्म हो गया?",
-   "write": "अब भी ख़त्म लगता है?",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-25T18:45:00+05:30",
- "duration": 35.06,
- "detail": "अंत → अनंत · posts Wed 25 Nov, 06:45 PM IST",
- "ended": "2026-11-20T08:21:25+00:00",
- "took": 570.0
+ "updated": "2026-11-20T08:22:06+00:00"
 }
