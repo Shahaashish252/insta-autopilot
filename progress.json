@@ -89,9 +89,10 @@
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T12:24:40+00:00"
+   "started": "2026-11-20T12:24:40+00:00",
+   "ended": "2026-11-20T12:25:55+00:00"
   },
   {
    "key": "upload",
@@ -288,7 +289,7 @@
    "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:24:40+00:00",
+ "updated": "2026-11-20T12:25:55+00:00",
  "word": "रंग → रग",
  "slug": "rang-rag",
  "hook": "रंग पर कितनी बार ताना?",
