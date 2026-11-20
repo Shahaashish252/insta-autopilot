@@ -2,7 +2,7 @@
  "run_id": "44701943149",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44701943149",
  "started": "2026-11-20T08:22:06+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 525.0
   }
  ],
- "updated": "2026-11-20T08:31:27+00:00",
+ "updated": "2026-11-20T08:31:29+00:00",
  "word": "जन → जान",
  "slug": "jan-jaan",
  "hook": "भीड़ में बस एक जन?",
@@ -383,5 +383,8 @@
   }
  ],
  "publish_at": "2026-11-26T18:45:00+05:30",
- "duration": 29.67
+ "duration": 29.67,
+ "detail": "जन → जान · posts Thu 26 Nov, 06:45 PM IST",
+ "ended": "2026-11-20T08:31:29+00:00",
+ "took": 563.0
 }
