@@ -44,9 +44,10 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "running",
-   "detail": null,
-   "started": "2026-11-20T10:56:17+00:00"
+   "state": "done",
+   "detail": "mismatches: 0 (lang=hi, model=small)",
+   "started": "2026-11-20T10:56:17+00:00",
+   "ended": "2026-11-20T10:56:19+00:00"
   },
   {
    "key": "timing",
@@ -278,7 +279,7 @@
    "took": 102.0
   }
  ],
- "updated": "2026-11-20T10:56:17+00:00",
+ "updated": "2026-11-20T10:56:19+00:00",
  "word": "रुक → रुख",
  "slug": "ruk-rukh",
  "hook": "हर हार पर रुकना बंद करो",
