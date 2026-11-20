@@ -2,7 +2,7 @@
  "run_id": "44720823120",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44720823120",
  "started": "2026-11-20T10:37:45+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:48:07+00:00",
+ "updated": "2026-11-20T10:48:09+00:00",
  "word": "संग → संगत",
  "slug": "sang-sangat",
  "hook": "संग तुझे कहाँ ले जा रहा?",
@@ -395,5 +395,8 @@
   }
  ],
  "publish_at": "2026-12-02T18:45:00+05:30",
- "duration": 34.09
+ "duration": 34.09,
+ "detail": "संग → संगत · posts Wed 02 Dec, 06:45 PM IST",
+ "ended": "2026-11-20T10:48:09+00:00",
+ "took": 624.0
 }
