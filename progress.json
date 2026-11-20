@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-20T09:08:45+00:00",
+   "detail": "16 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 115.0
   }
  ],
- "updated": "2026-11-20T09:08:44+00:00",
+ "updated": "2026-11-20T09:08:45+00:00",
  "word": "साथी → साथ",
  "slug": "saathi-saath",
  "hook": "कब तक साथी ढूंढते रहोगे?",
