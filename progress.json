@@ -1,119 +1,96 @@
 {
- "run_id": "44734258787",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44734258787",
- "started": "2026-11-20T12:15:38+00:00",
- "status": "done",
+ "run_id": "44735876861",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44735876861",
+ "started": "2026-11-20T12:27:14+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T12:15:38+00:00",
-   "ended": "2026-11-20T12:16:49+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T12:27:14+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T12:16:55+00:00",
-   "ended": "2026-11-20T12:17:41+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T12:17:43+00:00",
-   "detail": "रंग → रग",
-   "ended": "2026-11-20T12:21:10+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T12:21:12+00:00",
-   "ended": "2026-11-20T12:22:02+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T12:22:03+00:00",
-   "ended": "2026-11-20T12:22:05+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T12:22:06+00:00",
-   "ended": "2026-11-20T12:22:08+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  32.23 s  -16.0 LUFS",
-   "started": "2026-11-20T12:22:09+00:00",
-   "ended": "2026-11-20T12:22:11+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T12:22:12+00:00",
-   "ended": "2026-11-20T12:22:56+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "93 % (900/967 frames, 3 workers)",
-   "started": "2026-11-20T12:22:55+00:00",
-   "ended": "2026-11-20T12:24:39+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T12:24:40+00:00",
-   "ended": "2026-11-20T12:25:55+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T12:25:56+00:00",
-   "detail": "16 MB",
-   "ended": "2026-11-20T12:26:01+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T12:26:03+00:00",
-   "started": "2026-11-20T12:26:03+00:00",
-   "detail": "Sat 05 Dec, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44734258787",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44734258787",
+   "started": "2026-11-20T12:15:38+00:00",
+   "updated": "2026-11-20T12:26:05+00:00",
+   "status": "done",
+   "word": "रंग → रग",
+   "hook": "रंग पर कितनी बार ताना?",
+   "publish_at": "2026-12-05T18:45:00+05:30",
+   "detail": "रंग → रग · posts Sat 05 Dec, 06:45 PM IST",
+   "took": 627.0
+  },
   {
    "run_id": "44727994971",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727994971",
@@ -281,110 +258,7 @@
    "publish_at": "2026-11-23T18:45:00+05:30",
    "detail": "भूल → फूल · posts Mon 23 Nov, 06:45 PM IST",
    "took": 482.0
-  },
-  {
-   "run_id": "44672765392",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44672765392",
-   "started": "2026-11-20T04:11:53+00:00",
-   "updated": "2026-11-20T04:14:29+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "3 approved reels are already waiting (max 3); nothing to make",
-   "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:26:05+00:00",
- "word": "रंग → रग",
- "slug": "rang-rag",
- "hook": "रंग पर कितनी बार ताना?",
- "caption": "जिसे रंग को लेकर कभी ताना मिला है, ये रील उसे भेज दो।\n\nरंग में से सिर्फ़ एक बिंदु हटाओ, और बन जाता है रग। एक छोटा बदलाव, पर मतलब पूरा बदल देता है।\n\nदुनिया सिर्फ़ तुम्हारा रंग देखती है। पर तुम्हारी असली पहचान तो तुम्हारी रग में बहती है, तुम्हारे अंदर की ताकत में। यही इस शब्द की सीख है।\n\nअपने रंग पर कभी शर्म मत करना। तुम्हारी रग ही तुम्हें खास बनाती है।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #रंगरग",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "तुम्हारे रंग पर कितनी बार ताना मिला है?",
-   "card": "रंग पर कितनी बार ताना?",
-   "score": 86
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो रंग देखकर जज किए जाते हैं, ये सुनो।",
-   "card": "रंग से जज होने वालों के लिए",
-   "score": 73
-  },
-  {
-   "formula": "Negative command",
-   "line": "रंग देखकर किसी को छोटा मत समझो।",
-   "card": "रंग देखकर छोटा मत समझो",
-   "score": 66
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तुम्हारे रंग पर कितनी बार ताना मिला है?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "रंग।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "शादी से नौकरी तक, सब जगह बस रंग देखा जाता है।",
-   "write": "शादी से नौकरी तक... रंग?",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर इस शब्द का एक बिंदु, सब बदल देता है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N6",
-   "text": "इस बिंदु को हटा दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N7",
-   "text": "रंग, बन जाता है रग।",
-   "write": "रंग... रग।",
-   "cue": null
-  },
-  {
-   "id": "N8",
-   "text": "तुम्हारी असली पहचान रंग में नहीं, रग में बहती है।",
-   "write": "रंग नहीं, रग से पहचान",
-   "cue": "resolve"
-  },
-  {
-   "id": "N9",
-   "text": "जिसे रंग को लेकर ताना मिलता है, ये उसे भेजो।",
-   "write": "जिसे ताना मिले, भेजो",
-   "cue": null
-  },
-  {
-   "id": "N10",
-   "text": "हर शाम सात बजे, एक नया शब्द। रंग पर ताना अब मत सुनना।",
-   "write": "शाम 7 बजे नया शब्द",
-   "cue": null
-  }
- ],
- "publish_at": "2026-12-05T18:45:00+05:30",
- "duration": 32.23,
- "detail": "रंग → रग · posts Sat 05 Dec, 06:45 PM IST",
- "ended": "2026-11-20T12:26:05+00:00",
- "took": 627.0
+ "updated": "2026-11-20T12:27:14+00:00"
 }
