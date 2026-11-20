@@ -89,9 +89,10 @@
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T12:51:23+00:00"
+   "started": "2026-11-20T12:51:23+00:00",
+   "ended": "2026-11-20T12:52:48+00:00"
   },
   {
    "key": "upload",
@@ -288,7 +289,7 @@
    "took": 660.0
   }
  ],
- "updated": "2026-11-20T12:51:23+00:00",
+ "updated": "2026-11-20T12:52:48+00:00",
  "attempts": [
   "['तन', '्ह', 'ा']: rejected (N1 is not your strongest hook: \"तुम्हारी तन्हाई में ही एक ताक़त छुपी है।\" scores 100)"
  ],
