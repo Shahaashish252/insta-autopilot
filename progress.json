@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-20T09:42:14+00:00",
+   "detail": "17 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 92.0
   }
  ],
- "updated": "2026-11-20T09:42:13+00:00",
+ "updated": "2026-11-20T09:42:14+00:00",
  "word": "राज़ → राज",
  "slug": "raaz-raaj",
  "hook": "अपना राज़ खुद क्यों बताते?",
