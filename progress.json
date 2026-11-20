@@ -89,8 +89,9 @@
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T08:10:15+00:00"
   },
   {
    "key": "upload",
@@ -287,7 +288,7 @@
    "took": 608.0
   }
  ],
- "updated": "2026-11-20T08:10:14+00:00",
+ "updated": "2026-11-20T08:10:15+00:00",
  "attempts": [
   "['थ', '', 'म']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
