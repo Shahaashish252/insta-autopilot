@@ -188,5 +188,13 @@
   "hook_formula": "Sting question",
   "hook_score": 74,
   "at": "2026-11-20T11:39:49.969959+00:00"
+ },
+ {
+  "slug": "rang-rag",
+  "word": "रंग → रग",
+  "hook": "रंग पर कितनी बार ताना?",
+  "hook_formula": "Sting question",
+  "hook_score": 86,
+  "at": "2026-11-20T12:26:03.165426+00:00"
  }
 ]
