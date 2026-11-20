@@ -81,7 +81,7 @@
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "24 % (240/968 frames, 3 workers)",
+   "detail": "43 % (420/968 frames, 3 workers)",
    "started": "2026-11-20T09:05:43+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 115.0
   }
  ],
- "updated": "2026-11-20T09:06:11+00:00",
+ "updated": "2026-11-20T09:06:32+00:00",
  "word": "साथी → साथ",
  "slug": "saathi-saath",
  "hook": "कब तक साथी ढूंढते रहोगे?",
