@@ -2,7 +2,7 @@
  "run_id": "44704868014",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44704868014",
  "started": "2026-11-20T08:44:01+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 75.0
   }
  ],
- "updated": "2026-11-20T08:50:40+00:00",
+ "updated": "2026-11-20T08:50:42+00:00",
  "word": "दागी → दाग",
  "slug": "daagi-daag",
  "hook": "कब तक खुद को 'दागी' मानोगे?",
@@ -383,5 +383,8 @@
   }
  ],
  "publish_at": "2026-11-28T18:45:00+05:30",
- "duration": 29.93
+ "duration": 29.93,
+ "detail": "दागी → दाग · posts Sat 28 Nov, 06:45 PM IST",
+ "ended": "2026-11-20T08:50:42+00:00",
+ "took": 401.0
 }
