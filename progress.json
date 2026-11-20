@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-20T08:11:02+00:00",
+   "detail": "17 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 608.0
   }
  ],
- "updated": "2026-11-20T08:11:01+00:00",
+ "updated": "2026-11-20T08:11:02+00:00",
  "attempts": [
   "['थ', '', 'म']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
