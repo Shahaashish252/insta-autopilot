@@ -62,8 +62,9 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "40 sound cues, 35.8 s",
+   "started": "2026-11-20T11:35:37+00:00"
   },
   {
    "key": "reading",
@@ -281,7 +282,7 @@
    "took": 718.0
   }
  ],
- "updated": "2026-11-20T11:35:35+00:00",
+ "updated": "2026-11-20T11:35:37+00:00",
  "word": "मजबूर → मजबूत",
  "slug": "majboor-majboot",
  "hook": "मजबूर क्यों समझते हो?",
