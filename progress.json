@@ -53,9 +53,10 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T08:17:02+00:00"
+   "started": "2026-11-20T08:17:02+00:00",
+   "ended": "2026-11-20T08:17:04+00:00"
   },
   {
    "key": "music",
@@ -280,7 +281,7 @@
    "took": 803.0
   }
  ],
- "updated": "2026-11-20T08:17:02+00:00",
+ "updated": "2026-11-20T08:17:04+00:00",
  "word": "अंत → अनंत",
  "slug": "ant-anant",
  "hook": "सब ख़त्म हो गया?",
