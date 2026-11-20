@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "43 sound cues, 38.8 s",
-   "started": "2026-11-20T10:56:23+00:00"
+   "state": "done",
+   "detail": "mix.wav  38.79 s  -16.0 LUFS",
+   "started": "2026-11-20T10:56:23+00:00",
+   "ended": "2026-11-20T10:56:24+00:00"
   },
   {
    "key": "reading",
@@ -282,7 +283,7 @@
    "took": 102.0
   }
  ],
- "updated": "2026-11-20T10:56:23+00:00",
+ "updated": "2026-11-20T10:56:24+00:00",
  "word": "रुक → रुख",
  "slug": "ruk-rukh",
  "hook": "हर हार पर रुकना बंद करो",
