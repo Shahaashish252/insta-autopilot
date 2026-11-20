@@ -107,7 +107,10 @@
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "waiting"
+   "state": "done",
+   "ended": "2026-11-20T08:58:21+00:00",
+   "started": "2026-11-20T08:58:21+00:00",
+   "detail": "Sun 29 Nov, 06:45 PM IST"
   }
  ],
  "history": [
@@ -292,7 +295,7 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-20T08:58:19+00:00",
+ "updated": "2026-11-20T08:58:21+00:00",
  "word": "थम → थाम",
  "slug": "tham-thaam",
  "hook": "कब से यहीं थमी है ज़िंदगी?",
