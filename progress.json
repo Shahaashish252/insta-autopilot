@@ -26,9 +26,10 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-20T07:53:33+00:00",
-   "detail": "attempt 1: Claude is choosing a word"
+   "detail": "भूल → फूल",
+   "ended": "2026-11-20T07:56:09+00:00"
   },
   {
    "key": "voice",
@@ -267,7 +268,7 @@
    "took": 81.0
   }
  ],
- "updated": "2026-11-20T07:56:07+00:00",
+ "updated": "2026-11-20T07:56:09+00:00",
  "word": "भूल → फूल",
  "slug": "bhool-phool",
  "hook": "हर भूल पर खुद को कोसना?",
