@@ -72,16 +72,16 @@
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
    "state": "done",
-   "detail": null,
+   "detail": "every line readable",
    "started": "2026-11-20T09:05:03+00:00",
-   "ended": "2026-11-20T09:05:42+00:00"
+   "ended": "2026-11-20T09:05:44+00:00"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "0 %",
+   "detail": "24 % (240/968 frames, 3 workers)",
    "started": "2026-11-20T09:05:43+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 115.0
   }
  ],
- "updated": "2026-11-20T09:05:43+00:00",
+ "updated": "2026-11-20T09:06:11+00:00",
  "word": "साथी → साथ",
  "slug": "saathi-saath",
  "hook": "कब तक साथी ढूंढते रहोगे?",
