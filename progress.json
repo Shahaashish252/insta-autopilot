@@ -1,119 +1,96 @@
 {
- "run_id": "44577752005",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44577752005",
- "started": "2026-11-19T17:29:55+00:00",
- "status": "done",
+ "run_id": "44672765392",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44672765392",
+ "started": "2026-11-20T04:11:53+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-19T17:29:55+00:00",
-   "ended": "2026-11-19T17:33:16+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T04:11:53+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-19T17:33:19+00:00",
-   "ended": "2026-11-19T17:33:55+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-19T17:33:57+00:00",
-   "detail": "गिर → फिर",
-   "ended": "2026-11-19T17:36:14+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-19T17:36:15+00:00",
-   "ended": "2026-11-19T17:36:50+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-19T17:36:51+00:00",
-   "ended": "2026-11-19T17:36:52+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-19T17:36:53+00:00",
-   "ended": "2026-11-19T17:36:54+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  35.07 s  -16.0 LUFS",
-   "started": "2026-11-19T17:36:55+00:00",
-   "ended": "2026-11-19T17:36:58+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-19T17:36:59+00:00",
-   "ended": "2026-11-19T17:37:36+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "85 % (900/1052 frames, 3 workers)",
-   "started": "2026-11-19T17:37:35+00:00",
-   "ended": "2026-11-19T17:38:55+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-19T17:38:57+00:00",
-   "ended": "2026-11-19T17:39:56+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-19T17:39:57+00:00",
-   "detail": "17 MB",
-   "ended": "2026-11-19T17:40:02+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-19T17:40:03+00:00",
-   "started": "2026-11-19T17:40:03+00:00",
-   "detail": "Sun 22 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44577752005",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44577752005",
+   "started": "2026-11-19T17:29:55+00:00",
+   "updated": "2026-11-19T17:40:06+00:00",
+   "status": "done",
+   "word": "गिर → फिर",
+   "hook": "एक अक्षर से गिर बने फिर",
+   "publish_at": "2026-11-22T18:45:00+05:30",
+   "detail": "गिर → फिर · posts Sun 22 Nov, 06:45 PM IST",
+   "took": 611.0
+  },
   {
    "run_id": "44458110982",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44458110982",
@@ -281,122 +258,7 @@
    "publish_at": null,
    "detail": "3 approved reels are already waiting (max 3); nothing to make",
    "took": 82.0
-  },
-  {
-   "run_id": "43551797449",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43551797449",
-   "started": "2026-11-14T03:28:26+00:00",
-   "updated": "2026-11-14T03:29:50+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "3 approved reels are already waiting (max 3); nothing to make",
-   "took": 84.0
   }
  ],
- "updated": "2026-11-19T17:40:06+00:00",
- "word": "गिर → फिर",
- "slug": "gir-phir",
- "hook": "एक अक्षर से गिर बने फिर",
- "caption": "जो गिरकर खुद को हारा हुआ मान बैठता है, ये रील उसे भेज दो।\n\n'गिर' में से सिर्फ़ एक अक्षर बदलो, और वो बन जाता है 'फिर'।\n\nगिरना हार नहीं है, रुक जाना हार है। हर गिरने के बाद एक 'फिर' ज़रूर आता है।\n\nतो आज गिरो मत, बस फिर से उठो।\n\n#हिंदीमोटिवेशन #गिरकरफिरउठो #शब्दोंकीसीख",
- "hooks": [
-  {
-   "formula": "One-letter claim",
-   "line": "एक अक्षर बदलो, गिर बन जाए फिर।",
-   "card": "एक अक्षर से गिर बने फिर",
-   "score": 79
-  },
-  {
-   "formula": "Negative command",
-   "line": "गिरने के बाद रुकना बंद करो।",
-   "card": "गिरने के बाद रुकना बंद करो",
-   "score": 74
-  },
-  {
-   "formula": "Sting question",
-   "line": "तुम कितनी बार गिरकर रुक गए?",
-   "card": "कितनी बार गिरकर रुक गए?",
-   "score": 73
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "एक अक्षर बदलो, गिर बन जाए फिर।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "क्योंकि ये सीख, सिर्फ़ इस एक शब्द में है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "गिर।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "एक बार गिरे, और सब कुछ छोड़ दिया।",
-   "write": "एक बार गिरे… सब छोड़ा।",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर इस शब्द का एक छोटा-सा अक्षर, कहानी बदल देता है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N6",
-   "text": "ग को फ से बदलो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N7",
-   "text": "और गिर, बन जाता है फिर।",
-   "write": "गिर… फिर।",
-   "cue": null
-  },
-  {
-   "id": "N8",
-   "text": "गिरना हार नहीं, रुक जाना हार है।",
-   "write": "रुकना ही हार है।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N9",
-   "text": "हर गिरने के बाद, एक फिर ज़रूर आता है।",
-   "write": "गिरने पर, फिर आता है।",
-   "cue": null
-  },
-  {
-   "id": "N10",
-   "text": "जो गिरकर खुद को हारा हुआ मानता है, उसे भेजो।",
-   "write": "हारा मानते हो? भेजो।",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, एक नया शब्द।",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "तो आज गिरो मत, फिर से उठो।",
-   "write": "गिरो मत, फिर से उठो।",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-22T18:45:00+05:30",
- "duration": 35.07,
- "detail": "गिर → फिर · posts Sun 22 Nov, 06:45 PM IST",
- "ended": "2026-11-19T17:40:06+00:00",
- "took": 611.0
+ "updated": "2026-11-20T04:11:53+00:00"
 }
