@@ -53,8 +53,9 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T12:22:06+00:00"
   },
   {
    "key": "music",
@@ -279,7 +280,7 @@
    "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:22:05+00:00",
+ "updated": "2026-11-20T12:22:06+00:00",
  "word": "रंग → रग",
  "slug": "rang-rag",
  "hook": "रंग पर कितनी बार ताना?",
