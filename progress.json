@@ -1,119 +1,96 @@
 {
- "run_id": "44737425939",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44737425939",
- "started": "2026-11-20T12:38:22+00:00",
- "status": "done",
+ "run_id": "44779674998",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44779674998",
+ "started": "2026-11-20T17:04:39+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T12:38:22+00:00",
-   "ended": "2026-11-20T12:39:18+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T17:04:39+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T12:39:23+00:00",
-   "ended": "2026-11-20T12:39:48+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T12:39:50+00:00",
-   "detail": "सूना → सुना",
-   "ended": "2026-11-20T12:47:38+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T12:47:39+00:00",
-   "ended": "2026-11-20T12:48:25+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T12:48:26+00:00",
-   "ended": "2026-11-20T12:48:27+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T12:48:28+00:00",
-   "ended": "2026-11-20T12:48:29+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  35.65 s  -16.0 LUFS",
-   "started": "2026-11-20T12:48:30+00:00",
-   "ended": "2026-11-20T12:48:33+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T12:48:34+00:00",
-   "ended": "2026-11-20T12:49:24+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "84 % (900/1070 frames, 3 workers)",
-   "started": "2026-11-20T12:49:23+00:00",
-   "ended": "2026-11-20T12:51:22+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T12:51:23+00:00",
-   "ended": "2026-11-20T12:52:48+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T12:52:49+00:00",
-   "detail": "18 MB",
-   "ended": "2026-11-20T12:52:52+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T12:52:53+00:00",
-   "started": "2026-11-20T12:52:53+00:00",
-   "detail": "Mon 07 Dec, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44737425939",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44737425939",
+   "started": "2026-11-20T12:38:22+00:00",
+   "updated": "2026-11-20T12:52:55+00:00",
+   "status": "done",
+   "word": "सूना → सुना",
+   "hook": "कमरा सूना है, या तुम?",
+   "publish_at": "2026-12-07T18:45:00+05:30",
+   "detail": "सूना → सुना · posts Mon 07 Dec, 06:45 PM IST",
+   "took": 873.0
+  },
   {
    "run_id": "44735876861",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44735876861",
@@ -281,119 +258,7 @@
    "publish_at": "2026-11-25T18:45:00+05:30",
    "detail": "अंत → अनंत · posts Wed 25 Nov, 06:45 PM IST",
    "took": 570.0
-  },
-  {
-   "run_id": "44699070572",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44699070572",
-   "started": "2026-11-20T08:00:09+00:00",
-   "updated": "2026-11-20T08:11:09+00:00",
-   "status": "done",
-   "word": "खुद → खुश",
-   "hook": "आख़िरी बार कब हँसे तुम?",
-   "publish_at": "2026-11-24T18:45:00+05:30",
-   "detail": "खुद → खुश · posts Tue 24 Nov, 06:45 PM IST",
-   "took": 660.0
   }
  ],
- "updated": "2026-11-20T12:52:55+00:00",
- "attempts": [
-  "['तन', '्ह', 'ा']: rejected (N1 is not your strongest hook: \"तुम्हारी तन्हाई में ही एक ताक़त छुपी है।\" scores 100)"
- ],
- "word": "सूना → सुना",
- "slug": "soona-suna",
- "hook": "कमरा सूना है, या तुम?",
- "caption": "जो रात को सबसे अकेला महसूस करता है, ये रील उसे भेज दो।\n\n'सूना' की सिर्फ़ एक मात्रा बदलो, और बन जाता है 'सुना'। एक छोटा बदलाव, पूरा मतलब बदल देता है।\n\nसबसे अकेला वही होता है, जिसे किसी ने ठीक से सुना नहीं। तन्हाई कमरे की नहीं, अनसुने होने की होती है।\n\nआज किसी एक की बात पूरी सुन लो। ज़िंदगी की सबसे बड़ी सीख यहीं छुपी है।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #सूनासुना",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "तुम्हारा कमरा सूना है, या तुम ख़ुद?",
-   "card": "कमरा सूना है, या तुम?",
-   "score": 86
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो खुद को सबसे अकेला समझते हो, ये तुम्हारे लिए है।",
-   "card": "सबसे अकेला? ये तुम्हारे लिए",
-   "score": 66
-  },
-  {
-   "formula": "Nobody tells you",
-   "line": "कोई तुम्हें नहीं बताता, सूनापन ठीक कैसे होता है।",
-   "card": "सूनापन ठीक कैसे होता है?",
-   "score": 66
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तुम्हारा कमरा सूना है, या तुम ख़ुद?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "सूना।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "फ़ोन में सौ कॉन्टैक्ट हैं, फिर भी बात करने को कोई नहीं।",
-   "write": "फोन भरा, दिल सूना",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर इस शब्द की एक मात्रा, सब बदल देती है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N6",
-   "text": "ये बड़ी मात्रा छोटी कर दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N7",
-   "text": "और सूना, बन जाता है सुना।",
-   "write": "सूना... सुना।",
-   "cue": null
-  },
-  {
-   "id": "N8",
-   "text": "सबसे अकेला वही है, जिसे किसी ने ठीक से सुना नहीं।",
-   "write": "अनसुना ही असली अकेला",
-   "cue": "resolve"
-  },
-  {
-   "id": "N9",
-   "text": "जो रात को सबसे अकेला महसूस करे, उसे ये भेज दो।",
-   "write": "अकेले दोस्त को भेज दो",
-   "cue": null
-  },
-  {
-   "id": "N10",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम 7 बजे, नया शब्द",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "अगली बार कमरा सूना लगे, तो किसी को सुन लो।",
-   "write": "कमरा सूना लगे तो सुनो",
-   "cue": null
-  }
- ],
- "publish_at": "2026-12-07T18:45:00+05:30",
- "duration": 35.65,
- "detail": "सूना → सुना · posts Mon 07 Dec, 06:45 PM IST",
- "ended": "2026-11-20T12:52:55+00:00",
- "took": 873.0
+ "updated": "2026-11-20T17:04:39+00:00"
 }
