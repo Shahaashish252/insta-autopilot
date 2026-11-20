@@ -180,5 +180,13 @@
   "hook_formula": "Negative command",
   "hook_score": 100,
   "at": "2026-11-20T10:59:25.503045+00:00"
+ },
+ {
+  "slug": "majboor-majboot",
+  "word": "मजबूर → मजबूत",
+  "hook": "मजबूर क्यों समझते हो?",
+  "hook_formula": "Sting question",
+  "hook_score": 74,
+  "at": "2026-11-20T11:39:49.969959+00:00"
  }
 ]
