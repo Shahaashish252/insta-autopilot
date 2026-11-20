@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-20T08:58:15+00:00",
+   "detail": "16 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-20T08:58:13+00:00",
+ "updated": "2026-11-20T08:58:15+00:00",
  "word": "थम → थाम",
  "slug": "tham-thaam",
  "hook": "कब से यहीं थमी है ज़िंदगी?",
