@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-20T11:39:44+00:00",
+   "detail": "18 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 718.0
   }
  ],
- "updated": "2026-11-20T11:39:43+00:00",
+ "updated": "2026-11-20T11:39:44+00:00",
  "word": "मजबूर → मजबूत",
  "slug": "majboor-majboot",
  "hook": "मजबूर क्यों समझते हो?",
