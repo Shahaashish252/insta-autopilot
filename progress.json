@@ -107,7 +107,10 @@
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "waiting"
+   "state": "done",
+   "ended": "2026-11-20T10:48:06+00:00",
+   "started": "2026-11-20T10:48:06+00:00",
+   "detail": "Wed 02 Dec, 06:45 PM IST"
   }
  ],
  "history": [
@@ -292,7 +295,7 @@
    "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:48:04+00:00",
+ "updated": "2026-11-20T10:48:06+00:00",
  "word": "संग → संगत",
  "slug": "sang-sangat",
  "hook": "संग तुझे कहाँ ले जा रहा?",
