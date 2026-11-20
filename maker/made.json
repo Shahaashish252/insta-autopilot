@@ -196,5 +196,13 @@
   "hook_formula": "Sting question",
   "hook_score": 86,
   "at": "2026-11-20T12:26:03.165426+00:00"
+ },
+ {
+  "slug": "ghaav-chaav",
+  "word": "घाव → चाव",
+  "hook": "वो पुराना घाव अब भी हरा?",
+  "hook_formula": "Sting question",
+  "hook_score": 87,
+  "at": "2026-11-20T12:37:09.076564+00:00"
  }
 ]
