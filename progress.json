@@ -44,9 +44,10 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "running",
-   "detail": null,
-   "started": "2026-11-20T12:22:03+00:00"
+   "state": "done",
+   "detail": "mismatches: 0 (lang=hi, model=small)",
+   "started": "2026-11-20T12:22:03+00:00",
+   "ended": "2026-11-20T12:22:05+00:00"
   },
   {
    "key": "timing",
@@ -278,7 +279,7 @@
    "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:22:03+00:00",
+ "updated": "2026-11-20T12:22:05+00:00",
  "word": "रंग → रग",
  "slug": "rang-rag",
  "hook": "रंग पर कितनी बार ताना?",
