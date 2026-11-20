@@ -44,8 +44,9 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T08:28:04+00:00"
   },
   {
    "key": "timing",
@@ -277,7 +278,7 @@
    "took": 525.0
   }
  ],
- "updated": "2026-11-20T08:28:02+00:00",
+ "updated": "2026-11-20T08:28:04+00:00",
  "word": "जन → जान",
  "slug": "jan-jaan",
  "hook": "भीड़ में बस एक जन?",
