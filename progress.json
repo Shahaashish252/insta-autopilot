@@ -62,8 +62,9 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "40 sound cues, 33.2 s",
+   "started": "2026-11-20T12:33:14+00:00"
   },
   {
    "key": "reading",
@@ -281,7 +282,7 @@
    "took": 482.0
   }
  ],
- "updated": "2026-11-20T12:33:13+00:00",
+ "updated": "2026-11-20T12:33:14+00:00",
  "word": "घाव → चाव",
  "slug": "ghaav-chaav",
  "hook": "वो पुराना घाव अब भी हरा?",
