@@ -1,119 +1,96 @@
 {
- "run_id": "44701943149",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44701943149",
- "started": "2026-11-20T08:22:06+00:00",
- "status": "done",
+ "run_id": "44703309920",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44703309920",
+ "started": "2026-11-20T08:32:19+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T08:22:06+00:00",
-   "ended": "2026-11-20T08:22:54+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T08:32:19+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T08:22:59+00:00",
-   "ended": "2026-11-20T08:23:40+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T08:23:41+00:00",
-   "detail": "जन → जान",
-   "ended": "2026-11-20T08:27:24+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:27:26+00:00",
-   "ended": "2026-11-20T08:28:02+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T08:28:04+00:00",
-   "ended": "2026-11-20T08:28:05+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:28:06+00:00",
-   "ended": "2026-11-20T08:28:08+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  29.67 s  -16.0 LUFS",
-   "started": "2026-11-20T08:28:09+00:00",
-   "ended": "2026-11-20T08:28:10+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T08:28:11+00:00",
-   "ended": "2026-11-20T08:28:47+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "80 % (720/890 frames, 3 workers)",
-   "started": "2026-11-20T08:28:46+00:00",
-   "ended": "2026-11-20T08:30:15+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:30:16+00:00",
-   "ended": "2026-11-20T08:31:20+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T08:31:21+00:00",
-   "detail": "15 MB",
-   "ended": "2026-11-20T08:31:25+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T08:31:26+00:00",
-   "started": "2026-11-20T08:31:26+00:00",
-   "detail": "Thu 26 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44701943149",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44701943149",
+   "started": "2026-11-20T08:22:06+00:00",
+   "updated": "2026-11-20T08:31:29+00:00",
+   "status": "done",
+   "word": "जन → जान",
+   "hook": "भीड़ में बस एक जन?",
+   "publish_at": "2026-11-26T18:45:00+05:30",
+   "detail": "जन → जान · posts Thu 26 Nov, 06:45 PM IST",
+   "took": 563.0
+  },
   {
    "run_id": "44700606289",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44700606289",
@@ -281,110 +258,7 @@
    "publish_at": "2026-11-21T18:45:00+05:30",
    "detail": "कीमत → कीमती · posts Sat 21 Nov, 06:45 PM IST",
    "took": 775.0
-  },
-  {
-   "run_id": "43721505440",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43721505440",
-   "started": "2026-11-15T13:55:18+00:00",
-   "updated": "2026-11-15T14:04:03+00:00",
-   "status": "done",
-   "word": "सोच → सच",
-   "hook": "एक मात्रा हटाओ, सोच बने सच",
-   "publish_at": "2026-11-19T18:45:00+05:30",
-   "detail": "सोच → सच · posts Thu 19 Nov, 06:45 PM IST",
-   "took": 525.0
   }
  ],
- "updated": "2026-11-20T08:31:29+00:00",
- "word": "जन → जान",
- "slug": "jan-jaan",
- "hook": "भीड़ में बस एक जन?",
- "caption": "जो खुद को भीड़ में बस एक चेहरा समझता है, ये रील उसे भेज दो।\n\nजन से जान बनने में बस एक मात्रा लगती है। पर पूरा मतलब बदल जाता है, और ज़िंदगी का नज़रिया भी।\n\nतू भीड़ का एक जन नहीं है। तू किसी के लिए जान है, किसी की पूरी दुनिया है। ये सीख आज खुद को याद दिला।\n\nकभी खुद को भीड़ में गुम मत समझना। घर पर कोई तेरा इंतज़ार करता है।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #जनसेजान",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "तू भीड़ में बस एक जन है क्या?",
-   "card": "भीड़ में बस एक जन?",
-   "score": 87
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो खुद को भीड़ में गुम समझते हैं, सुनो।",
-   "card": "भीड़ में गुम हो तुम?",
-   "score": 73
-  },
-  {
-   "formula": "Nobody tells you",
-   "line": "किसी ने नहीं बताया, तू किसी की जान है।",
-   "card": "कोई नहीं बताता ये बात",
-   "score": 61
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तू भीड़ में बस एक जन है क्या?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "जन।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "पर इस शब्द की एक मात्रा, सब बदल देती है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N5",
-   "text": "ये मात्रा जोड़ो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N6",
-   "text": "और जन, बन जाता है जान।",
-   "write": "जन… जान।",
-   "cue": null
-  },
-  {
-   "id": "N7",
-   "text": "तू भीड़ नहीं, तू किसी की जान है। कोई तेरा इंतज़ार करता है।",
-   "write": "तू किसी की जान है।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N8",
-   "text": "जो खुद को भीड़ में अकेला समझे, उसे भेज दो।",
-   "write": "उसे भेजो, जो अकेला समझे",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "रोज़ शाम 7 बजे, नया शब्द",
-   "cue": null
-  },
-  {
-   "id": "N10",
-   "text": "तो अब भी लगता है, तू बस एक जन है?",
-   "write": "अब भी बस एक जन?",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-26T18:45:00+05:30",
- "duration": 29.67,
- "detail": "जन → जान · posts Thu 26 Nov, 06:45 PM IST",
- "ended": "2026-11-20T08:31:29+00:00",
- "took": 563.0
+ "updated": "2026-11-20T08:32:19+00:00"
 }
