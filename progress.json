@@ -71,9 +71,10 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T12:48:34+00:00"
+   "started": "2026-11-20T12:48:34+00:00",
+   "ended": "2026-11-20T12:49:22+00:00"
   },
   {
    "key": "picture",
@@ -284,7 +285,7 @@
    "took": 660.0
   }
  ],
- "updated": "2026-11-20T12:48:34+00:00",
+ "updated": "2026-11-20T12:49:22+00:00",
  "attempts": [
   "['तन', '्ह', 'ा']: rejected (N1 is not your strongest hook: \"तुम्हारी तन्हाई में ही एक ताक़त छुपी है।\" scores 100)"
  ],
