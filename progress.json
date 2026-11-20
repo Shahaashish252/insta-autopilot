@@ -71,8 +71,9 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T10:45:39+00:00"
   },
   {
    "key": "picture",
@@ -283,7 +284,7 @@
    "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:45:38+00:00",
+ "updated": "2026-11-20T10:45:39+00:00",
  "word": "संग → संगत",
  "slug": "sang-sangat",
  "hook": "संग तुझे कहाँ ले जा रहा?",
