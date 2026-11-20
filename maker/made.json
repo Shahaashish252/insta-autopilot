@@ -124,5 +124,13 @@
   "hook_formula": "Sting question",
   "hook_score": 87,
   "at": "2026-11-20T08:31:26.804186+00:00"
+ },
+ {
+  "slug": "raah-raahat",
+  "word": "राह → राहत",
+  "hook": "राह कब ख़त्म होगी?",
+  "hook_formula": "Sting question",
+  "hook_score": 86,
+  "at": "2026-11-20T08:43:14.555159+00:00"
  }
 ]
