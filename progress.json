@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "39 sound cues, 34.1 s",
-   "started": "2026-11-20T10:45:37+00:00"
+   "state": "done",
+   "detail": "mix.wav  34.09 s  -16.0 LUFS",
+   "started": "2026-11-20T10:45:37+00:00",
+   "ended": "2026-11-20T10:45:38+00:00"
   },
   {
    "key": "reading",
@@ -282,7 +283,7 @@
    "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:45:37+00:00",
+ "updated": "2026-11-20T10:45:38+00:00",
  "word": "संग → संगत",
  "slug": "sang-sangat",
  "hook": "संग तुझे कहाँ ले जा रहा?",
