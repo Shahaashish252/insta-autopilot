@@ -44,8 +44,9 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T12:33:09+00:00"
   },
   {
    "key": "timing",
@@ -277,7 +278,7 @@
    "took": 482.0
   }
  ],
- "updated": "2026-11-20T12:33:08+00:00",
+ "updated": "2026-11-20T12:33:09+00:00",
  "word": "घाव → चाव",
  "slug": "ghaav-chaav",
  "hook": "वो पुराना घाव अब भी हरा?",
