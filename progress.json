@@ -1,119 +1,96 @@
 {
- "run_id": "44720823120",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44720823120",
- "started": "2026-11-20T10:37:45+00:00",
- "status": "done",
+ "run_id": "44722316251",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44722316251",
+ "started": "2026-11-20T10:48:37+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T10:37:45+00:00",
-   "ended": "2026-11-20T10:38:34+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T10:48:37+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T10:38:41+00:00",
-   "ended": "2026-11-20T10:39:31+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T10:39:33+00:00",
-   "detail": "संग → संगत",
-   "ended": "2026-11-20T10:44:55+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T10:44:56+00:00",
-   "ended": "2026-11-20T10:45:29+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T10:45:31+00:00",
-   "ended": "2026-11-20T10:45:33+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T10:45:34+00:00",
-   "ended": "2026-11-20T10:45:35+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  34.09 s  -16.0 LUFS",
-   "started": "2026-11-20T10:45:37+00:00",
-   "ended": "2026-11-20T10:45:38+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T10:45:39+00:00",
-   "ended": "2026-11-20T10:46:07+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "87 % (900/1023 frames, 3 workers)",
-   "started": "2026-11-20T10:46:06+00:00",
-   "ended": "2026-11-20T10:47:13+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T10:47:14+00:00",
-   "ended": "2026-11-20T10:47:59+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T10:48:00+00:00",
-   "detail": "17 MB",
-   "ended": "2026-11-20T10:48:04+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T10:48:06+00:00",
-   "started": "2026-11-20T10:48:06+00:00",
-   "detail": "Wed 02 Dec, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44720823120",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44720823120",
+   "started": "2026-11-20T10:37:45+00:00",
+   "updated": "2026-11-20T10:48:09+00:00",
+   "status": "done",
+   "word": "संग → संगत",
+   "hook": "संग तुझे कहाँ ले जा रहा?",
+   "publish_at": "2026-12-02T18:45:00+05:30",
+   "detail": "संग → संगत · posts Wed 02 Dec, 06:45 PM IST",
+   "took": 624.0
+  },
   {
    "run_id": "44710548373",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44710548373",
@@ -281,122 +258,7 @@
    "publish_at": null,
    "detail": "3 approved reels are already waiting (max 3); nothing to make",
    "took": 102.0
-  },
-  {
-   "run_id": "44238784995",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44238784995",
-   "started": "2026-11-18T04:39:14+00:00",
-   "updated": "2026-11-18T04:41:19+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "4 approved reels are already waiting (max 3); nothing to make",
-   "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:48:09+00:00",
- "word": "संग → संगत",
- "slug": "sang-sangat",
- "hook": "संग तुझे कहाँ ले जा रहा?",
- "caption": "जो गलत लोगों के साथ फँसा है और निकल नहीं पा रहा, ये रील उसे भेज दो।\n\n'संग' में सिर्फ़ एक 'त' जोड़ो, और वो बन जाता है 'संगत'। जिनके साथ तुम रोज़ बैठते हो, वो सिर्फ़ साथ नहीं रहता, धीरे-धीरे तुम्हारी आदत बन जाता है।\n\nयही ज़िंदगी का सच है। तुम जिनके बीच रहते हो, वही तुम्हें बनाते हैं। बुरी संगत चुपके से तुम्हारा रंग बदल देती है, और अच्छी संगत तुम्हें ऊपर खींच लेती है।\n\nइसलिए आज से अपनी संगत पर ध्यान दो। सही लोगों के साथ रहो, बाकी ज़िंदगी खुद बदल जाएगी।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #संगतकाफर्क",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "तेरा 'संग' तुझे कहाँ ले जा रहा है?",
-   "card": "संग तुझे कहाँ ले जा रहा?",
-   "score": 87
-  },
-  {
-   "formula": "Negative command",
-   "line": "गलत लोगों के साथ बैठना बंद करो।",
-   "card": "गलत लोगों के साथ बैठना बंद",
-   "score": 74
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो हर ग्रुप में घुटता रहता है, ये सुनो।",
-   "card": "जो ग्रुप में घुटता रहता है",
-   "score": 87
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तेरा 'संग' तुझे कहाँ ले जा रहा है?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब छुपा है एक छोटे शब्द में।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "संग।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "लगता है बस साथ बैठना है।",
-   "write": "बस साथ बैठना है…",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर उनकी आदतें, चुपके से तुम में उतरती हैं।",
-   "write": "आदतें तुम में उतरतीं",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द में एक हिस्सा छुपा है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "बस एक 'त' जोड़ दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "संग, बन जाता है संगत।",
-   "write": "संग... संगत",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "जिनके साथ रहोगे, वैसे ही बन जाओगे।",
-   "write": "जैसी संगत वैसे तुम",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "जो गलत संगत में फँसा है, उसे ये भेज दो।",
-   "write": "उसे ये भेज दो",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, नया शब्द",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "अपनी संगत बदलो, फिर देखो कहाँ पहुँचते हो।",
-   "write": "संगत बदलो, मंज़िल बदलो",
-   "cue": null
-  }
- ],
- "publish_at": "2026-12-02T18:45:00+05:30",
- "duration": 34.09,
- "detail": "संग → संगत · posts Wed 02 Dec, 06:45 PM IST",
- "ended": "2026-11-20T10:48:09+00:00",
- "took": 624.0
+ "updated": "2026-11-20T10:48:37+00:00"
 }
