@@ -71,9 +71,10 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T08:55:21+00:00"
+   "started": "2026-11-20T08:55:21+00:00",
+   "ended": "2026-11-20T08:55:57+00:00"
   },
   {
    "key": "picture",
@@ -284,7 +285,7 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-20T08:55:21+00:00",
+ "updated": "2026-11-20T08:55:57+00:00",
  "word": "थम → थाम",
  "slug": "tham-thaam",
  "hook": "कब से यहीं थमी है ज़िंदगी?",
