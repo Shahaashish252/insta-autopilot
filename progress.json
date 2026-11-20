@@ -80,9 +80,10 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "running",
+   "state": "done",
    "detail": "92 % (1080/1164 frames, 3 workers)",
-   "started": "2026-11-20T10:57:00+00:00"
+   "started": "2026-11-20T10:57:00+00:00",
+   "ended": "2026-11-20T10:58:22+00:00"
   },
   {
    "key": "master",
@@ -286,7 +287,7 @@
    "took": 102.0
   }
  ],
- "updated": "2026-11-20T10:58:15+00:00",
+ "updated": "2026-11-20T10:58:22+00:00",
  "word": "रुक → रुख",
  "slug": "ruk-rukh",
  "hook": "हर हार पर रुकना बंद करो",
