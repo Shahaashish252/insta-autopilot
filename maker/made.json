@@ -140,5 +140,13 @@
   "hook_formula": "Sting question",
   "hook_score": 87,
   "at": "2026-11-20T08:50:39.852034+00:00"
+ },
+ {
+  "slug": "tham-thaam",
+  "word": "थम → थाम",
+  "hook": "कब से यहीं थमी है ज़िंदगी?",
+  "hook_formula": "Sting question",
+  "hook_score": 86,
+  "at": "2026-11-20T08:58:21.142485+00:00"
  }
 ]
