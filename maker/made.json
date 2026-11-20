@@ -204,5 +204,13 @@
   "hook_formula": "Sting question",
   "hook_score": 87,
   "at": "2026-11-20T12:37:09.076564+00:00"
+ },
+ {
+  "slug": "soona-suna",
+  "word": "सूना → सुना",
+  "hook": "कमरा सूना है, या तुम?",
+  "hook_formula": "Sting question",
+  "hook_score": 86,
+  "at": "2026-11-20T12:52:53.565342+00:00"
  }
 ]
