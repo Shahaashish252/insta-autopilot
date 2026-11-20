@@ -1,119 +1,96 @@
 {
- "run_id": "44706859492",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44706859492",
- "started": "2026-11-20T08:59:11+00:00",
- "status": "done",
+ "run_id": "44708280413",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44708280413",
+ "started": "2026-11-20T09:09:26+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T08:59:11+00:00",
-   "ended": "2026-11-20T09:00:07+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T09:09:26+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T09:00:11+00:00",
-   "ended": "2026-11-20T09:00:48+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T09:00:49+00:00",
-   "detail": "साथी → साथ",
-   "ended": "2026-11-20T09:04:11+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T09:04:12+00:00",
-   "ended": "2026-11-20T09:04:54+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T09:04:55+00:00",
-   "ended": "2026-11-20T09:04:56+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T09:04:58+00:00",
-   "ended": "2026-11-20T09:04:59+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  32.28 s  -16.0 LUFS",
-   "started": "2026-11-20T09:05:00+00:00",
-   "ended": "2026-11-20T09:05:02+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T09:05:03+00:00",
-   "ended": "2026-11-20T09:05:44+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "92 % (900/968 frames, 3 workers)",
-   "started": "2026-11-20T09:05:43+00:00",
-   "ended": "2026-11-20T09:07:27+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T09:07:28+00:00",
-   "ended": "2026-11-20T09:08:44+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T09:08:45+00:00",
-   "detail": "16 MB",
-   "ended": "2026-11-20T09:08:48+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T09:08:50+00:00",
-   "started": "2026-11-20T09:08:50+00:00",
-   "detail": "Mon 30 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44706859492",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44706859492",
+   "started": "2026-11-20T08:59:11+00:00",
+   "updated": "2026-11-20T09:08:52+00:00",
+   "status": "done",
+   "word": "साथी → साथ",
+   "hook": "कब तक साथी ढूंढते रहोगे?",
+   "publish_at": "2026-11-30T18:45:00+05:30",
+   "detail": "साथी → साथ · posts Mon 30 Nov, 06:45 PM IST",
+   "took": 581.0
+  },
   {
    "run_id": "44705803152",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44705803152",
@@ -281,116 +258,7 @@
    "publish_at": null,
    "detail": "5 approved reels are already waiting (max 3); nothing to make",
    "took": 87.0
-  },
-  {
-   "run_id": "43931858911",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43931858911",
-   "started": "2026-11-16T18:43:54+00:00",
-   "updated": "2026-11-16T18:45:49+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "5 approved reels are already waiting (max 3); nothing to make",
-   "took": 115.0
   }
  ],
- "updated": "2026-11-20T09:08:52+00:00",
- "word": "साथी → साथ",
- "slug": "saathi-saath",
- "hook": "कब तक साथी ढूंढते रहोगे?",
- "caption": "जो हमेशा यही सोचता है कि कोई साथ होता तो अच्छा था, ये रील उसे भेज दो।\n\nसाथी ढूंढने में हम पूरी ज़िंदगी लगा देते हैं। पर साथी शब्द से बस एक मात्रा हटाओ, तो बन जाता है साथ।\n\nसाथ सबसे पहले अपना होना चाहिए। जो खुद का साथ दे पाता है, उसे अकेलापन कभी नहीं डराता।\n\nआज से साथी मत ढूंढो, खुद का साथ बनो।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #साथ",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "तुम कब तक साथी ढूंढते रहोगे?",
-   "card": "कब तक साथी ढूंढते रहोगे?",
-   "score": 73
-  },
-  {
-   "formula": "Negative command",
-   "line": "बार-बार साथी ढूंढना बंद करो।",
-   "card": "साथी ढूंढना बंद करो",
-   "score": 74
-  },
-  {
-   "formula": "Nobody tells you",
-   "line": "कोई नहीं बताता, साथी से पहले क्या चाहिए।",
-   "card": "साथी से पहले ये चाहिए",
-   "score": 78
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तुम कब तक साथी ढूंढते रहोगे?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब, इस एक शब्द में है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "साथी।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "सोचते हो, कोई साथ देता तो अच्छा था।",
-   "write": "कोई साथ देता तो…",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर इस शब्द की एक छोटी-सी मात्रा है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N6",
-   "text": "ये मात्रा हटाओ।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N7",
-   "text": "साथी, बन जाता है साथ।",
-   "write": "साथी… साथ",
-   "cue": null
-  },
-  {
-   "id": "N8",
-   "text": "पहले खुद को वो साथ दो, फिर अकेलापन नहीं लगेगा।",
-   "write": "पहले खुद को साथ दो",
-   "cue": "resolve"
-  },
-  {
-   "id": "N9",
-   "text": "जो आज अकेला महसूस करे, उसे ये भेज दो।",
-   "write": "अकेले दोस्त को भेजो",
-   "cue": null
-  },
-  {
-   "id": "N10",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "शाम 7 बजे, नया शब्द",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "फिर कब तक साथी ढूंढोगे? आज से साथ बनो।",
-   "write": "कब तक साथी ढूंढोगे?",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-30T18:45:00+05:30",
- "duration": 32.28,
- "detail": "साथी → साथ · posts Mon 30 Nov, 06:45 PM IST",
- "ended": "2026-11-20T09:08:52+00:00",
- "took": 581.0
+ "updated": "2026-11-20T09:09:26+00:00"
 }
