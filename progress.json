@@ -80,9 +80,10 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "running",
-   "detail": "76 % (780/1016 frames, 3 workers)",
-   "started": "2026-11-20T08:39:53+00:00"
+   "state": "done",
+   "detail": "88 % (900/1016 frames, 3 workers)",
+   "started": "2026-11-20T08:39:53+00:00",
+   "ended": "2026-11-20T08:41:45+00:00"
   },
   {
    "key": "master",
@@ -286,7 +287,7 @@
    "took": 775.0
   }
  ],
- "updated": "2026-11-20T08:41:22+00:00",
+ "updated": "2026-11-20T08:41:45+00:00",
  "word": "राह → राहत",
  "slug": "raah-raahat",
  "hook": "राह कब ख़त्म होगी?",
