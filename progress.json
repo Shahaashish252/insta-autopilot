@@ -72,16 +72,16 @@
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
    "state": "done",
-   "detail": null,
+   "detail": "every line readable",
    "started": "2026-11-20T08:55:21+00:00",
-   "ended": "2026-11-20T08:55:57+00:00"
+   "ended": "2026-11-20T08:56:00+00:00"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "0 %",
+   "detail": "24 % (240/965 frames, 3 workers)",
    "started": "2026-11-20T08:55:58+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-20T08:55:58+00:00",
+ "updated": "2026-11-20T08:56:17+00:00",
  "word": "थम → थाम",
  "slug": "tham-thaam",
  "hook": "कब से यहीं थमी है ज़िंदगी?",
