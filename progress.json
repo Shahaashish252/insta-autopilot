@@ -2,7 +2,7 @@
  "run_id": "44727930644",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727930644",
  "started": "2026-11-20T11:29:00+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 718.0
   }
  ],
- "updated": "2026-11-20T11:39:51+00:00",
+ "updated": "2026-11-20T11:39:52+00:00",
  "word": "मजबूर → मजबूत",
  "slug": "majboor-majboot",
  "hook": "मजबूर क्यों समझते हो?",
@@ -395,5 +395,8 @@
   }
  ],
  "publish_at": "2026-12-04T18:45:00+05:30",
- "duration": 35.75
+ "duration": 35.75,
+ "detail": "मजबूर → मजबूत · posts Fri 04 Dec, 06:45 PM IST",
+ "ended": "2026-11-20T11:39:52+00:00",
+ "took": 652.0
 }
