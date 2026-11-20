@@ -80,8 +80,9 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "0 %",
+   "started": "2026-11-20T12:49:23+00:00"
   },
   {
    "key": "master",
@@ -285,7 +286,7 @@
    "took": 660.0
   }
  ],
- "updated": "2026-11-20T12:49:22+00:00",
+ "updated": "2026-11-20T12:49:23+00:00",
  "attempts": [
   "['तन', '्ह', 'ा']: rejected (N1 is not your strongest hook: \"तुम्हारी तन्हाई में ही एक ताक़त छुपी है।\" scores 100)"
  ],
