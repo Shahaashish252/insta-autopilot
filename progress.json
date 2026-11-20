@@ -35,9 +35,10 @@
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T10:55:41+00:00"
+   "started": "2026-11-20T10:55:41+00:00",
+   "ended": "2026-11-20T10:56:16+00:00"
   },
   {
    "key": "speech",
@@ -276,7 +277,7 @@
    "took": 102.0
   }
  ],
- "updated": "2026-11-20T10:55:41+00:00",
+ "updated": "2026-11-20T10:56:16+00:00",
  "word": "रुक → रुख",
  "slug": "ruk-rukh",
  "hook": "हर हार पर रुकना बंद करो",
