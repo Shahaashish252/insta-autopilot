@@ -53,9 +53,10 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T10:45:34+00:00"
+   "started": "2026-11-20T10:45:34+00:00",
+   "ended": "2026-11-20T10:45:35+00:00"
   },
   {
    "key": "music",
@@ -280,7 +281,7 @@
    "took": 125.0
   }
  ],
- "updated": "2026-11-20T10:45:34+00:00",
+ "updated": "2026-11-20T10:45:35+00:00",
  "word": "संग → संगत",
  "slug": "sang-sangat",
  "hook": "संग तुझे कहाँ ले जा रहा?",
