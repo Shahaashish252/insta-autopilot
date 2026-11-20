@@ -1,119 +1,96 @@
 {
- "run_id": "44698034169",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44698034169",
- "started": "2026-11-20T07:51:31+00:00",
- "status": "done",
+ "run_id": "44699070572",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44699070572",
+ "started": "2026-11-20T08:00:09+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T07:51:31+00:00",
-   "ended": "2026-11-20T07:52:16+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T08:00:09+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T07:52:21+00:00",
-   "ended": "2026-11-20T07:53:32+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T07:53:33+00:00",
-   "detail": "भूल → फूल",
-   "ended": "2026-11-20T07:56:09+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T07:56:10+00:00",
-   "ended": "2026-11-20T07:56:39+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T07:56:40+00:00",
-   "ended": "2026-11-20T07:56:41+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T07:56:43+00:00",
-   "ended": "2026-11-20T07:56:44+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  37.36 s  -16.0 LUFS",
-   "started": "2026-11-20T07:56:45+00:00",
-   "ended": "2026-11-20T07:56:46+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T07:56:48+00:00",
-   "ended": "2026-11-20T07:57:19+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "96 % (1080/1121 frames, 3 workers)",
-   "started": "2026-11-20T07:57:18+00:00",
-   "ended": "2026-11-20T07:58:33+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T07:58:34+00:00",
-   "ended": "2026-11-20T07:59:25+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T07:59:26+00:00",
-   "detail": "19 MB",
-   "ended": "2026-11-20T07:59:29+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T07:59:30+00:00",
-   "started": "2026-11-20T07:59:30+00:00",
-   "detail": "Mon 23 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44698034169",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44698034169",
+   "started": "2026-11-20T07:51:31+00:00",
+   "updated": "2026-11-20T07:59:33+00:00",
+   "status": "done",
+   "word": "भूल → फूल",
+   "hook": "हर भूल पर खुद को कोसना?",
+   "publish_at": "2026-11-23T18:45:00+05:30",
+   "detail": "भूल → फूल · posts Mon 23 Nov, 06:45 PM IST",
+   "took": 482.0
+  },
   {
    "run_id": "44672765392",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44672765392",
@@ -281,122 +258,7 @@
    "publish_at": "2026-11-19T18:45:00+05:30",
    "detail": "जग → जाग · posts Thu 19 Nov, 06:45 PM IST",
    "took": 608.0
-  },
-  {
-   "run_id": "43670170575",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43670170575",
-   "started": "2026-11-15T02:58:06+00:00",
-   "updated": "2026-11-15T02:59:27+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "3 approved reels are already waiting (max 3); nothing to make",
-   "took": 81.0
   }
  ],
- "updated": "2026-11-20T07:59:33+00:00",
- "word": "भूल → फूल",
- "slug": "bhool-phool",
- "hook": "हर भूल पर खुद को कोसना?",
- "caption": "जो हर गलती पर खुद को कोसते रहते हैं, ये रील उन्हें भेज दो।\n\nभूल में से बस एक अक्षर बदलो, और वो बन जाती है फूल। हर गलती उतनी बुरी नहीं, जितनी हम उसे मानते हैं।\n\nजो अपनी भूल से सीखता है, वही सच में खिलता है। खुद को कोसना बंद करो, सीखना शुरू करो।\n\nतुमसे हुई गलती, तुम्हारी पहचान नहीं है। वो सिर्फ़ एक सीख है, जो तुम्हें आगे ले जाएगी।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #भूलसेसीख",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "हर भूल के बाद, तुम खुद को कितना कोसते हो?",
-   "card": "हर भूल पर खुद को कोसना?",
-   "score": 81
-  },
-  {
-   "formula": "One-letter claim",
-   "line": "सिर्फ़ एक अक्षर बदलो, और भूल बन जाए फूल।",
-   "card": "1 अक्षर से भूल बने फूल",
-   "score": 79
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो हर गलती पर खुद को कोसते हैं, ये तुम्हारे लिए है।",
-   "card": "गलती पर खुद को कोसने वालों के लिए",
-   "score": 75
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "हर भूल के बाद, तुम खुद को कितना कोसते हो?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "इसका जवाब, एक शब्द में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "भूल।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "रात में वही गलती बार-बार याद आती है।",
-   "write": "रात में वही गलती…",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "खुद को माफ़ करने की हिम्मत नहीं होती।",
-   "write": "खुद को माफ़ नहीं करते…",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द का एक अक्षर, उड़ने को तैयार है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "इस भ को फ़ से बदल दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "भूल, बन जाता है फूल।",
-   "write": "भूल… फूल।",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "जो अपनी भूल से सीखता है, वही फूल जैसा खिलता है।",
-   "write": "भूल से सीखो, खिलो।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "जो हर गलती पर खुद को कोसते हैं, ये रील उन्हें भेजो।",
-   "write": "कोसने वालों को भेजो।",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, एक नया शब्द।",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "तो अगली बार भूल पर खुद को कोसने से पहले, सोचना।",
-   "write": "कोसने से पहले, सोचो।",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-23T18:45:00+05:30",
- "duration": 37.36,
- "detail": "भूल → फूल · posts Mon 23 Nov, 06:45 PM IST",
- "ended": "2026-11-20T07:59:33+00:00",
- "took": 482.0
+ "updated": "2026-11-20T08:00:09+00:00"
 }
