@@ -295,7 +295,7 @@
    "took": 611.0
   }
  ],
- "updated": "2026-11-20T11:53:34+00:00",
+ "updated": "2026-11-20T11:53:35+00:00",
  "attempts": [
   "['कद', '', '']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
@@ -402,5 +402,7 @@
    "write": "अब पता है जवाब।",
    "cue": null
   }
- ]
+ ],
+ "publish_at": "2026-12-04T18:45:00+05:30",
+ "duration": 36.71
 }
