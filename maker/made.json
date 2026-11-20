@@ -132,5 +132,13 @@
   "hook_formula": "Sting question",
   "hook_score": 86,
   "at": "2026-11-20T08:43:14.555159+00:00"
+ },
+ {
+  "slug": "daagi-daag",
+  "word": "दागी → दाग",
+  "hook": "कब तक खुद को 'दागी' मानोगे?",
+  "hook_formula": "Sting question",
+  "hook_score": 87,
+  "at": "2026-11-20T08:50:39.852034+00:00"
  }
 ]
