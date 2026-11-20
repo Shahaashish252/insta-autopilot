@@ -81,7 +81,7 @@
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
    "state": "running",
-   "detail": "21 % (240/1121 frames, 3 workers)",
+   "detail": "48 % (540/1121 frames, 3 workers)",
    "started": "2026-11-20T07:57:18+00:00"
   },
   {
@@ -286,7 +286,7 @@
    "took": 81.0
   }
  ],
- "updated": "2026-11-20T07:57:36+00:00",
+ "updated": "2026-11-20T07:57:53+00:00",
  "word": "भूल → फूल",
  "slug": "bhool-phool",
  "hook": "हर भूल पर खुद को कोसना?",
