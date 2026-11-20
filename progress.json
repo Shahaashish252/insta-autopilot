@@ -26,9 +26,10 @@
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "running",
+   "state": "done",
    "started": "2026-11-20T12:28:37+00:00",
-   "detail": "attempt 1: Claude is choosing a word"
+   "detail": "घाव → चाव",
+   "ended": "2026-11-20T12:32:16+00:00"
   },
   {
    "key": "voice",
@@ -267,7 +268,7 @@
    "took": 482.0
   }
  ],
- "updated": "2026-11-20T12:32:15+00:00",
+ "updated": "2026-11-20T12:32:16+00:00",
  "word": "घाव → चाव",
  "slug": "ghaav-chaav",
  "hook": "वो पुराना घाव अब भी हरा?",
