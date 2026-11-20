@@ -107,7 +107,10 @@
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "waiting"
+   "state": "done",
+   "ended": "2026-11-20T12:52:53+00:00",
+   "started": "2026-11-20T12:52:53+00:00",
+   "detail": "Mon 07 Dec, 06:45 PM IST"
   }
  ],
  "history": [
@@ -292,7 +295,7 @@
    "took": 660.0
   }
  ],
- "updated": "2026-11-20T12:52:52+00:00",
+ "updated": "2026-11-20T12:52:53+00:00",
  "attempts": [
   "['तन', '्ह', 'ा']: rejected (N1 is not your strongest hook: \"तुम्हारी तन्हाई में ही एक ताक़त छुपी है।\" scores 100)"
  ],
