@@ -92,5 +92,13 @@
   "hook_formula": "One-letter claim",
   "hook_score": 79,
   "at": "2026-11-19T17:40:03.959699+00:00"
+ },
+ {
+  "slug": "bhool-phool",
+  "word": "भूल → फूल",
+  "hook": "हर भूल पर खुद को कोसना?",
+  "hook_formula": "Sting question",
+  "hook_score": 81,
+  "at": "2026-11-20T07:59:30.673290+00:00"
  }
 ]
