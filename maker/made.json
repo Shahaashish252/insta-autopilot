@@ -164,5 +164,13 @@
   "hook_formula": "Sting question",
   "hook_score": 100,
   "at": "2026-11-20T09:42:19.996480+00:00"
+ },
+ {
+  "slug": "sang-sangat",
+  "word": "संग → संगत",
+  "hook": "संग तुझे कहाँ ले जा रहा?",
+  "hook_formula": "Sting question",
+  "hook_score": 87,
+  "at": "2026-11-20T10:48:06.405790+00:00"
  }
 ]
