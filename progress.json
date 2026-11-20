@@ -53,8 +53,9 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T08:48:23+00:00"
   },
   {
    "key": "music",
@@ -279,7 +280,7 @@
    "took": 75.0
   }
  ],
- "updated": "2026-11-20T08:48:22+00:00",
+ "updated": "2026-11-20T08:48:23+00:00",
  "word": "दागी → दाग",
  "slug": "daagi-daag",
  "hook": "कब तक खुद को 'दागी' मानोगे?",
