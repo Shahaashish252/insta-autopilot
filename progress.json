@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "36 sound cues, 32.3 s",
-   "started": "2026-11-20T09:05:00+00:00"
+   "state": "done",
+   "detail": "mix.wav  32.28 s  -16.0 LUFS",
+   "started": "2026-11-20T09:05:00+00:00",
+   "ended": "2026-11-20T09:05:02+00:00"
   },
   {
    "key": "reading",
@@ -282,7 +283,7 @@
    "took": 115.0
   }
  ],
- "updated": "2026-11-20T09:05:00+00:00",
+ "updated": "2026-11-20T09:05:02+00:00",
  "word": "साथी → साथ",
  "slug": "saathi-saath",
  "hook": "कब तक साथी ढूंढते रहोगे?",
