@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-20T08:31:21+00:00",
+   "detail": "15 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 525.0
   }
  ],
- "updated": "2026-11-20T08:31:20+00:00",
+ "updated": "2026-11-20T08:31:21+00:00",
  "word": "जन → जान",
  "slug": "jan-jaan",
  "hook": "भीड़ में बस एक जन?",
