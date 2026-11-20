@@ -44,8 +44,9 @@
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T08:55:13+00:00"
   },
   {
    "key": "timing",
@@ -277,7 +278,7 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-20T08:55:12+00:00",
+ "updated": "2026-11-20T08:55:13+00:00",
  "word": "थम → थाम",
  "slug": "tham-thaam",
  "hook": "कब से यहीं थमी है ज़िंदगी?",
