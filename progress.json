@@ -53,9 +53,10 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T11:49:15+00:00"
+   "started": "2026-11-20T11:49:15+00:00",
+   "ended": "2026-11-20T11:49:16+00:00"
   },
   {
    "key": "music",
@@ -280,7 +281,7 @@
    "took": 611.0
   }
  ],
- "updated": "2026-11-20T11:49:15+00:00",
+ "updated": "2026-11-20T11:49:16+00:00",
  "attempts": [
   "['कद', '', '']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
