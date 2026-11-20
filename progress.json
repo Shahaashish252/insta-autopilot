@@ -53,8 +53,9 @@
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": null,
+   "started": "2026-11-20T09:04:58+00:00"
   },
   {
    "key": "music",
@@ -279,7 +280,7 @@
    "took": 115.0
   }
  ],
- "updated": "2026-11-20T09:04:56+00:00",
+ "updated": "2026-11-20T09:04:58+00:00",
  "word": "साथी → साथ",
  "slug": "saathi-saath",
  "hook": "कब तक साथी ढूंढते रहोगे?",
