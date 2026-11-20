@@ -2,7 +2,7 @@
  "run_id": "44698034169",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44698034169",
  "started": "2026-11-20T07:51:31+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 81.0
   }
  ],
- "updated": "2026-11-20T07:59:31+00:00",
+ "updated": "2026-11-20T07:59:33+00:00",
  "word": "भूल → फूल",
  "slug": "bhool-phool",
  "hook": "हर भूल पर खुद को कोसना?",
@@ -395,5 +395,8 @@
   }
  ],
  "publish_at": "2026-11-23T18:45:00+05:30",
- "duration": 37.36
+ "duration": 37.36,
+ "detail": "भूल → फूल · posts Mon 23 Nov, 06:45 PM IST",
+ "ended": "2026-11-20T07:59:33+00:00",
+ "took": 482.0
 }
