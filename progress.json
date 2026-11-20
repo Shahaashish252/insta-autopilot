@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "36 sound cues, 32.2 s",
-   "started": "2026-11-20T08:55:18+00:00"
+   "state": "done",
+   "detail": "mix.wav  32.17 s  -16.0 LUFS",
+   "started": "2026-11-20T08:55:18+00:00",
+   "ended": "2026-11-20T08:55:20+00:00"
   },
   {
    "key": "reading",
@@ -282,7 +283,7 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-20T08:55:18+00:00",
+ "updated": "2026-11-20T08:55:20+00:00",
  "word": "थम → थाम",
  "slug": "tham-thaam",
  "hook": "कब से यहीं थमी है ज़िंदगी?",
