@@ -98,7 +98,9 @@
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "waiting"
+   "state": "running",
+   "started": "2026-11-20T12:25:56+00:00",
+   "detail": "16 MB"
   },
   {
    "key": "queued",
@@ -289,7 +291,7 @@
    "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:25:55+00:00",
+ "updated": "2026-11-20T12:25:56+00:00",
  "word": "रंग → रग",
  "slug": "rang-rag",
  "hook": "रंग पर कितनी बार ताना?",
