@@ -108,5 +108,13 @@
   "hook_formula": "Sting question",
   "hook_score": 86,
   "at": "2026-11-20T08:11:07.060418+00:00"
+ },
+ {
+  "slug": "ant-anant",
+  "word": "अंत → अनंत",
+  "hook": "सब ख़त्म हो गया?",
+  "hook_formula": "Sting question",
+  "hook_score": 74,
+  "at": "2026-11-20T08:21:22.888069+00:00"
  }
 ]
