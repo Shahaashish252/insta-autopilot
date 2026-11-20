@@ -2,7 +2,7 @@
  "run_id": "44727994971",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727994971",
  "started": "2026-11-20T11:40:08+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 611.0
   }
  ],
- "updated": "2026-11-20T11:53:35+00:00",
+ "updated": "2026-11-20T11:53:36+00:00",
  "attempts": [
   "['कद', '', '']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
@@ -404,5 +404,8 @@
   }
  ],
  "publish_at": "2026-12-04T18:45:00+05:30",
- "duration": 36.71
+ "duration": 36.71,
+ "detail": "कच्चा → सच्चा · posts Fri 04 Dec, 06:45 PM IST",
+ "ended": "2026-11-20T11:53:36+00:00",
+ "took": 808.0
 }
