@@ -148,5 +148,13 @@
   "hook_formula": "Sting question",
   "hook_score": 86,
   "at": "2026-11-20T08:58:21.142485+00:00"
+ },
+ {
+  "slug": "saathi-saath",
+  "word": "साथी → साथ",
+  "hook": "कब तक साथी ढूंढते रहोगे?",
+  "hook_formula": "Sting question",
+  "hook_score": 73,
+  "at": "2026-11-20T09:08:50.068921+00:00"
  }
 ]
