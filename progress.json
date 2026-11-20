@@ -1,119 +1,96 @@
 {
- "run_id": "44727994971",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727994971",
- "started": "2026-11-20T11:40:08+00:00",
- "status": "done",
+ "run_id": "44734258787",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44734258787",
+ "started": "2026-11-20T12:15:38+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T11:40:08+00:00",
-   "ended": "2026-11-20T11:40:58+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T12:15:38+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T11:41:02+00:00",
-   "ended": "2026-11-20T11:41:28+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T11:41:29+00:00",
-   "detail": "कच्चा → सच्चा",
-   "ended": "2026-11-20T11:47:52+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T11:47:53+00:00",
-   "ended": "2026-11-20T11:49:11+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T11:49:13+00:00",
-   "ended": "2026-11-20T11:49:14+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T11:49:15+00:00",
-   "ended": "2026-11-20T11:49:16+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  36.71 s  -16.0 LUFS",
-   "started": "2026-11-20T11:49:17+00:00",
-   "ended": "2026-11-20T11:49:19+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T11:49:21+00:00",
-   "ended": "2026-11-20T11:50:06+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "98 % (1080/1101 frames, 3 workers)",
-   "started": "2026-11-20T11:50:05+00:00",
-   "ended": "2026-11-20T11:52:02+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T11:52:03+00:00",
-   "ended": "2026-11-20T11:53:29+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T11:53:30+00:00",
-   "detail": "18 MB",
-   "ended": "2026-11-20T11:53:33+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T11:53:34+00:00",
-   "started": "2026-11-20T11:53:34+00:00",
-   "detail": "Fri 04 Dec, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44727994971",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727994971",
+   "started": "2026-11-20T11:40:08+00:00",
+   "updated": "2026-11-20T11:53:36+00:00",
+   "status": "done",
+   "word": "कच्चा → सच्चा",
+   "hook": "तुम्हें 'कच्चा' कौन कहता है?",
+   "publish_at": "2026-12-04T18:45:00+05:30",
+   "detail": "कच्चा → सच्चा · posts Fri 04 Dec, 06:45 PM IST",
+   "took": 808.0
+  },
   {
    "run_id": "44727930644",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727930644",
@@ -281,131 +258,7 @@
    "publish_at": null,
    "detail": "3 approved reels are already waiting (max 3); nothing to make",
    "took": 156.0
-  },
-  {
-   "run_id": "44577752005",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44577752005",
-   "started": "2026-11-19T17:29:55+00:00",
-   "updated": "2026-11-19T17:40:06+00:00",
-   "status": "done",
-   "word": "गिर → फिर",
-   "hook": "एक अक्षर से गिर बने फिर",
-   "publish_at": "2026-11-22T18:45:00+05:30",
-   "detail": "गिर → फिर · posts Sun 22 Nov, 06:45 PM IST",
-   "took": 611.0
   }
  ],
- "updated": "2026-11-20T11:53:36+00:00",
- "attempts": [
-  "['कद', '', '']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
- ],
- "word": "कच्चा → सच्चा",
- "slug": "kachcha-sachcha",
- "hook": "तुम्हें 'कच्चा' कौन कहता है?",
- "caption": "जिन्हें हमेशा 'कच्चा' या 'अभी तैयार नहीं' कहा गया, ये रील उन्हें भेज दो।\n\n'कच्चा' में से सिर्फ़ एक अक्षर बदलो, 'क' की जगह 'स' रखो, और ये बन जाता है 'सच्चा'।\n\nदुनिया तुम्हें कितनी भी बार 'कच्चा' कहे, तुम्हारी सच्चाई ही तुम्हारी असली पहचान है।\n\nपक्के होने का इंतज़ार मत करो, सच्चे बनकर आगे बढ़ो।\n\n#सच्चाई #आत्मसम्मान #हिंदीमोटिवेशन",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "तुम्हें 'कच्चा' कौन कहता है?",
-   "card": "तुम्हें 'कच्चा' कौन कहता है?",
-   "score": 87
-  },
-  {
-   "formula": "Negative command",
-   "line": "तुम खुद को कच्चा मत कहो।",
-   "card": "खुद को कच्चा मत कहो",
-   "score": 86
-  },
-  {
-   "formula": "Nobody tells you",
-   "line": "कोई नहीं कहता, कच्चा होना बुरा नहीं।",
-   "card": "कच्चा होना बुरा नहीं",
-   "score": 78
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तुम्हें 'कच्चा' कौन कहता है?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब इस एक शब्द में है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "कच्चा।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "सब कहते हैं, 'अभी तैयार नहीं।'",
-   "write": "अभी तैयार नहीं?",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "जैसे तुम्हारी कोई कीमत नहीं।",
-   "write": "कोई कीमत नहीं?",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इस शब्द का एक छोटा-सा अक्षर, सब बदल देता है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "ये 'क' को 'स' से बदलो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "कच्चा, बन जाता है सच्चा।",
-   "write": "कच्चा… सच्चा।",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "दुनिया कच्चा कहे, तुम सच्चे बनो।",
-   "write": "कच्चा नहीं, सच्चे बनो।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "सच्चा होना, पक्के होने से बड़ा।",
-   "write": "सच्चाई असली पहचान।",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "जिसे 'कच्चा' कहा गया, उसे भेज दो।",
-   "write": "जिसे कच्चा कहा, भेजो।",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, नया शब्द।",
-   "cue": null
-  },
-  {
-   "id": "N13",
-   "text": "तुम्हें 'कच्चा' कौन कहता है? अब पता है जवाब।",
-   "write": "अब पता है जवाब।",
-   "cue": null
-  }
- ],
- "publish_at": "2026-12-04T18:45:00+05:30",
- "duration": 36.71,
- "detail": "कच्चा → सच्चा · posts Fri 04 Dec, 06:45 PM IST",
- "ended": "2026-11-20T11:53:36+00:00",
- "took": 808.0
+ "updated": "2026-11-20T12:15:38+00:00"
 }
