@@ -80,9 +80,10 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "running",
-   "detail": "74 % (660/890 frames, 3 workers)",
-   "started": "2026-11-20T08:28:46+00:00"
+   "state": "done",
+   "detail": "80 % (720/890 frames, 3 workers)",
+   "started": "2026-11-20T08:28:46+00:00",
+   "ended": "2026-11-20T08:30:15+00:00"
   },
   {
    "key": "master",
@@ -286,7 +287,7 @@
    "took": 525.0
   }
  ],
- "updated": "2026-11-20T08:29:58+00:00",
+ "updated": "2026-11-20T08:30:15+00:00",
  "word": "जन → जान",
  "slug": "jan-jaan",
  "hook": "भीड़ में बस एक जन?",
