@@ -62,9 +62,10 @@
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "running",
-   "detail": "33 sound cues, 32.2 s",
-   "started": "2026-11-20T12:22:09+00:00"
+   "state": "done",
+   "detail": "mix.wav  32.23 s  -16.0 LUFS",
+   "started": "2026-11-20T12:22:09+00:00",
+   "ended": "2026-11-20T12:22:11+00:00"
   },
   {
    "key": "reading",
@@ -282,7 +283,7 @@
    "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:22:09+00:00",
+ "updated": "2026-11-20T12:22:11+00:00",
  "word": "रंग → रग",
  "slug": "rang-rag",
  "hook": "रंग पर कितनी बार ताना?",
