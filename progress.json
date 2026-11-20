@@ -71,9 +71,10 @@
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "running",
+   "state": "done",
    "detail": null,
-   "started": "2026-11-20T12:22:12+00:00"
+   "started": "2026-11-20T12:22:12+00:00",
+   "ended": "2026-11-20T12:22:53+00:00"
   },
   {
    "key": "picture",
@@ -284,7 +285,7 @@
    "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:22:12+00:00",
+ "updated": "2026-11-20T12:22:53+00:00",
  "word": "रंग → रग",
  "slug": "rang-rag",
  "hook": "रंग पर कितनी बार ताना?",
