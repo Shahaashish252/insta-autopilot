@@ -80,8 +80,9 @@
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "waiting",
-   "detail": null
+   "state": "running",
+   "detail": "0 %",
+   "started": "2026-11-20T08:55:58+00:00"
   },
   {
    "key": "master",
@@ -285,7 +286,7 @@
    "took": 79.0
   }
  ],
- "updated": "2026-11-20T08:55:57+00:00",
+ "updated": "2026-11-20T08:55:58+00:00",
  "word": "थम → थाम",
  "slug": "tham-thaam",
  "hook": "कब से यहीं थमी है ज़िंदगी?",
