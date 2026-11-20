@@ -24,6 +24,17 @@ Views so far (median 269): रूप → रूह 1,513 · हार → हर
 - **Shorter.** The 30 s reel (हार → हर) beat the 44 s one (कल → काल) by 3.5×. Aim for 28–34 seconds and 10–12 short lines.
 - Still unknown (Meta hides reach, saves and watch time for this account): retention, and which posting time is best.
 
+## Week 2 update (20 Nov 2026, 14 reels): vary the hook, and keep it short
+
+- **Stop opening with "सिर्फ़ एक अक्षर बदलो, X बन जाए Y".** It worked once (रूप → रूह, 1,525 views), then wore out:
+  this week डर → कर 309, जीत → जी 547, सोच → सच 231, जग → जाग 142 all opened the same way. Never use that opener, and
+  never open two reels in a row with the same shape.
+- **Open with the viewer's moment, as a question or a call-out.** The week's winner, हाल → हल (1,392 views, 74 shares,
+  the most shared reel ever), opened "तुम्हारा 'हाल' कब से यही हाल है?". The second best ever, हार → हर (965), opened on
+  "आज हार गए हो तो…". The word change comes AFTER the hook, as the answer.
+- **Length: 26–32 seconds, 8–10 lines.** जग → जाग at 42 s was the week's worst; हार → हर (31 s) and हाल → हल (33 s) were best.
+- Topics that share most: being stuck in a hard situation, rising after a fall, self-worth. Keep away from money.
+
 ## The word change (the most important choice)
 
 - Both words are **real, common Hindi words** a 16-year-old knows, and the change is **one visible piece**: remove,
@@ -42,8 +53,8 @@ Views so far (median 269): रूप → रूह 1,513 · हार → हर
 
 ## The script (`lines`)
 
-- 10 to 12 lines, ids N1, N2, … in order; each `text` is spoken, short, plain conversational Hindi (Devanagari, the way
-  a friend talks; Urdu-origin everyday words are fine). Under 60 characters per line. Total 28 to 34 seconds.
+- 8 to 10 lines, ids N1, N2, … in order; each `text` is spoken, short, plain conversational Hindi (Devanagari, the way
+  a friend talks; Urdu-origin everyday words are fine). Under 60 characters per line. Total 26 to 32 seconds.
 - **N1 is the hook**, said in the first second: a Negative Command ("…बंद करो"), a surprising claim, or a question that
   stings; with a number if there is one. N2 makes the promise ("जवाब इस एक शब्द में है").
 - Then: the first word said alone (N3, may have `"rate": "-6%"` to slow it), the problem in a concrete everyday picture
