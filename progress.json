@@ -2,7 +2,7 @@
  "run_id": "44699070572",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44699070572",
  "started": "2026-11-20T08:00:09+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 608.0
   }
  ],
- "updated": "2026-11-20T08:11:08+00:00",
+ "updated": "2026-11-20T08:11:09+00:00",
  "attempts": [
   "['थ', '', 'म']: rejected (N1 hook scores 61 (needs 65): {'length': 100, 'concrete': 30, 'stake': 35, 'front': 40, 'you': 100}; make it shorter, concrete, with a stake, said to \"तुम\")"
  ],
@@ -386,5 +386,8 @@
   }
  ],
  "publish_at": "2026-11-24T18:45:00+05:30",
- "duration": 33.36
+ "duration": 33.36,
+ "detail": "खुद → खुश · posts Tue 24 Nov, 06:45 PM IST",
+ "ended": "2026-11-20T08:11:09+00:00",
+ "took": 660.0
 }
