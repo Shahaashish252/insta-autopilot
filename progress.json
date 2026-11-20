@@ -2,7 +2,7 @@
  "run_id": "44734258787",
  "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44734258787",
  "started": "2026-11-20T12:15:38+00:00",
- "status": "running",
+ "status": "done",
  "stages": [
   {
    "key": "setup",
@@ -295,7 +295,7 @@
    "took": 156.0
   }
  ],
- "updated": "2026-11-20T12:26:04+00:00",
+ "updated": "2026-11-20T12:26:05+00:00",
  "word": "रंग → रग",
  "slug": "rang-rag",
  "hook": "रंग पर कितनी बार ताना?",
@@ -383,5 +383,8 @@
   }
  ],
  "publish_at": "2026-12-05T18:45:00+05:30",
- "duration": 32.23
+ "duration": 32.23,
+ "detail": "रंग → रग · posts Sat 05 Dec, 06:45 PM IST",
+ "ended": "2026-11-20T12:26:05+00:00",
+ "took": 627.0
 }
