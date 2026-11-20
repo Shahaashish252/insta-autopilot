@@ -1,119 +1,96 @@
 {
- "run_id": "44703309920",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44703309920",
- "started": "2026-11-20T08:32:19+00:00",
- "status": "done",
+ "run_id": "44704868014",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44704868014",
+ "started": "2026-11-20T08:44:01+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T08:32:19+00:00",
-   "ended": "2026-11-20T08:33:30+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T08:44:01+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T08:33:39+00:00",
-   "ended": "2026-11-20T08:34:33+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T08:34:35+00:00",
-   "detail": "राह → राहत",
-   "ended": "2026-11-20T08:38:06+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:38:07+00:00",
-   "ended": "2026-11-20T08:39:01+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T08:39:02+00:00",
-   "ended": "2026-11-20T08:39:03+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:39:05+00:00",
-   "ended": "2026-11-20T08:39:06+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  33.88 s  -16.0 LUFS",
-   "started": "2026-11-20T08:39:07+00:00",
-   "ended": "2026-11-20T08:39:09+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T08:39:10+00:00",
-   "ended": "2026-11-20T08:39:54+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "88 % (900/1016 frames, 3 workers)",
-   "started": "2026-11-20T08:39:53+00:00",
-   "ended": "2026-11-20T08:41:45+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T08:41:46+00:00",
-   "ended": "2026-11-20T08:43:08+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T08:43:09+00:00",
-   "detail": "17 MB",
-   "ended": "2026-11-20T08:43:13+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T08:43:14+00:00",
-   "started": "2026-11-20T08:43:14+00:00",
-   "detail": "Fri 27 Nov, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44703309920",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44703309920",
+   "started": "2026-11-20T08:32:19+00:00",
+   "updated": "2026-11-20T08:43:17+00:00",
+   "status": "done",
+   "word": "राह → राहत",
+   "hook": "राह कब ख़त्म होगी?",
+   "publish_at": "2026-11-27T18:45:00+05:30",
+   "detail": "राह → राहत · posts Fri 27 Nov, 06:45 PM IST",
+   "took": 658.0
+  },
   {
    "run_id": "44701943149",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44701943149",
@@ -281,122 +258,7 @@
    "publish_at": null,
    "detail": "6 approved reels are already waiting (max 3); nothing to make",
    "took": 75.0
-  },
-  {
-   "run_id": "43722365165",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/43722365165",
-   "started": "2026-11-15T14:04:56+00:00",
-   "updated": "2026-11-15T14:17:51+00:00",
-   "status": "done",
-   "word": "कीमत → कीमती",
-   "hook": "सिर्फ़ एक मात्रा से कीमती बनो",
-   "publish_at": "2026-11-21T18:45:00+05:30",
-   "detail": "कीमत → कीमती · posts Sat 21 Nov, 06:45 PM IST",
-   "took": 775.0
   }
  ],
- "updated": "2026-11-20T08:43:17+00:00",
- "word": "राह → राहत",
- "slug": "raah-raahat",
- "hook": "राह कब ख़त्म होगी?",
- "caption": "जो आज थक कर रुकने ही वाला है, ये रील उसे भेज दो।\n\nराह शब्द में बस एक 'त' जोड़ो, बन जाता है राहत। यही इस शब्द का पूरा मतलब है।\n\nमंज़िल का इंतज़ार मत करो। जो राह पर चलता रहता है, उसे राहत बीच रास्ते में ही मिल जाती है।\n\nथकना ठीक है, रुकना मत। अगला कदम ही राहत का पहला कदम है।\n\n#शब्दोंकाखेल #हिंदीमोटिवेशन #राहत",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "तुम्हारी ये राह, कब ख़त्म होगी?",
-   "card": "राह कब ख़त्म होगी?",
-   "score": 86
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो राह में थक कर रुक गया, ये सुनो।",
-   "card": "थक कर रुक गए हो?",
-   "score": 73
-  },
-  {
-   "formula": "Negative command",
-   "line": "रास्ते में थक कर टूट मत जाओ।",
-   "card": "रास्ते में टूटना मत",
-   "score": 66
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "तुम्हारी ये राह, कब ख़त्म होगी?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब छुपा है, इसी एक शब्द में।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "राह।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "रोज़ वही थका देने वाला रास्ता।",
-   "write": "रोज़ वही थका रास्ता",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "लगता है, ये कभी ख़त्म नहीं होता।",
-   "write": "कभी ख़त्म नहीं होता?",
-   "cue": null
-  },
-  {
-   "id": "N6",
-   "text": "पर इसी राह में, एक छोटा जवाब छुपा है।",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N7",
-   "text": "बस आख़िर में, एक 'त' जोड़ दो।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N8",
-   "text": "और राह, बन जाती है राहत।",
-   "write": "राह… राहत।",
-   "cue": null
-  },
-  {
-   "id": "N9",
-   "text": "जो चलता रहा, उसे आख़िर में राहत मिलती है।",
-   "write": "चलते रहो… राहत मिलेगी",
-   "cue": "resolve"
-  },
-  {
-   "id": "N10",
-   "text": "जो आज थक कर रुकने वाला है, उसे भेज दो।",
-   "write": "जो थक गया, उसे भेजो",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, एक नया शब्द",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "तुम्हारी ये राह, कब ख़त्म होगी?",
-   "write": "राह कब ख़त्म होगी?",
-   "cue": null
-  }
- ],
- "publish_at": "2026-11-27T18:45:00+05:30",
- "duration": 33.88,
- "detail": "राह → राहत · posts Fri 27 Nov, 06:45 PM IST",
- "ended": "2026-11-20T08:43:17+00:00",
- "took": 658.0
+ "updated": "2026-11-20T08:44:01+00:00"
 }
