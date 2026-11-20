@@ -1,119 +1,96 @@
 {
- "run_id": "44727930644",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727930644",
- "started": "2026-11-20T11:29:00+00:00",
- "status": "done",
+ "run_id": "44727994971",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727994971",
+ "started": "2026-11-20T11:40:08+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-20T11:29:00+00:00",
-   "ended": "2026-11-20T11:30:15+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-20T11:40:08+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-20T11:30:22+00:00",
-   "ended": "2026-11-20T11:31:35+00:00",
-   "detail": "slots: 18:45 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "done",
-   "started": "2026-11-20T11:31:37+00:00",
-   "detail": "मजबूर → मजबूत",
-   "ended": "2026-11-20T11:34:31+00:00"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T11:34:32+00:00",
-   "ended": "2026-11-20T11:35:29+00:00"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "done",
-   "detail": "mismatches: 0 (lang=hi, model=small)",
-   "started": "2026-11-20T11:35:31+00:00",
-   "ended": "2026-11-20T11:35:32+00:00"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T11:35:34+00:00",
-   "ended": "2026-11-20T11:35:35+00:00"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "done",
-   "detail": "mix.wav  35.75 s  -16.0 LUFS",
-   "started": "2026-11-20T11:35:37+00:00",
-   "ended": "2026-11-20T11:35:38+00:00"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "done",
-   "detail": "every line readable",
-   "started": "2026-11-20T11:35:39+00:00",
-   "ended": "2026-11-20T11:36:24+00:00"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "done",
-   "detail": "83 % (900/1073 frames, 3 workers)",
-   "started": "2026-11-20T11:36:22+00:00",
-   "ended": "2026-11-20T11:38:18+00:00"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "done",
-   "detail": null,
-   "started": "2026-11-20T11:38:19+00:00",
-   "ended": "2026-11-20T11:39:43+00:00"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "done",
-   "started": "2026-11-20T11:39:44+00:00",
-   "detail": "18 MB",
-   "ended": "2026-11-20T11:39:48+00:00"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "done",
-   "ended": "2026-11-20T11:39:49+00:00",
-   "started": "2026-11-20T11:39:49+00:00",
-   "detail": "Fri 04 Dec, 06:45 PM IST"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "44727930644",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727930644",
+   "started": "2026-11-20T11:29:00+00:00",
+   "updated": "2026-11-20T11:39:52+00:00",
+   "status": "done",
+   "word": "मजबूर → मजबूत",
+   "hook": "मजबूर क्यों समझते हो?",
+   "publish_at": "2026-12-04T18:45:00+05:30",
+   "detail": "मजबूर → मजबूत · posts Fri 04 Dec, 06:45 PM IST",
+   "took": 652.0
+  },
   {
    "run_id": "44722316251",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44722316251",
@@ -281,122 +258,7 @@
    "publish_at": "2026-11-22T18:45:00+05:30",
    "detail": "गिर → फिर · posts Sun 22 Nov, 06:45 PM IST",
    "took": 611.0
-  },
-  {
-   "run_id": "44458110982",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44458110982",
-   "started": "2026-11-19T04:24:54+00:00",
-   "updated": "2026-11-19T04:36:52+00:00",
-   "status": "skipped",
-   "word": null,
-   "hook": null,
-   "publish_at": null,
-   "detail": "3 approved reels are already waiting (max 3); nothing to make",
-   "took": 718.0
   }
  ],
- "updated": "2026-11-20T11:39:52+00:00",
- "word": "मजबूर → मजबूत",
- "slug": "majboor-majboot",
- "hook": "मजबूर क्यों समझते हो?",
- "caption": "जो हालात की वजह से खुद को मजबूर समझते हैं, ये रील उन्हें भेज दो।\n\nमजबूर शब्द में बस एक अक्षर बदलता है, 'र' हटकर 'त' आता है, और मजबूर से बनता है मजबूत।\n\nहालात हमें मजबूर कर सकते हैं, पर टूटने के बाद भी खड़ा होना, यही असली ताकत है। मजबूती बाहर से नहीं आती, अंदर से बनती है।\n\nज़िंदगी में हर मुश्किल वक़्त कुछ सिखाकर जाता है। खुद को कमज़ोर मत समझो, तुम सिर्फ़ मजबूर हो, हमेशा के लिए नहीं। यही आज के शब्द की सीख है।\n\n#हिंदीमोटिवेशन #मजबूतबनो #मजबूर",
- "hooks": [
-  {
-   "formula": "Sting question",
-   "line": "खुद को मजबूर क्यों समझते हो?",
-   "card": "मजबूर क्यों समझते हो?",
-   "score": 74
-  },
-  {
-   "formula": "Identity call",
-   "line": "जो खुद को कमज़ोर समझते हैं, सुनो।",
-   "card": "कमज़ोर समझने वालों के लिए",
-   "score": 73
-  },
-  {
-   "formula": "Negative command",
-   "line": "खुद को मजबूर कहना बंद करो।",
-   "card": "मजबूर कहना बंद करो",
-   "score": 74
-  }
- ],
- "lines": [
-  {
-   "id": "N1",
-   "text": "खुद को मजबूर क्यों समझते हो?",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N2",
-   "text": "जवाब इस एक शब्द में छुपा है।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N3",
-   "text": "मजबूर।",
-   "write": null,
-   "cue": null
-  },
-  {
-   "id": "N4",
-   "text": "हर बार हालात ने घेरा, और तुमने हार मान ली।",
-   "write": "हालात ने घेरा…",
-   "cue": null
-  },
-  {
-   "id": "N5",
-   "text": "पर इस शब्द के अंदर एक हिस्सा बदलते ही…",
-   "write": null,
-   "cue": "lift"
-  },
-  {
-   "id": "N6",
-   "text": "ये 'र' हटाओ, 'त' लगाओ।",
-   "write": null,
-   "cue": "swap"
-  },
-  {
-   "id": "N7",
-   "text": "और मजबूर, बन जाता है मजबूत।",
-   "write": "मजबूर… मजबूत।",
-   "cue": null
-  },
-  {
-   "id": "N8",
-   "text": "जो हर बार गिरकर उठा, वही सच में मजबूत है।",
-   "write": "गिरकर उठे, वो मजबूत।",
-   "cue": "resolve"
-  },
-  {
-   "id": "N9",
-   "text": "मजबूरी वक़्त की होती है, मजबूती तुम्हारी पहचान।",
-   "write": "मजबूती ही पहचान है",
-   "cue": null
-  },
-  {
-   "id": "N10",
-   "text": "जो टूट चुका है, उसे ये रील भेज दो।",
-   "write": "जो टूटा है, उसे भेजो।",
-   "cue": null
-  },
-  {
-   "id": "N11",
-   "text": "हर शाम सात बजे, एक नया शब्द।",
-   "write": "हर शाम, नया शब्द।",
-   "cue": null
-  },
-  {
-   "id": "N12",
-   "text": "अब भी खुद को मजबूर समझते हो?",
-   "write": "अब भी मजबूर?",
-   "cue": null
-  }
- ],
- "publish_at": "2026-12-04T18:45:00+05:30",
- "duration": 35.75,
- "detail": "मजबूर → मजबूत · posts Fri 04 Dec, 06:45 PM IST",
- "ended": "2026-11-20T11:39:52+00:00",
- "took": 652.0
+ "updated": "2026-11-20T11:40:08+00:00"
 }
