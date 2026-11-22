@@ -18,8 +18,8 @@ try:                                                            # online_followe
 except Exception:                                               # (Windows without tzdata: standard time is close enough)
     OF_TZ = dt.timezone(dt.timedelta(hours=-8))
 PER_DAY = int(os.environ.get('POSTS_PER_DAY', '2'))
-# Fixed by the user (12 Nov 2026): one reel a day at 19:00 Nepal time = 18:45 IST. Empty POST_SLOTS = choose from the data again.
-FIXED = [x for x in os.environ.get('POST_SLOTS', '18:45').split(',') if x.strip()]
+# Fixed by the user: one reel a day. 19:00 IST = 7:15 PM Nepal: a reel you scheduled yourself in Meta for 7:00 PM is live by then, so it is never posted twice. Empty POST_SLOTS = choose from the data again.
+FIXED = [x for x in os.environ.get('POST_SLOTS', '19:00').split(',') if x.strip()]
 
 
 def _mins(hhmm): h, m = map(int, hhmm.split(':')); return h * 60 + m
