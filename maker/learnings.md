@@ -1,15 +1,15 @@
 <!-- written weekly by maker/learn.py from reports/insights.json and reports/viral.json; read by every new reel -->
 # What works on this channel
 
-- **Data warning:** only 9 reels, and saves, reach and watch time read 0 on every one. That looks like missing tracking, not real zeros, so retention and saves can't be judged. Everything below is a hint, not a rule.
-- **Retire the one-letter claim hook ("सिर्फ़ एक अक्षर बदलो…").** It made रूप → रूह (1,525 views) but wore out with repetition: डर → कर 309, जीत → जी 547, सोच → सच 231, जग → जाग 142 (16–19 Nov). Open on the viewer's moment as a question instead: हाल → हल ("तुम्हारा 'हाल' कब से यही हाल है?") got 1,392 views and 74 shares.
-- **Do more of themes about how you see yourself or others (hint).** रूप (looks vs. soul) and मन (silence vs. respect) beat the abstract ones. धन → धुन got 52 views and सब्र → सब got 191, even though सब्र is a hot theme in the niche. So the theme alone isn't enough; the framing matters.
-- **Don't trust the hook score.** धन → धुन scored 100 and got the fewest views. कर्म → कम scored 87 and got 605. The best reel scored 79. Judge hooks by views and shares, not by the score.
-- **Make the caption ask specific.** The best shared reel named a type of person: "जो खुद को सिर्फ़ शक्ल से नापते हैं, ये रील उन्हें भेजो।" Vaguer asks did worse: "जिसे आज ये सुनना था…" got 0 shares, and the excuse-maker ask got 1. Keep "send to…" and name a recognisable person.
-- **Shares per view is high on some small reels, but they didn't travel.** सपना → अपना, कल → काल and चिंता → चिता have strong share rates but only 167-269 views. Viewers who see them do share, so the problem is getting them shown to more people (hook, first seconds, posting time). Don't call these failures.
-- **Comment prompts work a little.** The one-word question on चिंता → चिता and the "name it in the comments" ask on कल → काल got some response. सपना → अपना had the most comments per view, so keep one such ask on reels where the aim is conversation.
-- **Length:** all reels run 31-44 s, and the three best-viewed sit at 31-39 s. The longest (कल → काल, 44 s) did poorly. Aim for 30-38 s (weak hint).
-- **Stop:** writing a hook that is only a scolding ("पैसे के पीछे भागना बंद करो", "तुम हर बार नया बहाना…"). Both got below-median-to-modest views. The curiosity of "one letter changes it" did better than telling the viewer off.
-- **Stop:** generic captions that open with a quote or a vague send ask. Keep the ask to one clear line.
-- **Fix tracking:** check why saves, reach and watch time are all 0 before next week. Without them you can't tell whether people watch to the end.
-- **Experiment for next week (one variable only):** every reel opens with a question or call-out about the viewer's moment (no "सिर्फ़ एक अक्षर बदलो"), 26–32 s, self-worth or rising-again words. Compare views against the 290 median and against हाल → हल.
+- **Data warning:** 15 reels, most with a few hundred views. Reach, saves and watch time are all 0 in the export, so they are not tracked. We know nothing about saves or retention. Everything below is a hint, not a rule.
+- **Hint, do more of this:** the top 3 by views (रूप → रूह 1525, गम → गुम 1468, हाल → हल 1393) are about the viewer's own pain or identity: looks, hidden grief, being stuck. They also have the best share counts (60, 45, 74). Keep picking words that describe how the viewer feels about themselves.
+- **Hint, hook shape does not decide it:** the One-letter claim formula is on both the top reels and the flops (सोच → सच 267, जग → जाग 144, डर → कर 309). The sting question (हाल → हल) did best on shares per 1000 views (53.1). Test it again before trusting it.
+- **Hook score is not predicting results.** धन → धुन scored 100 and got 55 views, the lowest. रूप → रूह scored 79 and got the most. Don't pick hooks by that score.
+- **Hint, stop:** preachy or abstract advice that tells the viewer what to do without a word reveal, like पैसे के पीछे भागना बंद करो (55 views). The excuse call-out (कर्म → कम, 614 views, 1 share) was also weak. Lead with the word and the feeling, not an order.
+- **Hint, stop:** generic self-improvement words like सोच, जग, डर and जीत. They got 0-1 shares each, but जीत did get 549 views. The framing may matter more than the word.
+- **The ask is not the difference.** Almost every caption opens with 'send this to someone who...' and the flops do too. Keep it, but make the person specific and painful, as in the gam reel: someone who hides their grief and breaks inside.
+- **Length shows no clear pattern.** The top 3 are 39.19, 39.19 and 32.95 s, and the flops run 33-42 s. Don't change length yet.
+- **Odd signal, only a hint:** कल → काल, चिंता → चिता and सपना → अपना had very high shares per 1000 views (136.5, 117.4, 233.0) and the best comments, but only 176-271 views. The counts are small, and these were the earliest posts (Nov 5-9, one not made by hand). It could mean the content resonates but was not pushed. Worth re-making one with a stronger hook.
+- **Missing hooks:** 5 reels have no hook fields recorded, so hook comparison covers only 10 reels.
+- **Experiment for next week (one variable only):** post two reels on equally personal words, same length and same caption ask. Give one a sting-question hook, like 'तुम्हारा ___ कब से यही ___ है?', and the other a One-letter claim. Compare views and shares per 1000 views.
+- **Fix tracking:** check why reach, saves and watch time come back as 0, so next week's coaching can use saves and retention.
