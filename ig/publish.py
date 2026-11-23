@@ -119,7 +119,7 @@ def reslot(name, folder, meta):
 def seconds_to_next():
     """Seconds until the next approved reel is due (0 if one is due now), or -1 if nothing is waiting."""
     now = dt.datetime.now(dt.timezone.utc)
-    ts = [dt.datetime.fromisoformat(m['publish_at']) for _, _, m in items() if m.get('approved') and m.get('publish_at')]
+    ts = [dt.datetime.fromisoformat(m['publish_at']) for _, _, m in items() if m.get('approved') and m.get('publish_at') and not m.get('manual')]   # hand-post reels never wake the poster (a past one made it loop)
     return max(0, int((min(ts) - now).total_seconds())) if ts else -1
 
 
