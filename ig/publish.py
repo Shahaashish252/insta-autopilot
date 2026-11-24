@@ -71,6 +71,20 @@ def mark_posted(name, folder, meta, m):
     shutil.move(folder, os.path.join(POSTED, name))
     print(f'{name}: already on Instagram (media {m["id"]}), marked as posted')
     if meta.get('auto_failed'): close_issue(name, m['id'])
+    share_story(name, meta, m)
+
+
+def share_story(name, meta, m):
+    """Once a reel you scheduled is live: one try at a Story (queue/<slug>/story.jpg, by its public URL) that points people to it."""
+    url = meta.get('story_url')
+    if not url or api.DRY or meta.get('story_id'): return
+    try:
+        age = dt.datetime.now(dt.timezone.utc) - dt.datetime.fromisoformat(m['timestamp'].replace('+0000', '+00:00'))
+        if age > dt.timedelta(hours=6): print(f'{name}: the reel went live {age} ago, too late for its Story'); return
+        meta['story_id'] = api.publish_image_story(url); print(f'{name}: shared to Story (media {meta["story_id"]})')
+    except Exception as e:                                        # one try only, never a retry
+        meta['story_error'] = str(e)[:300]; print(f'{name}: Instagram refused the Story: {e}')
+    json.dump(meta, open(os.path.join(POSTED, name, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 
 OWNER = os.environ.get('GITHUB_REPOSITORY', 'Shahaashish252/insta-autopilot').split('/')[0]
@@ -128,8 +142,10 @@ def main():
     now = dt.datetime.now(dt.timezone.utc)
     only = sys.argv[sys.argv.index('--now') + 1] if '--now' in sys.argv else None
     done, live = 0, None
+    record = '--record' in sys.argv                                 # only look for reels you posted yourself; never post one
     for name, folder, meta in items():
         if only and name != only: continue
+        if record and not meta.get('manual'): continue
         if not meta.get('approved'):
             print(f'skip {name}: not approved'); continue
         if meta.get('manual') and not only:              # you post it (dashboard: Post by hand); once it is live, record it

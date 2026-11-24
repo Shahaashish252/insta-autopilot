@@ -36,6 +36,9 @@ jobs:
         if: inputs.now != '' || steps.wait.outputs.go == 'yes'
         env: { NOW: '${{ inputs.now }}' }
         run: git pull -q --rebase || true; python -m ig.publish ${NOW:+--now "$NOW"}
+      - name: Find reels you posted yourself (and share each one to Story)
+        if: inputs.now == '' && steps.wait.outputs.go != 'yes'
+        run: git pull -q --rebase || true; python -m ig.publish --record
       - name: Record it
         if: always()
         run: |

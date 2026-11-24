@@ -8,3 +8,4 @@ studio/films/*
 !studio/films/_template/
 queue/*/*.mp4.part
 dashboard/making.html
+stories/_build/
