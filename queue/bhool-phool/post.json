@@ -30,7 +30,5 @@
    "card": "गलती पर खुद को कोसने वालों के लिए",
    "score": 75
   }
- ],
- "auto_failed": "2026-11-23T13:30:29.328129+00:00",
- "auto_error": "POST https://graph.facebook.com/v21.0/17841471920376046/media_publish → 400: Fatal | type=OAuthException | code=-1 | error_subcode=2207085 | error_user_title=Generic Internal Error | error_user_msg=An internal server error occurred. Please try again later. | fbtrace_id=AqKnuFk-EFOb6w2Dycbd6ye"
+ ]
 }

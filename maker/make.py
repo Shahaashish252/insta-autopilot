@@ -255,7 +255,7 @@ def queue(slug, o, dest, dur):
     cap = signoff(cap, series_no())
     meta = {'type': 'reel', 'asset': f'{slug}.mp4', 'title': title, 'caption': cap, 'publish_at': when.isoformat(),
             'approved': AUTO, 'share_to_feed': True, 'made_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'duration': dur,
-            'manual': os.environ.get('MANUAL_POST', '0') == '1',   # 22 Nov 2026: back to one automatic try at 7:15 PM NPT, then an email ('1' = you post every reel yourself)
+            'manual': os.environ.get('MANUAL_POST', '1') == '1',   # 24 Nov 2026: you schedule every reel in Meta Business Suite (Meta refuses API posts for this account: 2207085 x6). '0' = one automatic try + email
             'hook_formula': used.get('formula'), 'hook_score': hook_score(n1)[0],
             'hooks': [{**x, 'score': hook_score(x.get('line', ''))[0]} for x in o.get('hooks') or []]}
     json.dump(meta, open(os.path.join(q, 'post.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

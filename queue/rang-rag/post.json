@@ -8,7 +8,7 @@
  "share_to_feed": true,
  "made_at": "2026-11-20T12:26:03.165426+00:00",
  "duration": 32.23,
- "manual": false,
+ "manual": true,
  "hook_formula": "Sting question",
  "hook_score": 86,
  "hooks": [

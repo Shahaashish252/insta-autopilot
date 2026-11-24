@@ -8,7 +8,7 @@
  "share_to_feed": true,
  "made_at": "2026-11-20T10:59:25.503045+00:00",
  "duration": 38.79,
- "manual": false,
+ "manual": true,
  "hook_formula": "Negative command",
  "hook_score": 100,
  "hooks": [
