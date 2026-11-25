@@ -1,89 +1,96 @@
 {
- "run_id": "45472008644",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/45472008644",
- "started": "2026-11-24T19:36:46+00:00",
- "status": "skipped",
+ "run_id": "45554792848",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/45554792848",
+ "started": "2026-11-25T05:37:02+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-24T19:36:46+00:00",
-   "ended": "2026-11-24T19:37:42+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-25T05:37:02+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-24T19:37:49+00:00",
-   "ended": "2026-11-24T19:39:32+00:00",
-   "detail": "slots: 19:00 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "skipped"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "45472008644",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/45472008644",
+   "started": "2026-11-24T19:36:46+00:00",
+   "updated": "2026-11-24T19:39:34+00:00",
+   "status": "skipped",
+   "word": null,
+   "hook": null,
+   "publish_at": null,
+   "detail": "17 approved reels are already waiting (max 3); nothing to make",
+   "took": 168.0
+  },
   {
    "run_id": "45344845773",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/45344845773",
@@ -251,22 +258,7 @@
    "publish_at": "2026-12-03T18:45:00+05:30",
    "detail": "रुक → रुख · posts Thu 03 Dec, 06:45 PM IST",
    "took": 651.0
-  },
-  {
-   "run_id": "44720823120",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44720823120",
-   "started": "2026-11-20T10:37:45+00:00",
-   "updated": "2026-11-20T10:48:09+00:00",
-   "status": "done",
-   "word": "संग → संगत",
-   "hook": "संग तुझे कहाँ ले जा रहा?",
-   "publish_at": "2026-12-02T18:45:00+05:30",
-   "detail": "संग → संगत · posts Wed 02 Dec, 06:45 PM IST",
-   "took": 624.0
   }
  ],
- "updated": "2026-11-24T19:39:34+00:00",
- "detail": "17 approved reels are already waiting (max 3); nothing to make",
- "ended": "2026-11-24T19:39:34+00:00",
- "took": 168.0
+ "updated": "2026-11-25T05:37:02+00:00"
 }
