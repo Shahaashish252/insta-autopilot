@@ -1,89 +1,96 @@
 {
- "run_id": "45760873717",
- "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/45760873717",
- "started": "2026-11-26T05:20:00+00:00",
- "status": "skipped",
+ "run_id": "45876645956",
+ "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/45876645956",
+ "started": "2026-11-26T18:31:51+00:00",
+ "status": "running",
  "stages": [
   {
    "key": "setup",
    "label": "Set up the studio",
    "about": "ffmpeg, the renderer, Claude Code",
-   "state": "done",
-   "started": "2026-11-26T05:20:00+00:00",
-   "ended": "2026-11-26T05:25:31+00:00",
-   "detail": "ffmpeg, renderer, Claude Code"
+   "state": "running",
+   "started": "2026-11-26T18:31:51+00:00"
   },
   {
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "done",
-   "started": "2026-11-26T05:25:36+00:00",
-   "ended": "2026-11-26T05:26:48+00:00",
-   "detail": "slots: 19:00 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
+   "state": "waiting"
   },
   {
    "key": "write",
    "label": "Claude writes the reel",
    "about": "picks a new word, the hook, the script and the caption; checked against the rules",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "voice",
    "label": "Voice",
    "about": "every line spoken by hi-IN-SwaraNeural",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "speech",
    "label": "Speech check",
    "about": "Whisper listens back to every line",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "timing",
    "label": "Timing",
    "about": "when each word, matra and pencil stroke happens",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "music",
    "label": "Music and sound",
    "about": "guitar, bass, pencil, whooshes; mixed under the voice",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "reading",
    "label": "Reading check",
    "about": "every written line long enough on screen to read",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "picture",
    "label": "Picture",
    "about": "1080×1920, 30 fps, frame by frame",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "master",
    "label": "Master, subtitles, cover",
    "about": "loudness −14 LUFS, Hindi .srt, cover frame",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "upload",
    "label": "Upload",
    "about": "the video to the media release",
-   "state": "skipped"
+   "state": "waiting"
   },
   {
    "key": "queued",
    "label": "Scheduled",
    "about": "queued at the next best time",
-   "state": "skipped"
+   "state": "waiting"
   }
  ],
  "history": [
+  {
+   "run_id": "45760873717",
+   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/45760873717",
+   "started": "2026-11-26T05:20:00+00:00",
+   "updated": "2026-11-26T05:26:49+00:00",
+   "status": "skipped",
+   "word": null,
+   "hook": null,
+   "publish_at": null,
+   "detail": "16 approved reels are already waiting (max 3); nothing to make",
+   "took": 409.0
+  },
   {
    "run_id": "45678197771",
    "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/45678197771",
@@ -251,22 +258,7 @@
    "publish_at": "2026-12-05T18:45:00+05:30",
    "detail": "रंग → रग · posts Sat 05 Dec, 06:45 PM IST",
    "took": 627.0
-  },
-  {
-   "run_id": "44727994971",
-   "run_url": "https://github.com/Shahaashish252/insta-autopilot/actions/runs/44727994971",
-   "started": "2026-11-20T11:40:08+00:00",
-   "updated": "2026-11-20T11:53:36+00:00",
-   "status": "done",
-   "word": "कच्चा → सच्चा",
-   "hook": "तुम्हें 'कच्चा' कौन कहता है?",
-   "publish_at": "2026-12-04T18:45:00+05:30",
-   "detail": "कच्चा → सच्चा · posts Fri 04 Dec, 06:45 PM IST",
-   "took": 808.0
   }
  ],
- "updated": "2026-11-26T05:26:49+00:00",
- "detail": "16 approved reels are already waiting (max 3); nothing to make",
- "ended": "2026-11-26T05:26:49+00:00",
- "took": 409.0
+ "updated": "2026-11-26T18:31:51+00:00"
 }
