@@ -17,8 +17,10 @@
    "key": "numbers",
    "label": "Channel numbers and best time",
    "about": "fresh views, the posting slot",
-   "state": "running",
-   "started": "2026-11-26T18:32:46+00:00"
+   "state": "done",
+   "started": "2026-11-26T18:32:46+00:00",
+   "ended": "2026-11-26T18:33:40+00:00",
+   "detail": "slots: 19:00 IST (set by you: one reel a day at 7:00 PM Nepal time (6:45 PM IST))"
   },
   {
    "key": "write",
@@ -263,5 +265,5 @@
    "took": 627.0
   }
  ],
- "updated": "2026-11-26T18:32:46+00:00"
+ "updated": "2026-11-26T18:33:40+00:00"
 }
