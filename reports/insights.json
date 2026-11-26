@@ -1,14 +1,35 @@
 {
- "at": "2026-11-26T05:26:47.688667+00:00",
+ "at": "2026-11-26T13:56:40.308708+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 13,
   "follows_count": 1,
-  "media_count": 16,
+  "media_count": 17,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "18002116470022238",
+   "caption": "जो आज सोचता है कि सब कुछ ख़त्म हो गया, ये रील उसे भेज दो।\n\nअंत में बस एक 'न' जोड",
+   "comments_count": 0,
+   "like_count": 0,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/DgNMG6ECYqW/",
+   "timestamp": "2026-11-26T13:15:53+0000",
+   "insights": {
+    "views": 65,
+    "reach": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "18159812254508938",
    "caption": "जो हर किसी को खुश रखते-रखते खुद को भूल गए हैं, ये रील उन्हें भेज दो।\n\n'खुद' शब्द",
@@ -19,7 +40,7 @@
    "permalink": "https://www.instagram.com/reel/DgKnUOAiIHf/",
    "timestamp": "2026-11-25T13:15:46+0000",
    "insights": {
-    "views": 177,
+    "views": 211,
     "reach": 0,
     "likes": 4,
     "comments": 0,
@@ -40,7 +61,7 @@
    "permalink": "https://www.instagram.com/reel/Df9vbWXCuOk/",
    "timestamp": "2026-11-20T13:16:30+0000",
    "insights": {
-    "views": 1473,
+    "views": 1474,
     "reach": 0,
     "likes": 11,
     "comments": 2,
