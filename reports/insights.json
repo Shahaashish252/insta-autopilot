@@ -1,14 +1,35 @@
 {
- "at": "2026-11-27T05:18:57.597159+00:00",
+ "at": "2026-11-27T13:55:16.869018+00:00",
  "account": {
   "id": "17841471920376046",
   "followers_count": 13,
   "follows_count": 1,
-  "media_count": 17,
+  "media_count": 18,
   "username": "anek.arthi"
  },
  "online_followers": {},
  "posts": [
+  {
+   "id": "17883250389628026",
+   "caption": "जो खुद को भीड़ में बस एक चेहरा समझता है, ये रील उसे भेज दो।\n\nजन से जान बनने में ",
+   "comments_count": 0,
+   "like_count": 1,
+   "media_product_type": "REELS",
+   "media_type": "VIDEO",
+   "permalink": "https://www.instagram.com/reel/DgPw5ZwAQQY/",
+   "timestamp": "2026-11-27T13:15:43+0000",
+   "insights": {
+    "views": 30,
+    "reach": 0,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 0,
+    "ig_reels_video_view_total_time": 0
+   }
+  },
   {
    "id": "18002116470022238",
    "caption": "जो आज सोचता है कि सब कुछ ख़त्म हो गया, ये रील उसे भेज दो।\n\nअंत में बस एक 'न' जोड",
@@ -19,7 +40,7 @@
    "permalink": "https://www.instagram.com/reel/DgNMG6ECYqW/",
    "timestamp": "2026-11-26T13:15:53+0000",
    "insights": {
-    "views": 161,
+    "views": 171,
     "reach": 0,
     "likes": 2,
     "comments": 0,
@@ -34,15 +55,15 @@
    "id": "18159812254508938",
    "caption": "जो हर किसी को खुश रखते-रखते खुद को भूल गए हैं, ये रील उन्हें भेज दो।\n\n'खुद' शब्द",
    "comments_count": 0,
-   "like_count": 4,
+   "like_count": 5,
    "media_product_type": "REELS",
    "media_type": "VIDEO",
    "permalink": "https://www.instagram.com/reel/DgKnUOAiIHf/",
    "timestamp": "2026-11-25T13:15:46+0000",
    "insights": {
-    "views": 211,
+    "views": 213,
     "reach": 0,
-    "likes": 4,
+    "likes": 5,
     "comments": 0,
     "shares": 0,
     "saved": 0,
@@ -103,7 +124,7 @@
    "permalink": "https://www.instagram.com/reel/Df4l0N6iMRg/",
    "timestamp": "2026-11-18T13:16:21+0000",
    "insights": {
-    "views": 144,
+    "views": 145,
     "reach": 0,
     "likes": 2,
     "comments": 0,
